@@ -1,0 +1,61 @@
+@import '../../styles/variable.scss';
+
+.footer_main_div {
+  background-color: $main-bg;
+  border-radius: $border-radius;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.bottom_footer_main_div {
+  background-color: $main-bg-500;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.box_heading {
+  font-size: 24px;
+  font-weight: 500;
+  color: $text-primary;
+  margin-bottom: 25px;
+}
+.para_text {
+  color: $text-primary;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+}
+.highlight_text {
+  font-size: 30px;
+  color: $text-primary;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .footer_main_div {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .box_heading {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .box_heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .para_text {
+    font-size: 15px;
+  }
+  .highlight_text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .footer_main_div {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
