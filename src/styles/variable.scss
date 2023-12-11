@@ -10,11 +10,12 @@ $border-primary: #e7e7e7 !default;
 $border-secondary: #c5c5c5 !default;
 $body-font: 'Poppins', sans-serif !default;
 $border-radius: 8px !default;
-$background-header: #fbc8b2 !default;
 
 $body-color: $text-primary !default;
 $body-font-family: $body-font;
 $body-font-size: 16px;
-$primary: #7e7e7e !default;
+$primary: $green;
+$danger: $red;
 // $secondary: $pink !default;
 // $gray: $gray !default;
+
