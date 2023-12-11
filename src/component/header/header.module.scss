@@ -1,11 +1,11 @@
 @import '../../styles/variable.scss';
 
 .navbar_main_div {
-  background-color: $background-header;
-  border-radius: $border-radius;
+  background-color: $main-bg;
   margin-top: 0px;
   margin-bottom: 20px;
   padding: 10px 20px !important;
+  border-bottom: 1px solid $border-primary;
 
   .navbar_brand {
     img {
@@ -20,9 +20,8 @@
     align-items: center;
 
     .nav_link {
-      font-size: 20px;
-      text-transform: uppercase;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 500;
       color: $text-primary;
       display: flex;
     }
@@ -34,7 +33,7 @@
     font-size: 20px;
   }
   span {
-    background-color: #ff989e;
+    background-color: #0ABB92;
     height: 18px;
     width: 18px;
     display: flex;
@@ -45,27 +44,11 @@
     position: absolute;
     top: -5px;
     right: -15px;
-    color: $text-primary;
-  }
-}
-
-/*mega menu css*/
-
-.mega_menu {
-  .dropdown_header {
-    font-size: 18px;
-    padding: 0.675rem 0.5rem;
-  }
-
-  .dropdown_item {
-    font-size: 17px;
-    padding: 0.675rem 0.5rem;
-    text-transform: capitalize;
-    font-weight: 500;
+    color: $white;
   }
 }
 .info_icon {
-  font-size: 18px;
+  font-size: 19px;
 }
 .mob_account_icons {
   display: none;
