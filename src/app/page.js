@@ -1,72 +1,102 @@
 "use client";
-import Image from "next/image";
-import styles from "../styles/page.module.scss";
-import { Button, Card, Col, Row, Tab, Tabs } from "react-bootstrap";
+import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
 import Link from "next/link";
+import IndexMarket from "@/component/index-market";
+import StocksList from "@/component/stocks-list";
+import ProductTools from "@/component/product-tools";
+import TopGainers from "@/component/top-gainers";
+import TopLosers from "@/component/top-losers";
+import TopSectors from "@/component/top-sectors";
 
 export default function Home() {
   return (
-    <main className="container">
-      <Tabs
-        defaultActiveKey="Stock"
-        transition={false}
-        id="noanim-tab-example"
-        className="mb-3"
-      >
-        <Tab eventKey="Stock" title="Stock">
-          <Row>
-          <Col xs={12} md={12}>
-            <div className="d-flex justify-content-between align-items-center">
-                <div><h2 className="section-title">Index</h2></div>
-                <div><Link href="/">All indices</Link></div>
-            </div>
-          </Col>
-            <Col xs={12} md={3}>
-              <Card className={`${styles.nifty_index}`}>
-                <Card.Body>
-                  <Card.Title>NIFTY 50</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    20,997
-                  </Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className={`${styles.nifty_index}`}>
-                <Card.Body>
-                  <Card.Title>BANKNIFTY</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    20,997
-                  </Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className={`${styles.nifty_index}`}>
-                <Card.Body>
-                  <Card.Title>SENSEX</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    20,997
-                  </Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className={`${styles.nifty_index}`}>
-                <Card.Body>
-                  <Card.Title>FINNIFTY</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    20,997
-                  </Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Tab>
-        <Tab eventKey="MutualFunds" title="MutualFunds">
-          Tab content for Mutual Funds
-        </Tab>
-      </Tabs>
-    </main>
+    <>
+      <Container>
+        <Tabs
+          defaultActiveKey="Stock"
+          transition={false}
+          id="noanim-tab-example"
+          className="mb-4 mt-5 tabs_main_div"
+        >
+          <Tab eventKey="Stock" title="Stock">
+            <Row>
+              <Col md={8}>
+                <div>
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Index</h5>
+                    </div>
+                    <div>
+                      <Link href="/">All indices</Link>
+                    </div>
+                  </div>
+                  <IndexMarket />
+                </div>
+                <div className="mt-5">
+                  <div className="mb-3">
+                    <h5 className="text-white mb-0">Most Bought on Groww</h5>
+                  </div>
+                  <StocksList />
+                </div>
+                <div className="mt-5">
+                  <div className="mb-3">
+                    <h5 className="text-white mb-0">Product & Tools</h5>
+                  </div>
+                  <ProductTools />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Top Gainers</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See more</Link>
+                    </div>
+                  </div>
+                  <TopGainers />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Stocks in News</h5>
+                    </div>
+                    <div>
+                      <Link href="/">News</Link>
+                    </div>
+                  </div>
+                  <StocksList />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Top Losers</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See more</Link>
+                    </div>
+                  </div>
+                  <TopLosers />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Top Sectors</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See more</Link>
+                    </div>
+                  </div>
+                  <TopSectors />
+                </div>
+              </Col>
+              <Col md={4}>2 of 3 (wider)</Col>
+            </Row>
+          </Tab>
+          <Tab eventKey="MutualFunds" title="MutualFunds">
+            Mutual Funds
+          </Tab>
+        </Tabs>
+      </Container>
+    </>
   );
 }

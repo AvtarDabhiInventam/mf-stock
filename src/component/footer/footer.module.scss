@@ -1,15 +1,17 @@
 @import '../../styles/variable.scss';
 
 .footer_main_div {
-  background-color: $main-bg;
+  background-color: $main-bg-500;
   border-radius: $border-radius;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 70px;
 }
 .bottom_footer_main_div {
   background-color: $main-bg-500;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-top: 1px solid $border-primary;
 }
 .box_heading {
   font-size: 24px;
