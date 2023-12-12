@@ -1,0 +1,21 @@
+@import '../../styles/variable.scss';
+
+.watchlist_card_div {
+  background: $main-bg;
+  border: 1px solid $border-primary;
+  .watchlist_card_body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .title {
+    color: $white;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .index_value {
+    margin-bottom: 0px;
+    font-size: 14px;
+  }
+  
+}

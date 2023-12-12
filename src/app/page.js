@@ -7,6 +7,8 @@ import ProductTools from "@/component/product-tools";
 import TopGainers from "@/component/top-gainers";
 import TopLosers from "@/component/top-losers";
 import TopSectors from "@/component/top-sectors";
+import Investments from "@/component/investments";
+import Watchlists from "@/component/watchlists";
 
 export default function Home() {
   return (
@@ -89,7 +91,30 @@ export default function Home() {
                   <TopSectors />
                 </div>
               </Col>
-              <Col md={4}>2 of 3 (wider)</Col>
+              <Col md={4}>
+                <div>
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Your Investments</h5>
+                    </div>
+                    <div>
+                      <Link href="/">Dashboard</Link>
+                    </div>
+                  </div>
+                  <Investments />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">All watchlists</h5>
+                    </div>
+                    <div>
+                      <Link href="/">View all</Link>
+                    </div>
+                  </div>
+                  <Watchlists />
+                </div>
+              </Col>
             </Row>
           </Tab>
           <Tab eventKey="MutualFunds" title="MutualFunds">
