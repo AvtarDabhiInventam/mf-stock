@@ -1,0 +1,21 @@
+@import '../../styles/variable.scss';
+
+.watchlists_box_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid $border-primary;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.title {
+  color: $white;
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+.index_value {
+  margin-bottom: 0px;
+  color: $white;
+  font-size: 15px;
+  font-weight: 500;
+}

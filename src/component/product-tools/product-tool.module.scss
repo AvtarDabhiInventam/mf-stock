@@ -1,0 +1,14 @@
+@import '../../styles/variable.scss';
+
+.product_card_div{
+  background: $main-bg-500;
+  border: 1px solid $border-primary;
+  text-align: center;
+  .img_box {
+    margin-bottom: 12px;
+  }
+  .title {
+    font-size: 19px;
+    color: $white;
+  }
+}

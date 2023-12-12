@@ -1,0 +1,23 @@
+@import './variable.scss';
+.card_main_div{
+    background: $main-bg-500;
+    border: 1px solid $border-primary;
+    .title {
+        color: $white;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .index_value {
+        margin-bottom: 0px;
+        color: $white;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .img_box {
+        background-color: $white;
+        width: fit-content;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+}
