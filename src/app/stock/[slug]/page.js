@@ -398,7 +398,7 @@ function StockDetail() {
           <BreadcrumbItem active>Apple</BreadcrumbItem>
         </Breadcrumb>
         <Row>
-          <Col sm={9}>
+          <Col sm={12} md={7} lg={8} xl={9}>
             <div className={`${style.stock_detail_logo}`}>
               <div className="d-flex align-items-center">
                 <img
@@ -456,7 +456,7 @@ function StockDetail() {
                 <div className={`${style.stock_detail_stock_overview} mt-3`}>
                   <p>{data.about}</p>
                   <Row>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -464,7 +464,7 @@ function StockDetail() {
                         <p>{data.fundamental.open}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -472,7 +472,7 @@ function StockDetail() {
                         <p>{data.fundamental.high}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -480,7 +480,7 @@ function StockDetail() {
                         <p>{data.fundamental.low}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -490,7 +490,7 @@ function StockDetail() {
                     </Col>
                   </Row>
                   <Row>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -498,7 +498,7 @@ function StockDetail() {
                         <p>{data.fundamental.avgVol}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -506,7 +506,7 @@ function StockDetail() {
                         <p>{data.fundamental.shareVol}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -514,7 +514,7 @@ function StockDetail() {
                         <p>{data.fundamental.low}</p>
                       </div>
                     </Col>
-                    <Col>
+                    <Col sm={6} lg={3}>
                       <div
                         className={`${style.stock_detail_stock_performance}`}
                       >
@@ -553,7 +553,7 @@ function StockDetail() {
               </Tab>
             </Tabs>
           </Col>
-          <Col sm={3}>
+          <Col sm={12} md={5} lg={4} xl={3}>
             <div className="common-card">
               <Tabs
                 defaultActiveKey="market-buy"
