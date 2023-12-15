@@ -11,6 +11,8 @@ import {
   Tab,
   Col,
   Row,
+  Accordion,
+  Form,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
 import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
@@ -18,6 +20,7 @@ import { RiTimerLine } from "react-icons/ri";
 import { GoBookmark } from "react-icons/go";
 import { FaRupeeSign } from "react-icons/fa";
 import ReactApexChart from "react-apexcharts";
+import { BiWalletAlt } from "react-icons/bi";
 
 const data = ALL_STOCK_COMPANY_DATA[0];
 
@@ -394,143 +397,238 @@ function StockDetail() {
           <BreadcrumbItem href="#">Stocks</BreadcrumbItem>
           <BreadcrumbItem active>Apple</BreadcrumbItem>
         </Breadcrumb>
-        <div className={`${style.stock_detail_logo}`}>
-          <div className="d-flex align-items-center">
-            <img
-              src={data.logo}
-              width={60}
-              height={60}
-              alt="User Image"
-              className="rounded"
-            />
-          </div>
-          <div>
-            <div className="common-card">
-              <Button variant="dark" size="sm" className="me-3 rounded">
-                <RiTimerLine style={{ marginRight: "5px" }} />
-                Create Alert
-              </Button>
-              <Button variant="dark" size="sm" className="rounded">
-                <GoBookmark style={{ marginRight: "5px" }} />
-                Watchlist
-              </Button>
+        <Row>
+          <Col sm={9}>
+            <div className={`${style.stock_detail_logo}`}>
+              <div className="d-flex align-items-center">
+                <img
+                  src={data.logo}
+                  width={60}
+                  height={60}
+                  alt="User Image"
+                  className="rounded"
+                />
+              </div>
+              <div>
+                <div>
+                  <Button variant="dark" size="sm" className="me-3 rounded">
+                    <RiTimerLine style={{ marginRight: "5px" }} />
+                    Create Alert
+                  </Button>
+                  <Button variant="dark" size="sm" className="rounded">
+                    <GoBookmark style={{ marginRight: "5px" }} />
+                    Watchlist
+                  </Button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className={`${style.stock_detail_stock_name}`}>
-          <h2>{data.name}</h2>
-        </div>
-        <div className={`${style.stock_detail_price}`}>
-          <h3>
-            <FaRupeeSign fontSize={22} />
-            {data.price}{" "}
-            <span className={`${style.stock_detail_price_updown}`}>
-              {data.priceUpDown}
-            </span>
-            <span className={`${style.stock_detail_price_updown}`}>
-              {" "}
-              ({data.priceUpDownPercentage}%)
-            </span>
-          </h3>
-        </div>
-        <div>
-          <ReactApexChart
-            options={stockGraph.options}
-            series={stockGraph.series}
-            type="candlestick"
-            height={350}
-          />
-        </div>
-        <Tabs
-          defaultActiveKey="overview"
-          id="uncontrolled-tab-example"
-          variant="pills"
-          className="mt-3"
-        >
-          <Tab eventKey="overview" title="overview">
-            <div className={`${style.stock_detail_stock_overview} mt-3`}>
-              <p>{data.about}</p>
-              <Row>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Open</h6>
-                    <p>{data.fundamental.open}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>High</h6>
-                    <p>{data.fundamental.high}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Low</h6>
-                    <p>{data.fundamental.low}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Market Cap</h6>
-                    <p>{data.fundamental.marketCap}</p>
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Avg Vol</h6>
-                    <p>{data.fundamental.avgVol}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Share Vol</h6>
-                    <p>{data.fundamental.shareVol}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Low</h6>
-                    <p>{data.fundamental.low}</p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className={`${style.stock_detail_stock_performance}`}>
-                    <h6>Market Cap</h6>
-                    <p>{data.fundamental.marketCap}</p>
-                  </div>
-                </Col>
-              </Row>
+            <div className={`${style.stock_detail_stock_name}`}>
+              <h2>{data.name}</h2>
             </div>
-          </Tab>
-          <Tab eventKey="financials" title="financials">
-            <div className={`${style.stock_detail_stock_overview}`}>
+            <div className={`${style.stock_detail_price}`}>
+              <h3>
+                <FaRupeeSign fontSize={22} />
+                {data.price}{" "}
+                <span className={`${style.stock_detail_price_updown}`}>
+                  {data.priceUpDown}
+                </span>
+                <span className={`${style.stock_detail_price_updown}`}>
+                  {" "}
+                  ({data.priceUpDownPercentage}%)
+                </span>
+              </h3>
+            </div>
+            <div>
               <ReactApexChart
-                options={revenueGraph.options}
-                series={revenueGraph.series}
-                type="bar"
+                options={stockGraph.options}
+                series={stockGraph.series}
+                type="candlestick"
                 height={350}
               />
             </div>
-          </Tab>
-          <Tab eventKey="News" title="News">
-            <div className={`${style.stock_detail_stock_overview}`}>
-              {/* <ReactApexChart
+            <Tabs
+              defaultActiveKey="overview"
+              id="uncontrolled-tab-example"
+              variant="pills"
+              className="mt-3"
+            >
+              <Tab eventKey="overview" title="overview">
+                <div className={`${style.stock_detail_stock_overview} mt-3`}>
+                  <p>{data.about}</p>
+                  <Row>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Open</h6>
+                        <p>{data.fundamental.open}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>High</h6>
+                        <p>{data.fundamental.high}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Low</h6>
+                        <p>{data.fundamental.low}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Market Cap</h6>
+                        <p>{data.fundamental.marketCap}</p>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Avg Vol</h6>
+                        <p>{data.fundamental.avgVol}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Share Vol</h6>
+                        <p>{data.fundamental.shareVol}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Low</h6>
+                        <p>{data.fundamental.low}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <div
+                        className={`${style.stock_detail_stock_performance}`}
+                      >
+                        <h6>Market Cap</h6>
+                        <p>{data.fundamental.marketCap}</p>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
+              </Tab>
+              <Tab eventKey="financials" title="financials">
+                <div className={`${style.stock_detail_stock_overview}`}>
+                  <ReactApexChart
+                    options={revenueGraph.options}
+                    series={revenueGraph.series}
+                    type="bar"
+                    height={350}
+                  />
+                </div>
+              </Tab>
+              <Tab eventKey="News" title="News">
+                <div className={`${style.stock_detail_stock_overview}`}>
+                  {/* <ReactApexChart
                 options={stockGraph.options}
                 series={stockGraph.series}
                 type="candlestick"
                 height={350}
               /> */}
-              <ReactApexChart
-                options={revenueGraph.options}
-                series={revenueGraph.series}
-                type="bar"
-                height={350}
-              />
+                  <ReactApexChart
+                    options={revenueGraph.options}
+                    series={revenueGraph.series}
+                    type="bar"
+                    height={350}
+                  />
+                </div>
+              </Tab>
+            </Tabs>
+          </Col>
+          <Col sm={3}>
+            <div className="common-card">
+              <Tabs
+                defaultActiveKey="market-buy"
+                id="uncontrolled-tab-example"
+                className="mb-3 tabs_main_div"
+              >
+                <Tab eventKey="market-buy" title="market Buy">
+                  <div className={`${style.stock_buy_sell}`}>
+                    <div className="d-flex align-items-center justify-content-between mb-3">
+                      <p className="mb-0 text-white">Shars to Buy</p>
+                      <Form.Control
+                        size="sm"
+                        type="text"
+                        placeholder="1"
+                        style={{ width: "100px", textAlign: "right" }}
+                      />
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-0 text-white">
+                        Market Price{" "}
+                        <span className="fs-6 text-primary">NSE</span>
+                      </p>
+                      <p className="mb-0">2142.2</p>
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-0 text-white">Balance Available</p>
+                      <p className="mb-0">
+                        <BiWalletAlt /> 15000.00
+                      </p>
+                    </div>
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="w-100 mb-3 text-white"
+                    >
+                      Buy
+                    </Button>
+                  </div>
+                </Tab>
+                <Tab eventKey="market-sell" title="Market Sell">
+                  Tab content for Profile
+                </Tab>
+              </Tabs>
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item>
+                  <Accordion.Header>Open Orders</Accordion.Header>
+                  <Accordion.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </Accordion.Body>
+                </Accordion.Item>
+                <Accordion.Item eventKey="1">
+                  <Accordion.Header>positions</Accordion.Header>
+                  <Accordion.Body>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </div>
-          </Tab>
-        </Tabs>
+          </Col>
+        </Row>
       </Container>
     </div>
   );

@@ -63,10 +63,32 @@ const Header = () => {
               <Nav.Link className={`${style.nav_link} `}> About</Nav.Link>
               <Nav.Link className={`${style.nav_link} `}> Pricing</Nav.Link>
               <Nav.Link className={`${style.nav_link} `}> Support</Nav.Link>
-              <Nav.Link className={`${style.nav_link} `}>
+              {/* <Nav.Link className={`${style.nav_link} `}>
                 <FaUser className={`${style.info_icon} me-3`} />
                 Account
-              </Nav.Link>
+              </Nav.Link> */}
+              <NavDropdown
+                title={
+                  <>
+                    <FaUser className={`${style.info_icon} me-2 text-white`} />
+                    <span className="text-gray">Avtar</span>
+                  </>
+                }
+                id="basic-nav-dropdown"
+                className={`${style.profile_dropdown}`}
+              >
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

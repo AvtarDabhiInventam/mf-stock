@@ -1,0 +1,13 @@
+@import '../styles/variable.scss';
+
+.profile_setting_tabs {
+    padding-right: 20px;
+
+    .profile_setting_tabs_link {
+        padding: 12px 20px;
+        font-size: 17px;
+        margin-bottom: 10px;
+        color: $text-primary;
+
+    }
+}

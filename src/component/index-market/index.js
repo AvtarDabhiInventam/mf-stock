@@ -8,21 +8,20 @@ console.log("NiftyIndex", MAIN_CARD);
 const IndexMarket = () => {
   return (
     <>
-      <Row>
+      <Row className="row_space">
         {MAIN_CARD.map((value, index) => {
-          
           return (
             <>
-              <Col xs={12} md={4}>
+              <Col xs={6} md={4}>
                 <Card className={`${styles.card_main_div}`}>
                   <Card.Body>
                     <h6 className={`${styles.title}`}>{value.name}</h6>
                     <p className={`${styles.index_value}`}>
-                    {value.price}
+                      {value.price}
                       <label
                         className={`${styles.index_percentage} green-color`}
                       >
-                        {value.priceUpDown}  {value.priceUpDownPercentage}
+                        {value.priceUpDown} {value.priceUpDownPercentage}
                       </label>
                     </p>
                   </Card.Body>
@@ -31,7 +30,6 @@ const IndexMarket = () => {
             </>
           );
         })}
-
       </Row>
     </>
   );

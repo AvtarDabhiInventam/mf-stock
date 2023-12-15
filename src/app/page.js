@@ -9,6 +9,10 @@ import TopLosers from "@/component/top-losers";
 import TopSectors from "@/component/top-sectors";
 import Investments from "@/component/investments";
 import Watchlists from "@/component/watchlists";
+import MutualFundsCategory from "@/component/mutual-fund-category";
+import MutualFundList from "@/component/mutual-fund-list";
+import MutualFundWatchList from "@/component/mutual-fund-watchlist";
+import MutualFundPopularFund from "@/component/mutual-fund-popularfund";
 
 export default function Home() {
   return (
@@ -21,7 +25,7 @@ export default function Home() {
           className="mb-4 mt-5 tabs_main_div"
         >
           <Tab eventKey="Stock" title="Stock">
-            <Row>
+            <Row className="column-reverse-mob">
               <Col md={8}>
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
@@ -103,7 +107,7 @@ export default function Home() {
                   </div>
                   <Investments />
                 </div>
-                <div className="mt-5">
+                <div className="mt-5 mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
                       <h5 className="text-white mb-0">All watchlists</h5>
@@ -118,7 +122,64 @@ export default function Home() {
             </Row>
           </Tab>
           <Tab eventKey="MutualFunds" title="MutualFunds">
-            Mutual Funds
+            <Row className="column-reverse-mob">
+              <Col md={8}>
+                <div>
+                  <div className="mb-3">
+                    <h5 className="text-white mb-0">Category</h5>
+                  </div>
+                  <MutualFundsCategory />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Popular fund</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See all</Link>
+                    </div>
+                  </div>
+                  <MutualFundPopularFund />
+                </div>
+
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Watchlist</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See all</Link>
+                    </div>
+                  </div>
+                  <MutualFundWatchList />
+                </div>
+
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">All mutual fund</h5>
+                    </div>
+                    <div>
+                      <Link href="/">See all</Link>
+                    </div>
+                  </div>
+                  <MutualFundList />
+                </div>
+              </Col>
+              <Col md={4}>
+                <div className="mb-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="text-white mb-0">Your Investments</h5>
+                    </div>
+                    <div>
+                      <Link href="/">Dashboard</Link>
+                    </div>
+                  </div>
+                  <Investments />
+                </div>
+              </Col>
+            </Row>
           </Tab>
         </Tabs>
       </Container>
