@@ -26,11 +26,14 @@
     }
   }
 }
+
 .cart_items {
   position: relative;
+
   svg {
     font-size: 20px;
   }
+
   span {
     background-color: #0ABB92;
     height: 18px;
@@ -46,11 +49,28 @@
     color: $white;
   }
 }
+
 .info_icon {
   font-size: 19px;
 }
+
 .mob_account_icons {
   display: none;
+}
+
+.profile_dropdown {
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-primary;
+
+  .dropdown-toggle::after {
+    color: $white;
+  }
+
+}
+
+.nav-link {
+  color: $text-primary;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
@@ -75,6 +95,7 @@
       }
     }
   }
+
   .mob_account_icons {
     position: absolute;
     right: 90px;
@@ -83,6 +104,7 @@
     align-items: center;
     gap: 20px;
     color: $text-primary;
+
     svg {
       color: $text-primary;
     }
@@ -112,6 +134,7 @@
       }
     }
   }
+
   .mob_account_icons {
     position: absolute;
     right: 90px;
@@ -120,6 +143,7 @@
     align-items: center;
     gap: 20px;
     color: $text-primary;
+
     svg {
       color: $text-primary;
     }
