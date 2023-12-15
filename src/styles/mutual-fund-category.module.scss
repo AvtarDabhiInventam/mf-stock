@@ -1,0 +1,32 @@
+@import "./variable.scss";
+
+.mf_card_div {
+  background: $main-bg-500;
+  border: 1px solid $border-primary;
+}
+.small_text {
+  font-size: 15px;
+}
+.img_box {
+  img {
+    border-radius: $border-radius;
+    min-width: 38px;
+    min-height: 38px;
+  }
+}
+.star_rating {
+  svg {
+    color: $gold-color;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .small_text {
+    font-size: 14px;
+  }
+  .header_contains {
+    h6 {
+      font-size: 15px;
+    }
+  }
+}

@@ -1,7 +1,6 @@
-
-@import './variable.scss';
-@import 'bootstrap/dist/css/bootstrap.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "./variable.scss";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "~bootstrap/scss/bootstrap";
 * {
   padding: 0;
@@ -33,10 +32,12 @@ a {
 .red-color {
   color: $red;
 }
+.gray-color {
+  color: $text-primary;
+}
 .row_space {
   row-gap: 24px;
 }
-
 
 // #bootstrap
 
@@ -83,20 +84,12 @@ a {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     max-width: 540px !important;
+  }
+  .column-reverse-mob {
+    flex-direction: column-reverse;
   }
 }
 
