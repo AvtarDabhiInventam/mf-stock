@@ -1,4 +1,4 @@
-@import '../../styles/variable.scss';
+@import "../../styles/variable.scss";
 
 .watchlists_box_div {
   display: flex;
@@ -9,13 +9,13 @@
   padding-top: 10px;
 }
 .title {
-  color: $white;
+  color: $text-primary;
   font-size: 15px;
   margin-bottom: 0px;
 }
 .index_value {
   margin-bottom: 0px;
-  color: $white;
+  color: $text-primary;
   font-size: 15px;
   font-weight: 500;
 }

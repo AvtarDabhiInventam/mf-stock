@@ -1,7 +1,7 @@
 @import "../../styles/variable.scss";
 
 .product_card_div {
-  background: $main-bg-500;
+  background: $white;
   border: 1px solid $border-primary;
   text-align: center;
   .img_box {
@@ -12,7 +12,7 @@
   }
   .title {
     font-size: 19px;
-    color: $white;
+    color: $text-primary;
   }
 }
 

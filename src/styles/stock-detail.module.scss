@@ -1,46 +1,46 @@
-@import '../styles/variable.scss';
+@import "../styles/variable.scss";
 
 .stock_detail {
-    .stock_detail_logo {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  .stock_detail_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .stock_detail_price {
+    margin-top: 15px;
+
+    h3 {
+      color: $text-primary;
     }
+  }
 
-    .stock_detail_price {
-        margin-top: 15px;
-
-        h3 {
-            color: #fff;
-        }
+  .stock_detail_stock_name {
+    h2 {
+      font-size: 22px;
+      margin-top: 15px;
+      color: $text-primary;
     }
+  }
 
-    .stock_detail_stock_name {
-        h2 {
-            font-size: 22px;
-            margin-top: 15px;
-            color: #fff;
-        }
+  .stock_detail_price_updown {
+    color: $primary;
+    font-size: 16px;
+  }
+
+  .stock_detail_stock_overview {
+    .stock_detail_stock_performance {
+      h6 {
+        font-size: 15px;
+        color: $text-primary;
+      }
+
+      p {
+        font-size: 15px;
+        color: $text-primary;
+        letter-spacing: 0.5px;
+        font-weight: 600;
+      }
     }
-
-    .stock_detail_price_updown {
-        color: $primary;
-        font-size: 16px;
-    }
-
-    .stock_detail_stock_overview {
-        .stock_detail_stock_performance {
-            h6 {
-                font-size: 15px;
-                color: $white;
-            }
-
-            p {
-                font-size: 15px;
-                color: $white;
-                letter-spacing: .5px;
-                font-weight: 600;
-            }
-        }
-    }
+  }
 }

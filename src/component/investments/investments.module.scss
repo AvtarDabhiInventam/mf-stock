@@ -1,7 +1,7 @@
-@import '../../styles/variable.scss';
+@import "../../styles/variable.scss";
 
 .investments_card_div {
-  background: $main-bg;
+  background: $white;
   border: 1px solid $border-primary;
 }
 .grid_div {
@@ -10,7 +10,7 @@
   column-gap: 15px;
 }
 .title {
-  color: $white;
+  color: $text-primary;
   margin-bottom: 10px;
   font-size: 18px;
 }

@@ -70,7 +70,7 @@ const Header = () => {
               <NavDropdown
                 title={
                   <>
-                    <FaUser className={`${style.info_icon} me-2 text-white`} />
+                    <FaUser className={`${style.info_icon} me-2`} />
                     <span className="text-gray">Avtar</span>
                   </>
                 }
