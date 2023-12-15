@@ -30,7 +30,7 @@ export default function Home() {
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Index</h5>
+                      <h5 className="mb-0">Index</h5>
                     </div>
                     <div>
                       <Link href="/">All indices</Link>
@@ -40,20 +40,20 @@ export default function Home() {
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
-                    <h5 className="text-white mb-0">Most Bought on Groww</h5>
+                    <h5 className="mb-0">Most Bought on Groww</h5>
                   </div>
                   <StocksList />
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
-                    <h5 className="text-white mb-0">Product & Tools</h5>
+                    <h5 className="mb-0">Product & Tools</h5>
                   </div>
                   <ProductTools />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Top Gainers</h5>
+                      <h5 className="mb-0">Top Gainers</h5>
                     </div>
                     <div>
                       <Link href="/">See more</Link>
@@ -64,18 +64,18 @@ export default function Home() {
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Stocks in News</h5>
+                      <h5 className="mb-0">Stocks in News</h5>
                     </div>
                     <div>
                       <Link href="/">News</Link>
                     </div>
                   </div>
-                  <c />
+                  <StocksList />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Top Losers</h5>
+                      <h5 className="mb-0">Top Losers</h5>
                     </div>
                     <div>
                       <Link href="/">See more</Link>
@@ -86,7 +86,7 @@ export default function Home() {
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Top Sectors</h5>
+                      <h5 className="mb-0">Top Sectors</h5>
                     </div>
                     <div>
                       <Link href="/">See more</Link>
@@ -99,7 +99,7 @@ export default function Home() {
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Your Investments</h5>
+                      <h5 className="mb-0">Your Investments</h5>
                     </div>
                     <div>
                       <Link href="/">Dashboard</Link>
@@ -110,7 +110,7 @@ export default function Home() {
                 <div className="mt-5 mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">All watchlists</h5>
+                      <h5 className="mb-0">All watchlists</h5>
                     </div>
                     <div>
                       <Link href="/">View all</Link>
@@ -126,14 +126,14 @@ export default function Home() {
               <Col md={8}>
                 <div>
                   <div className="mb-3">
-                    <h5 className="text-white mb-0">Category</h5>
+                    <h5 className="mb-0">Category</h5>
                   </div>
                   <MutualFundsCategory />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Popular fund</h5>
+                      <h5 className="mb-0">Popular fund</h5>
                     </div>
                     <div>
                       <Link href="/">See all</Link>
@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Watchlist</h5>
+                      <h5 className="mb-0">Watchlist</h5>
                     </div>
                     <div>
                       <Link href="/">See all</Link>
@@ -157,7 +157,7 @@ export default function Home() {
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">All mutual fund</h5>
+                      <h5 className="mb-0">All mutual fund</h5>
                     </div>
                     <div>
                       <Link href="/">See all</Link>
@@ -170,7 +170,7 @@ export default function Home() {
                 <div className="mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="text-white mb-0">Your Investments</h5>
+                      <h5 className="mb-0">Your Investments</h5>
                     </div>
                     <div>
                       <Link href="/">Dashboard</Link>

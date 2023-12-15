@@ -1,21 +1,21 @@
 @import "./variable.scss";
 .card_main_div {
-  background: $main-bg-500;
+  background: $white;
   border: 1px solid $border-primary;
   // margin-bottom: 15px;
   .title {
-    color: $white;
+    color: $text-primary;
     font-size: 15px;
     margin-bottom: 10px;
   }
   .index_value {
     margin-bottom: 0px;
-    color: $white;
+    color: $text-primary;
     font-size: 15px;
     font-weight: 500;
   }
   .img_box {
-    background-color: $white;
+    // background-color: $white;
     width: fit-content;
     border-radius: 5px;
     overflow: hidden;

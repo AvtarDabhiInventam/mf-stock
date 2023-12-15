@@ -1,7 +1,7 @@
-@import '../../styles/variable.scss';
+@import "../../styles/variable.scss";
 
 .watchlist_card_div {
-  background: $main-bg;
+  background: $white;
   border: 1px solid $border-primary;
   .watchlist_card_body {
     display: flex;
@@ -10,7 +10,7 @@
     cursor: pointer;
   }
   .title {
-    color: $white;
+    color: $text-primary;
     margin-bottom: 5px;
     font-size: 16px;
   }

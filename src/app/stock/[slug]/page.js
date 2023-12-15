@@ -560,10 +560,10 @@ function StockDetail() {
                 id="uncontrolled-tab-example"
                 className="mb-3 tabs_main_div"
               >
-                <Tab eventKey="market-buy" title="market Buy">
+                <Tab eventKey="market-buy" title="Market Buy">
                   <div className={`${style.stock_buy_sell}`}>
                     <div className="d-flex align-items-center justify-content-between mb-3">
-                      <p className="mb-0 text-white">Shars to Buy</p>
+                      <p className="mb-0">Shars to Buy</p>
                       <Form.Control
                         size="sm"
                         type="text"
@@ -572,7 +572,7 @@ function StockDetail() {
                       />
                     </div>
                     <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0 text-white">
+                      <p className="mb-0">
                         Market Price{" "}
                         <span className="fs-6 text-primary">NSE</span>
                       </p>
@@ -580,16 +580,12 @@ function StockDetail() {
                     </div>
                     <hr />
                     <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0 text-white">Balance Available</p>
+                      <p className="mb-0">Balance Available</p>
                       <p className="mb-0">
                         <BiWalletAlt /> 15000.00
                       </p>
                     </div>
-                    <Button
-                      variant="primary"
-                      size="lg"
-                      className="w-100 mb-3 text-white"
-                    >
+                    <Button variant="primary" size="lg" className="w-100 mb-3">
                       Buy
                     </Button>
                   </div>
