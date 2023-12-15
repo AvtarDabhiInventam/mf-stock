@@ -26,7 +26,7 @@ function Profile_Setting() {
       </Breadcrumb>
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={3}>
+          <Col sm={12} md={12} lg={4}>
             <Nav
               variant="pills"
               className={`${style.profile_setting_tabs} flex-column`}
@@ -57,7 +57,7 @@ function Profile_Setting() {
               </Nav.Item>
             </Nav>
           </Col>
-          <Col sm={9}>
+          <Col sm={12} md={12} lg={8}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <Form>
