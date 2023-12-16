@@ -59,7 +59,10 @@ const Header = () => {
             className="justify-content-end"
           >
             <Nav className={`${style.navbar_nav} `}>
-              <Nav.Link className={`${style.nav_link} `}> Signin</Nav.Link>
+              <Nav.Link href="/login" className={`${style.nav_link} `}>
+                {" "}
+                Signin
+              </Nav.Link>
               <Nav.Link className={`${style.nav_link} `}> About</Nav.Link>
               <Nav.Link className={`${style.nav_link} `}> Pricing</Nav.Link>
               <Nav.Link className={`${style.nav_link} `}> Support</Nav.Link>
