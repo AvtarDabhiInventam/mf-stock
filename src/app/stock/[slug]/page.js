@@ -390,7 +390,7 @@ const revenueGraph = {
 };
 function StockDetail() {
   return (
-    <div className={`${style.stock_detail} mb-4 mt-5`}>
+    <div className={`${style.stock_detail} mt-5`}>
       <Container>
         <Breadcrumb>
           <BreadcrumbItem href="#">Home </BreadcrumbItem>

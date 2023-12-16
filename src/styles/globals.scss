@@ -21,6 +21,7 @@ body {
   font-family: $body-font !important;
   font-size: 15px;
   font-weight: 400;
+  color: $text-primary;
 }
 
 a {
@@ -53,6 +54,9 @@ a {
 }
 
 // #bootstrap
+.form-label {
+  font-weight: 500;
+}
 
 .container {
   max-width: 1400px !important;
@@ -120,6 +124,60 @@ a {
   width: 100%;
 }
 
+/*custom radio*/
+.radio-group {
+  gap: 16px;
+  margin-top: 32px;
+}
+
+/* Hide the native radio input */
+.custom-radio input[type="radio"] {
+  appearance: none;
+  opacity: 0;
+  position: absolute;
+}
+
+
+.custom-radio label {
+  position: relative;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px 0px var(--grey);
+  width: 100%;
+}
+
+.custom-radio label::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: 16px;
+  top: 16px;
+  background: var(--grey);
+}
+
+/* When the radio is checked, style the label accordingly */
+.custom-radio input[type="radio"]:checked+label {
+  background: #ebefff;
+  outline: solid 3px var(--blue);
+}
+
+/* When the radio is focused, style the label accordingly */
+.custom-radio input[type="radio"]:focus+label {
+  outline: solid 3px var(--blue);
+  outline-offset: 5px;
+}
+
+/* When the radio is checked, style the pseudo element accordingly */
+.custom-radio input[type="radio"]:checked+label::after {
+  background: $primary;
+}
+
+.custom-radio h3 {
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .container {
     max-width: 540px !important;
@@ -128,6 +186,7 @@ a {
   .column-reverse-mob {
     flex-direction: column-reverse;
   }
+
   .sec_title {
     font-size: 17px;
   }
@@ -137,6 +196,7 @@ a {
   .container {
     max-width: 720px !important;
   }
+
   .sec_title {
     font-size: 16px;
   }
@@ -146,6 +206,7 @@ a {
   .container {
     max-width: 960px !important;
   }
+
   .sec_title {
     font-size: 17px;
   }
@@ -155,6 +216,7 @@ a {
   .container {
     max-width: 1160px !important;
   }
+
   .sec_title {
     font-size: 18px;
   }
