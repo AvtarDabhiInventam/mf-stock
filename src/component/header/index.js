@@ -75,7 +75,7 @@ const Header = () => {
                   </>
                 }
                 id="basic-nav-dropdown"
-                className={`${style.profile_dropdown}`}
+                className={`${style.profile_dropdown} `}
               >
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

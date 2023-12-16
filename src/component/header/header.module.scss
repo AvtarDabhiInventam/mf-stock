@@ -1,4 +1,4 @@
-@import '../../styles/variable.scss';
+@import "../../styles/variable.scss";
 
 .navbar_main_div {
   background-color: $main-bg;
@@ -35,7 +35,7 @@
   }
 
   span {
-    background-color: #0ABB92;
+    background-color: #0abb92;
     height: 18px;
     width: 18px;
     display: flex;
@@ -51,7 +51,7 @@
 }
 
 .info_icon {
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .mob_account_icons {
@@ -62,11 +62,12 @@
   font-size: 16px;
   font-weight: 500;
   color: $text-primary;
+  display: flex;
+  align-items: center;
 
   .dropdown-toggle::after {
     color: $white;
   }
-
 }
 
 .nav-link {

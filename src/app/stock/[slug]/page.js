@@ -411,11 +411,11 @@ function StockDetail() {
               </div>
               <div>
                 <div>
-                  <Button variant="dark" size="sm" className="me-3 rounded">
+                  <Button size="sm" className="me-3 rounded">
                     <RiTimerLine style={{ marginRight: "5px" }} />
                     Create Alert
                   </Button>
-                  <Button variant="dark" size="sm" className="rounded">
+                  <Button size="sm" className="rounded">
                     <GoBookmark style={{ marginRight: "5px" }} />
                     Watchlist
                   </Button>
@@ -447,12 +447,12 @@ function StockDetail() {
               />
             </div>
             <Tabs
-              defaultActiveKey="overview"
+              defaultActiveKey="Overview"
               id="uncontrolled-tab-example"
               variant="pills"
               className="mt-3"
             >
-              <Tab eventKey="overview" title="overview">
+              <Tab eventKey="Overview" title="Overview">
                 <div className={`${style.stock_detail_stock_overview} mt-3`}>
                   <p>{data.about}</p>
                   <Row>
@@ -525,7 +525,7 @@ function StockDetail() {
                   </Row>
                 </div>
               </Tab>
-              <Tab eventKey="financials" title="financials">
+              <Tab eventKey="Financials" title="Financials">
                 <div className={`${style.stock_detail_stock_overview}`}>
                   <ReactApexChart
                     options={revenueGraph.options}
@@ -556,11 +556,11 @@ function StockDetail() {
           <Col sm={12} md={5} lg={4} xl={3}>
             <div className="common-card">
               <Tabs
-                defaultActiveKey="market-buy"
+                defaultActiveKey="Market-buy"
                 id="uncontrolled-tab-example"
                 className="mb-3 tabs_main_div"
               >
-                <Tab eventKey="market-buy" title="Market Buy">
+                <Tab eventKey="Market-buy" title="Market Buy">
                   <div className={`${style.stock_buy_sell}`}>
                     <div className="d-flex align-items-center justify-content-between mb-3">
                       <p className="mb-0">Shars to Buy</p>
@@ -585,16 +585,16 @@ function StockDetail() {
                         <BiWalletAlt /> 15000.00
                       </p>
                     </div>
-                    <Button variant="primary" size="lg" className="w-100 mb-3">
+                    <Button variant="primary" className="w-100 mb-3">
                       Buy
                     </Button>
                   </div>
                 </Tab>
-                <Tab eventKey="market-sell" title="Market Sell">
+                <Tab eventKey="Market-sell" title="Market Sell">
                   Tab content for Profile
                 </Tab>
               </Tabs>
-              <Accordion defaultActiveKey="0">
+              <Accordion defaultActiveKey="0" className="mt-3">
                 <Accordion.Item>
                   <Accordion.Header>Open Orders</Accordion.Header>
                   <Accordion.Body>
