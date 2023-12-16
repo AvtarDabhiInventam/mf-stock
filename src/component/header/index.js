@@ -8,6 +8,11 @@ import { FaOpencart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUser } from "react-icons/fa6";
 import style from "./header.module.scss";
+import logo from "../../images/mf-stock-logo.png";
+import Image from "next/image";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { IoWalletOutline } from "react-icons/io5";
+import { IoCartOutline } from "react-icons/io5";
 
 const CustomNavItem = ({ text }) => {
   return (
@@ -38,8 +43,7 @@ const Header = () => {
             className={`${style.navbar_brand} me-0 p-0`}
           >
             <Link href="/">
-              {/* <Image src={logo} width={233} height={200} alt='Banner Image' /> */}
-              <FaOpencart fontSize={50} color="#0ABB92" />
+              <Image src={logo} alt="Banner Image" />
             </Link>
           </Navbar.Brand>
           <div className={`${style.mob_account_icons} `}>
@@ -59,10 +63,21 @@ const Header = () => {
             className="justify-content-end"
           >
             <Nav className={`${style.navbar_nav} `}>
-              <Nav.Link className={`${style.nav_link} `}> Signin</Nav.Link>
-              <Nav.Link className={`${style.nav_link} `}> About</Nav.Link>
-              <Nav.Link className={`${style.nav_link} `}> Pricing</Nav.Link>
-              <Nav.Link className={`${style.nav_link} `}> Support</Nav.Link>
+              <Nav.Link href="/login" className={`${style.nav_link} `}>
+                Login
+              </Nav.Link>
+              <Nav.Link href="/notification" className={`${style.nav_link} `}>
+                {" "}
+                <IoMdNotificationsOutline fontSize={25} />
+              </Nav.Link>
+              <Nav.Link href="wallet" className={`${style.nav_link} `}>
+                {" "}
+                <IoWalletOutline fontSize={25} />
+              </Nav.Link>
+              <Nav.Link className={`${style.nav_link} `}>
+                {" "}
+                <IoCartOutline fontSize={25} />
+              </Nav.Link>
               {/* <Nav.Link className={`${style.nav_link} `}>
                 <FaUser className={`${style.info_icon} me-3`} />
                 Account
@@ -75,19 +90,25 @@ const Header = () => {
                   </>
                 }
                 id="basic-nav-dropdown"
-                className={`${style.profile_dropdown} `}
+                className={`${style.profile_dropdown}`}
               >
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">
+                  Bank & AutoPay
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                  Another action
+                  Import Funds
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">
-                  Something
+                  Watchlist
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                {/* <NavDropdown.Divider /> */}
+                <NavDropdown.Item href="#action/3.4">Orders</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Reports</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">SIPs</NavDropdown.Item>
+                <NavDropdown.Item href="/profile-setting">
+                  Settings
                 </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

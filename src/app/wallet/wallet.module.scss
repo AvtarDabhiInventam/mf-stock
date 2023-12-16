@@ -1,0 +1,32 @@
+@import '../../styles/variable.scss';
+
+.my_wallet_right {
+    border: 1px solid $border-primary;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+
+    .my_wallet_tab_link {
+        border: 1px solid;
+    }
+
+    .my_wallet_title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .my_wallet_amount {
+        color: $primary;
+        font-size: 26px;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .my_wallet_right {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
