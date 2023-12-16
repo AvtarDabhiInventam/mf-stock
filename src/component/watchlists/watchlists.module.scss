@@ -26,6 +26,19 @@
     font-size: 18px;
   }
   svg {
-    font-size: 24px;
+    font-size: 22px;
+    position: relative;
+    top: -2px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  .create_watchlists {
+    a {
+      font-size: 16px;
+    }
+    svg {
+      font-size: 20px;
+    }
   }
 }

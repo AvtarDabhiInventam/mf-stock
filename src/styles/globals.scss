@@ -126,11 +126,17 @@ a {
   .column-reverse-mob {
     flex-direction: column-reverse;
   }
+  .sec_title {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .container {
     max-width: 720px !important;
+  }
+  .sec_title {
+    font-size: 16px;
   }
 }
 
@@ -138,11 +144,17 @@ a {
   .container {
     max-width: 960px !important;
   }
+  .sec_title {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
   .container {
     max-width: 1160px !important;
+  }
+  .sec_title {
+    font-size: 18px;
   }
 }
 
