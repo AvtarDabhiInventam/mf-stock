@@ -63,7 +63,8 @@ const Header = () => {
             className="justify-content-end"
           >
             <Nav className={`${style.navbar_nav} `}>
-              <Nav.Link className={`${style.nav_link} `}>
+              <Nav.Link href="/login" className={`${style.nav_link} `}>
+                {" "}
                 <IoMdNotificationsOutline fontSize={25} />
               </Nav.Link>
               <Nav.Link href="wallet" className={`${style.nav_link} `}>
