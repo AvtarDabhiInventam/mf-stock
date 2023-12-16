@@ -37,7 +37,7 @@ const StocksList = () => {
                       <label
                         className={`${styles.index_percentage} green-color`}
                       >
-                        {value.priceUpDown} {value.priceUpDownPercentage}%
+                        {value.priceUpDown} ({value.priceUpDownPercentage}%)
                       </label>
                     </p>
                   </Card.Body>

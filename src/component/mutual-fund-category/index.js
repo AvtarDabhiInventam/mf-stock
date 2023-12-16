@@ -15,8 +15,8 @@ const MutualFundsCategory = () => {
                   <div className={`${styles.img_box}`}>
                     <img
                       src={value.logo}
-                      width={130}
-                      height={130}
+                      width={80}
+                      height={80}
                       alt="User Image"
                     />
                   </div>

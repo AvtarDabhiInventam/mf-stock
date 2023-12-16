@@ -17,11 +17,11 @@ const IndexMarket = () => {
                   <Card.Body>
                     <h6 className={`${styles.title}`}>{value.name}</h6>
                     <p className={`${styles.index_value}`}>
-                      {value.price}
+                      {value.price}{" "}
                       <label
                         className={`${styles.index_percentage} green-color`}
                       >
-                        {value.priceUpDown} {value.priceUpDownPercentage}
+                        {value.priceUpDown} ({value.priceUpDownPercentage}%)
                       </label>
                     </p>
                   </Card.Body>

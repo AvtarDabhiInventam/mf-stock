@@ -45,12 +45,7 @@ const ProductTools = () => {
             <Card className={`${styles.product_card_div}`}>
               <Card.Body>
                 <div className={`${styles.img_box}`}>
-                  <Image
-                    src={item.img}
-                    width={130}
-                    height={130}
-                    alt="User Image"
-                  />
+                  <Image src={item.img} width={80} height={80} alt="Icon" />
                 </div>
                 <h6 className={`${styles.title} mb-0`}>{item.title}</h6>
               </Card.Body>

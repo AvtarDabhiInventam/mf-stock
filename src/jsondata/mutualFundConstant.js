@@ -2,7 +2,7 @@ export const CATEGORIES = [
   {
     _id: 1,
     name: "High return",
-    logo: "images/high_returns_dark.svg",
+    logo: "images/high_returns.svg",
     company: [
       {
         _id: 1,
@@ -291,7 +291,7 @@ export const CATEGORIES = [
   {
     _id: 2,
     name: "Tax savings",
-    logo: "images/tax_saving_dark.svg",
+    logo: "images/tax_saving.svg",
     company: [
       {
         _id: 1,
@@ -580,7 +580,7 @@ export const CATEGORIES = [
   {
     _id: 3,
     name: "Sip with 500",
-    logo: "images/sip_with_500_dark.svg",
+    logo: "images/sip_with_500.svg",
     company: [
       {
         _id: 1,
@@ -869,7 +869,7 @@ export const CATEGORIES = [
   {
     _id: 4,
     name: "Large cap",
-    logo: "images/large_cap_dark.svg",
+    logo: "images/large_cap.svg",
     company: [
       {
         _id: 1,
@@ -1158,7 +1158,7 @@ export const CATEGORIES = [
   {
     _id: 5,
     name: "Mid cap",
-    logo: "images/mid_cap_dark.svg",
+    logo: "images/mid_cap.svg",
     company: [
       {
         _id: 1,
@@ -1447,7 +1447,7 @@ export const CATEGORIES = [
   {
     _id: 6,
     name: "Small cap",
-    logo: "images/small_cap_dark.svg",
+    logo: "images/small_cap.svg",
     company: [
       {
         _id: 1,

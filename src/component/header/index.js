@@ -43,20 +43,9 @@ const Header = () => {
             className={`${style.navbar_brand} me-0 p-0`}
           >
             <Link href="/">
-              <Image src={logo} alt="Banner Image" />
+              <Image src={logo} alt="Banner Image" width={65} height={65} />
             </Link>
           </Navbar.Brand>
-          <div className={`${style.mob_account_icons} `}>
-            <Link href="#">
-              <FaUser className={`${style.info_icon}`} />
-            </Link>
-            {/* <Link href="#">
-              <div className={`${style.cart_items} `}>
-                <FaShoppingCart className={`${style.info_icon}`} />
-                <span>3</span>
-              </div>
-            </Link> */}
-          </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
