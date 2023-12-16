@@ -64,6 +64,9 @@ const Header = () => {
           >
             <Nav className={`${style.navbar_nav} `}>
               <Nav.Link href="/login" className={`${style.nav_link} `}>
+                Login
+              </Nav.Link>
+              <Nav.Link href="/notification" className={`${style.nav_link} `}>
                 {" "}
                 <IoMdNotificationsOutline fontSize={25} />
               </Nav.Link>

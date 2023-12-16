@@ -8,7 +8,7 @@ const Notification = () => {
     <>
       <div className="mt-5">
         <Container>
-          <h3 className="main_title text-center">Notification</h3>
+          <h3 className="main_title">Notification</h3>
           <div className={`${styles.notification_ui_dd_content}`}>
             {NOTIFICATION.map((value, index) => {
               return (
