@@ -74,6 +74,12 @@ a {
   }
 }
 
+.sec_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: $text-primary;
+}
+
 // tabs
 .tabs_main_div {
   border-bottom: 1px solid $border-primary !important;
