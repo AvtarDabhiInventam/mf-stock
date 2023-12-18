@@ -8,7 +8,7 @@ const WatchlistsStocks = () => {
     series: [
       {
         name: "Desktops",
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148],
+        data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
       },
     ],
     options: {
@@ -46,6 +46,9 @@ const WatchlistsStocks = () => {
       },
       legend: {
         show: false,
+      },
+      tooltip: {
+        enabled: false,
       },
       xaxis: {
         show: false,
@@ -87,79 +90,33 @@ const WatchlistsStocks = () => {
           return (
             <>
               <div className={`${styles.watchlists_box_div}`}>
-                <h6 className={`${styles.title}`}>{value.name}</h6>
-                <div>
+                <div className="w-100">
+                  <h6 className={`${styles.title}`}>{value.name}</h6>
+                </div>
+                <div className="w-100">
                   <div id="chart">
                     <ReactApexChart
                       options={stockWatchListGraph.options}
                       series={stockWatchListGraph.series}
                       type="line"
-                      height={200}
+                      height={40}
+                      width={100}
                     />
                   </div>
                 </div>
-                <p className={`${styles.index_value}`}>
-                  {value.price}
-                  <br />
-                  <label className={`${styles.index_percentage} green-color`}>
-                    {value.priceUpDown} ({value.priceUpDownPercentage}%)
-                  </label>
-                </p>
+                <div className="w-100 text-end">
+                  <p className={`${styles.index_value}`}>
+                    {value.price}
+                    <br />
+                    <label className={`${styles.index_percentage} green-color`}>
+                      {value.priceUpDown} ({value.priceUpDownPercentage}%)
+                    </label>
+                  </p>
+                </div>
               </div>
             </>
           );
         })}
-
-        {/* <div className={`${styles.watchlists_box_div}`}>
-          <h6 className={`${styles.title}`}>Tata Power</h6>
-          <p className={`${styles.index_value}`}>
-            ₹330.50
-            <br />
-            <label className={`${styles.index_percentage} green-color`}>
-              2.33 (0.80%)
-            </label>
-          </p>
-        </div>
-        <div className={`${styles.watchlists_box_div}`}>
-          <h6 className={`${styles.title}`}>Tata Power</h6>
-          <p className={`${styles.index_value}`}>
-            ₹330.50
-            <br />
-            <label className={`${styles.index_percentage} green-color`}>
-              2.33 (0.80%)
-            </label>
-          </p>
-        </div>
-        <div className={`${styles.watchlists_box_div}`}>
-          <h6 className={`${styles.title}`}>Tata Power</h6>
-          <p className={`${styles.index_value}`}>
-            ₹330.50
-            <br />
-            <label className={`${styles.index_percentage} green-color`}>
-              2.33 (0.80%)
-            </label>
-          </p>
-        </div>
-        <div className={`${styles.watchlists_box_div}`}>
-          <h6 className={`${styles.title}`}>Tata Power</h6>
-          <p className={`${styles.index_value}`}>
-            ₹330.50
-            <br />
-            <label className={`${styles.index_percentage} green-color`}>
-              2.33 (0.80%)
-            </label>
-          </p>
-        </div>
-        <div className={`${styles.watchlists_box_div}`}>
-          <h6 className={`${styles.title}`}>Tata Power</h6>
-          <p className={`${styles.index_value}`}>
-            ₹330.50
-            <br />
-            <label className={`${styles.index_percentage} green-color`}>
-              2.33 (0.80%)
-            </label>
-          </p>
-        </div> */}
       </div>
     </>
   );
