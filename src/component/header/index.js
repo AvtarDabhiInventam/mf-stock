@@ -77,15 +77,18 @@ const Header = () => {
                 id="basic-nav-dropdown"
                 className={`${style.profile_dropdown}`}
               >
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="/bank-info">
                   Bank & AutoPay
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/watchlist">Watchlist</NavDropdown.Item>
+                <NavDropdown.Item href="/notification">
+                  Notification
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#">Orders</NavDropdown.Item>
                 <NavDropdown.Item href="/profile-setting">
                   Settings
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">Logout</NavDropdown.Item>
+                <NavDropdown.Item href="#">Logout</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

@@ -182,7 +182,7 @@ function page() {
             <p className={`${style.my_wallet_title} text-center`}>
               Your Total Balance
             </p>
-            <p className={`${style.my_wallet_amount} text-center`}>$700.00</p>
+            <p className={`${style.my_wallet_amount} text-center`}>₹700.00</p>
             <Tab.Container id="left-tabs-example">
               <Nav variant="pills" justify>
                 <Nav.Item className="me-3">
