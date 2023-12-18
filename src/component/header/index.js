@@ -67,10 +67,6 @@ const Header = () => {
                 {" "}
                 <IoCartOutline fontSize={25} />
               </Nav.Link>
-              {/* <Nav.Link className={`${style.nav_link} `}>
-                <FaUser className={`${style.info_icon} me-3`} />
-                Account
-              </Nav.Link> */}
               <NavDropdown
                 title={
                   <>
@@ -84,16 +80,8 @@ const Header = () => {
                 <NavDropdown.Item href="#action/3.1">
                   Bank & AutoPay
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Import Funds
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Watchlist
-                </NavDropdown.Item>
-                {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item href="#action/3.4">Orders</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">Reports</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">SIPs</NavDropdown.Item>
+                <NavDropdown.Item href="/watchlist">Watchlist</NavDropdown.Item>
+                <NavDropdown.Item href="#">Orders</NavDropdown.Item>
                 <NavDropdown.Item href="/profile-setting">
                   Settings
                 </NavDropdown.Item>
