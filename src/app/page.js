@@ -13,6 +13,8 @@ import MutualFundsCategory from "@/component/mutual-fund-category";
 import MutualFundList from "@/component/mutual-fund-list";
 import MutualFundWatchList from "@/component/mutual-fund-watchlist";
 import MutualFundPopularFund from "@/component/mutual-fund-popularfund";
+import CurrentInvestment from "@/component/stock-current-investment";
+import MFCurrentInvestment from "@/component/mutual-fund-current-investment";
 
 export default function Home() {
   return (
@@ -25,8 +27,8 @@ export default function Home() {
           className="mb-4 mt-5 tabs_main_div"
         >
           <Tab eventKey="Stock" title="Stock">
-            <Row className="column-reverse-mob">
-              <Col md={8}>
+            <Row className="column-reverse-mob column-reverse-tab">
+              <Col xs={12} md={12} xl={8}>
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
@@ -95,7 +97,7 @@ export default function Home() {
                   <TopSectors />
                 </div>
               </Col>
-              <Col md={4}>
+              <Col xs={12} md={8} xl={4} className="tabs_invest_div">
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
@@ -106,6 +108,14 @@ export default function Home() {
                     </div>
                   </div>
                   <Investments />
+                </div>
+                <div className="mt-5">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="mb-0 sec_title">Current Investment</h5>
+                    </div>
+                  </div>
+                  <CurrentInvestment />
                 </div>
                 <div className="mt-5 mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
@@ -122,8 +132,8 @@ export default function Home() {
             </Row>
           </Tab>
           <Tab eventKey="MutualFunds" title="MutualFunds">
-            <Row className="column-reverse-mob">
-              <Col md={8}>
+            <Row className="column-reverse-mob column-reverse-tab">
+              <Col xs={12} md={12} xl={8}>
                 <div>
                   <div className="mb-3">
                     <h5 className="mb-0 sec_title">Category</h5>
@@ -166,7 +176,7 @@ export default function Home() {
                   <MutualFundList />
                 </div>
               </Col>
-              <Col md={4}>
+              <Col xs={12} md={8} xl={4} className="tabs_invest_div">
                 <div className="mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
@@ -177,6 +187,14 @@ export default function Home() {
                     </div>
                   </div>
                   <Investments />
+                </div>
+                <div className="mb-4">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="mb-0 sec_title">My Mutual Fund</h5>
+                    </div>
+                  </div>
+                  <MFCurrentInvestment />
                 </div>
               </Col>
             </Row>

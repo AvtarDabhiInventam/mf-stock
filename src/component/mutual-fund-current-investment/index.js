@@ -4,14 +4,14 @@ import styles from "../../styles/mutual-fund-category.module.scss";
 import { IoIosStar } from "react-icons/io";
 import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
 
-const MutualFundPopularFund = () => {
+const MFCurrentInvestment = () => {
   return (
     <>
-      <Row className="row_space">
+      <div className="current_investment_div">
+        {/* <Row className="row_space"> */}
         {ALL_MF_COMPANY.map((company_value, index) => {
-          console.log("test", company_value);
           return (
-            <Col key={index} xs={12} md={6} xl={6}>
+            <div key={index} className="mb-3">
               <Card className={`${styles.mf_card_div}`}>
                 <Card.Body>
                   <div className={`${styles.mf_box}`}>
@@ -32,21 +32,21 @@ const MutualFundPopularFund = () => {
                         <h6 className="mb-0">{company_value.name}</h6>
                       </div>
                       <p className={`${styles.star_rating} mb-0 d-flex `}>
-                        <IoIosStar className="me-1" /> {company_value.rating}
+                        SIP
                       </p>
                     </div>
                     <div className={`${styles.bottom_div} mt-3`}>
                       <div className="d-flex gap-3 justify-content-around">
                         <p className={`${styles.small_text} mb-0 text-center`}>
-                          Min.Invest <br />{" "}
+                          Investment <br />{" "}
                           <label>₹ {company_value.minInvest}</label>
                         </p>
                         <p className={`${styles.small_text} mb-0 text-center`}>
-                          Fund size <br />{" "}
+                          Current <br />{" "}
                           <label>₹ {company_value.fundSize}</label>
                         </p>
                         <p className={`${styles.small_text} mb-0 text-center`}>
-                          3Y return <br />{" "}
+                          Total return <br />{" "}
                           <label>% {company_value.threeYearReturn}</label>
                         </p>
                       </div>
@@ -54,12 +54,13 @@ const MutualFundPopularFund = () => {
                   </div>
                 </Card.Body>
               </Card>
-            </Col>
+            </div>
           );
         })}
-      </Row>
+        {/* </Row> */}
+      </div>
     </>
   );
 };
 
-export default MutualFundPopularFund;
+export default MFCurrentInvestment;
