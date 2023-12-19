@@ -1,10 +1,10 @@
 "use client";
+import OrderMutualFund from "@/component/order-mutualfund";
+import OrderStock from "@/component/order-stock";
 import React from "react";
 import { Col, Container, Row, Tab, Tabs } from "react-bootstrap";
-import StockWatchlistMain from "@/component/stocks-watchlists-main";
-import MutualFundWatchlistMain from "@/component/mutualfund-watchlists-main";
 
-const WatchList = () => {
+const OrderList = () => {
   return (
     <>
       <Container>
@@ -19,9 +19,9 @@ const WatchList = () => {
               <Col md={12}>
                 <div className="">
                   <div className="mb-3">
-                    <h5 className="mb-0 sec_title">Watchlist</h5>
+                    <h5 className="mb-0 sec_title">Stock Order List</h5>
                   </div>
-                  <StockWatchlistMain />
+                  <OrderStock />
                 </div>
               </Col>
             </Row>
@@ -32,10 +32,10 @@ const WatchList = () => {
                 <div className="">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
-                      <h5 className="mb-0 sec_title">Watchlist</h5>
+                      <h5 className="mb-0 sec_title">Mutual Fund Order List</h5>
                     </div>
                   </div>
-                  <MutualFundWatchlistMain />
+                  <OrderMutualFund />
                 </div>
               </Col>
             </Row>
@@ -46,4 +46,4 @@ const WatchList = () => {
   );
 };
 
-export default WatchList;
+export default OrderList;
