@@ -591,7 +591,34 @@ function StockDetail() {
                   </div>
                 </Tab>
                 <Tab eventKey="Market-sell" title="Market Sell">
-                  Tab content for Profile
+                  <div className={`${style.stock_buy_sell}`}>
+                    <div className="d-flex align-items-center justify-content-between mb-3">
+                      <p className="mb-0">Shars to Sell</p>
+                      <Form.Control
+                        size="sm"
+                        type="text"
+                        placeholder="1"
+                        style={{ width: "100px", textAlign: "right" }}
+                      />
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-0">
+                        Market Price{" "}
+                        <span className="fs-6 text-primary">NSE</span>
+                      </p>
+                      <p className="mb-0">2142.2</p>
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-0">Balance Available</p>
+                      <p className="mb-0">
+                        <BiWalletAlt /> 15000.00
+                      </p>
+                    </div>
+                    <Button variant="primary" className="w-100 mb-3">
+                      Sell
+                    </Button>
+                  </div>
                 </Tab>
               </Tabs>
               <Accordion defaultActiveKey="0" className="mt-3">

@@ -561,7 +561,6 @@ function MutualDetail() {
                       options={HoldingAnalysis.options}
                       series={HoldingAnalysis.series}
                       type="donut"
-                      width={380}
                       height={380}
                     />
                   </div>
@@ -573,7 +572,6 @@ function MutualDetail() {
                       options={HoldingAnalysis.options}
                       series={HoldingAnalysis.series}
                       type="donut"
-                      width={380}
                       height={380}
                     />
                   </div>
@@ -614,7 +612,7 @@ function MutualDetail() {
                         className={`${style.form_control}`}
                       />
                     </div>
-                    <div className="d-flex align-items-center justify-content-between mb-3">
+                    <div className="d-flex align-items-center justify-content-between mb-3 sip-date w-100">
                       <p className="mb-0">Monthly SIP Date</p>
                       {/* <Form.Control
                         size="sm"
@@ -629,19 +627,51 @@ function MutualDetail() {
                       />
                     </div>
                     <hr />
-                    <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0">Balance Available</p>
-                      <p className="mb-0">
-                        <BiWalletAlt /> 15000.00
-                      </p>
+                    <div className="d-flex align-items-center justify-content-between">
+                      <Button variant="light" className="text-dark pe-3 w-100">
+                        Add To Cart
+                      </Button>
+                      <Button variant="primary" className="w-100 ">
+                        Invest
+                      </Button>
                     </div>
-                    <Button variant="primary" className="w-100 mb-3">
-                      Buy
-                    </Button>
                   </div>
                 </Tab>
                 <Tab eventKey="One-Time" title="One Time">
-                  Tab content for Profile
+                  <div className={`${style.stock_buy_sell}`}>
+                    <div className="d-flex align-items-center justify-content-between mb-3">
+                      <p className="mb-0">SIP Amount</p>
+                      <Form.Control
+                        size="sm"
+                        type="text"
+                        placeholder="1"
+                        className={`${style.form_control}`}
+                      />
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between mb-3 sip-date w-100">
+                      <p className="mb-0">Monthly SIP Date</p>
+                      {/* <Form.Control
+                        size="sm"
+                        type="text"
+                        placeholder="1"
+                        className={`${style.form_control}`}
+                      /> */}
+                      <DatePicker
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        className={`${style.form_control} form-control`}
+                      />
+                    </div>
+                    <hr />
+                    <div className="d-flex align-items-center justify-content-between">
+                      <Button variant="light" className="text-dark pe-3 w-100">
+                        Add To Cart
+                      </Button>
+                      <Button variant="primary" className="w-100 ">
+                        Invest
+                      </Button>
+                    </div>
+                  </div>
                 </Tab>
               </Tabs>
             </div>
