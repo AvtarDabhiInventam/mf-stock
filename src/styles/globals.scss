@@ -164,19 +164,19 @@ a {
 }
 
 /* When the radio is checked, style the label accordingly */
-.custom-radio input[type="radio"]:checked + label {
+.custom-radio input[type="radio"]:checked+label {
   background: #ebefff;
   outline: solid 3px var(--blue);
 }
 
 /* When the radio is focused, style the label accordingly */
-.custom-radio input[type="radio"]:focus + label {
+.custom-radio input[type="radio"]:focus+label {
   outline: solid 3px var(--blue);
   outline-offset: 5px;
 }
 
 /* When the radio is checked, style the pseudo element accordingly */
-.custom-radio input[type="radio"]:checked + label::after {
+.custom-radio input[type="radio"]:checked+label::after {
   background: $primary;
 }
 
@@ -206,22 +206,33 @@ a {
   margin-bottom: 50px;
 }
 
+.main_sub_title {
+  font-size: 22px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 15px;
+}
+
 .doc_upload_input {
   height: auto;
 }
+
 .table_contain_middle {
   td {
     vertical-align: middle;
   }
 }
+
 .dropdown-menu {
   padding: 0px;
   border-radius: 0px;
   border: 1px solid $border-primary;
 }
+
 .dropdown-menu .dropdown-item:last-child {
   border-bottom: 0px;
 }
+
 .dropdown-menu .dropdown-item {
   padding: 10px 15px;
   border-bottom: 1px solid $border-primary;

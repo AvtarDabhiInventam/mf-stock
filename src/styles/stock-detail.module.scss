@@ -43,4 +43,32 @@
       }
     }
   }
+
+}
+
+.form_control {
+  background: $main-bg-500;
+  width: 100px;
+  text-align: right;
+}
+
+.mutual_detail_year {
+  font-size: 17px;
+  color: $text-primary;
+}
+
+.mutual_list {
+  display: flex;
+  justify-content: space-between;
+
+  h6 {
+    color: $text-gray;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    color: $text-primary;
+    font-weight: 500;
+  }
 }
