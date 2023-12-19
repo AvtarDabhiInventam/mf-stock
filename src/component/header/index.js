@@ -84,7 +84,7 @@ const Header = () => {
                 <NavDropdown.Item href="/notification">
                   Notification
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#">Orders</NavDropdown.Item>
+                <NavDropdown.Item href="/orderlist">Orders</NavDropdown.Item>
                 <NavDropdown.Item href="/profile-setting">
                   Settings
                 </NavDropdown.Item>
