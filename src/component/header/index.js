@@ -63,10 +63,6 @@ const Header = () => {
                 {" "}
                 <IoWalletOutline fontSize={25} />
               </Nav.Link>
-              <Nav.Link className={`${style.nav_link} `}>
-                {" "}
-                <IoCartOutline fontSize={25} />
-              </Nav.Link>
               <NavDropdown
                 title={
                   <>
