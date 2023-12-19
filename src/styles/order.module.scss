@@ -1,0 +1,21 @@
+@import "./variable.scss";
+
+.card_main_div {
+  background: $white;
+  border: 1px solid $border-primary;
+}
+.order_box_div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.small_text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b8b8b;
+}
+.avg_text {
+  font-weight: 500;
+  font-size: 15px;
+  color: $text-primary;
+}
