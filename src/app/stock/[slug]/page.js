@@ -567,7 +567,11 @@ function StockDetail() {
                           <BiWalletAlt /> 15000.00
                         </p>
                       </div>
-                      <Button variant="primary" className="w-100 mb-3">
+                      <Button
+                        variant="primary"
+                        className="w-100 mb-3"
+                        onClick={handleShow}
+                      >
                         Sell
                       </Button>
                     </div>
