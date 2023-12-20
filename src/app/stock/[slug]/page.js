@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Breadcrumb,
   Container,
@@ -13,14 +13,18 @@ import {
   Row,
   Accordion,
   Form,
+  ProgressBar,
+  Modal,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
 import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 import { RiTimerLine } from "react-icons/ri";
 import { GoBookmark } from "react-icons/go";
-import { FaRupeeSign } from "react-icons/fa";
+import { FaCheck, FaCheckCircle, FaRupeeSign } from "react-icons/fa";
 import ReactApexChart from "react-apexcharts";
 import { BiWalletAlt } from "react-icons/bi";
+import StockOverview from "@/component/stock-detail/StockOverview";
+import ExpertRating from "@/component/stock-detail/ExpertRating";
 
 const data = ALL_STOCK_COMPANY_DATA[0];
 
@@ -278,6 +282,7 @@ const stockGraph = {
       type: "candlestick",
       height: 350,
     },
+
     title: {
       text: "CandleStick Chart",
       align: "left",
@@ -307,7 +312,7 @@ const revenueGraph = {
     },
     plotOptions: {
       bar: {
-        borderRadius: 10,
+        columnWidth: "20%",
         dataLabels: {
           position: "top", // top, center, bottom
         },
@@ -389,271 +394,241 @@ const revenueGraph = {
   },
 };
 function StockDetail() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <div className={`${style.stock_detail} mt-5`}>
-      <Container>
-        <Breadcrumb>
-          <BreadcrumbItem href="#">Home </BreadcrumbItem>
-          <BreadcrumbItem href="#">Stocks</BreadcrumbItem>
-          <BreadcrumbItem active>Apple</BreadcrumbItem>
-        </Breadcrumb>
-        <Row>
-          <Col sm={12} md={7} lg={8} xl={9}>
-            <div className={`${style.stock_detail_logo}`}>
-              <div className="d-flex align-items-center">
-                <img
-                  src={data.logo}
-                  width={60}
-                  height={60}
-                  alt="User Image"
-                  className="rounded"
-                />
+    <>
+      <div className={`${style.stock_detail} mt-5`}>
+        <Container>
+          <Breadcrumb>
+            <BreadcrumbItem href="#">Home </BreadcrumbItem>
+            <BreadcrumbItem href="#">Stocks</BreadcrumbItem>
+            <BreadcrumbItem active>Apple</BreadcrumbItem>
+          </Breadcrumb>
+          <Row>
+            <Col sm={12} md={7} lg={8} xl={9}>
+              <div className={`${style.stock_detail_logo}`}>
+                <div className="d-flex align-items-center">
+                  <img
+                    src={data.logo}
+                    width={60}
+                    height={60}
+                    alt="User Image"
+                    className="rounded"
+                  />
+                </div>
+                <div>
+                  <div>
+                    <Button size="sm" className="me-3 rounded">
+                      <RiTimerLine style={{ marginRight: "5px" }} />
+                      Create Alert
+                    </Button>
+                    <Button size="sm" className="rounded">
+                      <GoBookmark style={{ marginRight: "5px" }} />
+                      Watchlist
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              <div className={`${style.stock_detail_stock_name}`}>
+                <h2>{data.name}</h2>
+              </div>
+              <div className={`${style.stock_detail_price}`}>
+                <h3>
+                  <FaRupeeSign fontSize={22} />
+                  {data.price}{" "}
+                  <span className={`${style.stock_detail_price_updown}`}>
+                    {data.priceUpDown}
+                  </span>
+                  <span className={`${style.stock_detail_price_updown}`}>
+                    {" "}
+                    ({data.priceUpDownPercentage}%)
+                  </span>
+                </h3>
               </div>
               <div>
-                <div>
-                  <Button size="sm" className="me-3 rounded">
-                    <RiTimerLine style={{ marginRight: "5px" }} />
-                    Create Alert
-                  </Button>
-                  <Button size="sm" className="rounded">
-                    <GoBookmark style={{ marginRight: "5px" }} />
-                    Watchlist
-                  </Button>
-                </div>
+                <ReactApexChart
+                  options={stockGraph.options}
+                  series={stockGraph.series}
+                  type="candlestick"
+                  height={350}
+                />
               </div>
-            </div>
-            <div className={`${style.stock_detail_stock_name}`}>
-              <h2>{data.name}</h2>
-            </div>
-            <div className={`${style.stock_detail_price}`}>
-              <h3>
-                <FaRupeeSign fontSize={22} />
-                {data.price}{" "}
-                <span className={`${style.stock_detail_price_updown}`}>
-                  {data.priceUpDown}
-                </span>
-                <span className={`${style.stock_detail_price_updown}`}>
-                  {" "}
-                  ({data.priceUpDownPercentage}%)
-                </span>
-              </h3>
-            </div>
-            <div>
-              <ReactApexChart
-                options={stockGraph.options}
-                series={stockGraph.series}
-                type="candlestick"
-                height={350}
-              />
-            </div>
-            <Tabs
-              defaultActiveKey="Overview"
-              id="uncontrolled-tab-example"
-              variant="pills"
-              className="mt-3"
-            >
-              <Tab eventKey="Overview" title="Overview">
-                <div className={`${style.stock_detail_stock_overview} mt-3`}>
-                  <p>{data.about}</p>
-                  <Row>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Open</h6>
-                        <p>{data.fundamental.open}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>High</h6>
-                        <p>{data.fundamental.high}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Low</h6>
-                        <p>{data.fundamental.low}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Market Cap</h6>
-                        <p>{data.fundamental.marketCap}</p>
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Avg Vol</h6>
-                        <p>{data.fundamental.avgVol}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Share Vol</h6>
-                        <p>{data.fundamental.shareVol}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Low</h6>
-                        <p>{data.fundamental.low}</p>
-                      </div>
-                    </Col>
-                    <Col sm={6} lg={3}>
-                      <div
-                        className={`${style.stock_detail_stock_performance}`}
-                      >
-                        <h6>Market Cap</h6>
-                        <p>{data.fundamental.marketCap}</p>
-                      </div>
-                    </Col>
-                  </Row>
-                </div>
-              </Tab>
-              <Tab eventKey="Financials" title="Financials">
-                <div className={`${style.stock_detail_stock_overview}`}>
+              <StockOverview />
+              <ExpertRating />
+
+              <Tabs
+                defaultActiveKey="Overview"
+                id="uncontrolled-tab-example"
+                variant="pills"
+                className="mt-3"
+              >
+                <Tab eventKey="Overview" title="Revenue">
                   <ReactApexChart
                     options={revenueGraph.options}
                     series={revenueGraph.series}
                     type="bar"
                     height={350}
                   />
-                </div>
-              </Tab>
-              <Tab eventKey="News" title="News">
-                <div className={`${style.stock_detail_stock_overview}`}>
-                  {/* <ReactApexChart
+                </Tab>
+                <Tab eventKey="Financials" title="Profit">
+                  <div className={`${style.stock_detail_stock_overview}`}>
+                    <ReactApexChart
+                      options={revenueGraph.options}
+                      series={revenueGraph.series}
+                      type="bar"
+                      height={350}
+                    />
+                  </div>
+                </Tab>
+                <Tab eventKey="News" title="Net Worth">
+                  <div className={`${style.stock_detail_stock_overview}`}>
+                    {/* <ReactApexChart
                 options={stockGraph.options}
                 series={stockGraph.series}
                 type="candlestick"
                 height={350}
               /> */}
-                  <ReactApexChart
-                    options={revenueGraph.options}
-                    series={revenueGraph.series}
-                    type="bar"
-                    height={350}
-                  />
-                </div>
-              </Tab>
-            </Tabs>
-          </Col>
-          <Col sm={12} md={5} lg={4} xl={3}>
-            <div className="common-card">
-              <Tabs
-                defaultActiveKey="Market-buy"
-                id="uncontrolled-tab-example"
-                className="mb-3 tabs_main_div"
-              >
-                <Tab eventKey="Market-buy" title="Market Buy">
-                  <div className={`${style.stock_buy_sell}`}>
-                    <div className="d-flex align-items-center justify-content-between mb-3">
-                      <p className="mb-0">Shars to Buy</p>
-                      <Form.Control
-                        size="sm"
-                        type="text"
-                        placeholder="1"
-                        style={{ width: "100px", textAlign: "right" }}
-                      />
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0">
-                        Market Price{" "}
-                        <span className="fs-6 text-primary">NSE</span>
-                      </p>
-                      <p className="mb-0">2142.2</p>
-                    </div>
-                    <hr />
-                    <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0">Balance Available</p>
-                      <p className="mb-0">
-                        <BiWalletAlt /> 15000.00
-                      </p>
-                    </div>
-                    <Button variant="primary" className="w-100 mb-3">
-                      Buy
-                    </Button>
-                  </div>
-                </Tab>
-                <Tab eventKey="Market-sell" title="Market Sell">
-                  <div className={`${style.stock_buy_sell}`}>
-                    <div className="d-flex align-items-center justify-content-between mb-3">
-                      <p className="mb-0">Shars to Sell</p>
-                      <Form.Control
-                        size="sm"
-                        type="text"
-                        placeholder="1"
-                        style={{ width: "100px", textAlign: "right" }}
-                      />
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0">
-                        Market Price{" "}
-                        <span className="fs-6 text-primary">NSE</span>
-                      </p>
-                      <p className="mb-0">2142.2</p>
-                    </div>
-                    <hr />
-                    <div className="d-flex align-items-center justify-content-between mb-4">
-                      <p className="mb-0">Balance Available</p>
-                      <p className="mb-0">
-                        <BiWalletAlt /> 15000.00
-                      </p>
-                    </div>
-                    <Button variant="primary" className="w-100 mb-3">
-                      Sell
-                    </Button>
+                    <ReactApexChart
+                      options={revenueGraph.options}
+                      series={revenueGraph.series}
+                      type="bar"
+                      height={350}
+                    />
                   </div>
                 </Tab>
               </Tabs>
-              <Accordion defaultActiveKey="0" className="mt-3">
-                <Accordion.Item>
-                  <Accordion.Header>Open Orders</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-                <Accordion.Item eventKey="1">
-                  <Accordion.Header>positions</Accordion.Header>
-                  <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+            <Col sm={12} md={5} lg={4} xl={3}>
+              <div className="common-card">
+                <Tabs
+                  defaultActiveKey="Market-buy"
+                  id="uncontrolled-tab-example"
+                  className="mb-3 tabs_main_div"
+                >
+                  <Tab eventKey="Market-buy" title="Market Buy">
+                    <div className={`${style.stock_buy_sell}`}>
+                      <div className="d-flex align-items-center justify-content-between mb-3">
+                        <p className="mb-0">Shars to Buy</p>
+                        <Form.Control
+                          size="sm"
+                          type="text"
+                          placeholder="1"
+                          style={{ width: "100px", textAlign: "right" }}
+                        />
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between mb-4">
+                        <p className="mb-0">
+                          Market Price{" "}
+                          <span className="fs-6 text-primary">NSE</span>
+                        </p>
+                        <p className="mb-0">2142.2</p>
+                      </div>
+                      <hr />
+                      <div className="d-flex align-items-center justify-content-between mb-4">
+                        <p className="mb-0">Balance Available</p>
+                        <p className="mb-0">
+                          <BiWalletAlt /> 15000.00
+                        </p>
+                      </div>
+                      <Button
+                        variant="primary"
+                        className="w-100 mb-3"
+                        onClick={handleShow}
+                      >
+                        Buy
+                      </Button>
+                    </div>
+                  </Tab>
+                  <Tab eventKey="Market-sell" title="Market Sell">
+                    <div className={`${style.stock_buy_sell}`}>
+                      <div className="d-flex align-items-center justify-content-between mb-3">
+                        <p className="mb-0">Shars to Sell</p>
+                        <Form.Control
+                          size="sm"
+                          type="text"
+                          placeholder="1"
+                          style={{ width: "100px", textAlign: "right" }}
+                        />
+                      </div>
+                      <div className="d-flex align-items-center justify-content-between mb-4">
+                        <p className="mb-0">
+                          Market Price{" "}
+                          <span className="fs-6 text-primary">NSE</span>
+                        </p>
+                        <p className="mb-0">2142.2</p>
+                      </div>
+                      <hr />
+                      <div className="d-flex align-items-center justify-content-between mb-4">
+                        <p className="mb-0">Balance Available</p>
+                        <p className="mb-0">
+                          <BiWalletAlt /> 15000.00
+                        </p>
+                      </div>
+                      <Button variant="primary" className="w-100 mb-3">
+                        Sell
+                      </Button>
+                    </div>
+                  </Tab>
+                </Tabs>
+                <Accordion defaultActiveKey="0" className="mt-3">
+                  <Accordion.Item>
+                    <Accordion.Header>Open Orders</Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>positions</Accordion.Header>
+                    <Accordion.Body>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        className="modal-confirm"
+        centered
+      >
+        <Modal.Header closeButton className="text-center">
+          <div className="icon-box">
+            {" "}
+            <FaCheck fontSize={45} />
+          </div>
+          <h4 class="modal-title w-100">SUCCESS!</h4>
+        </Modal.Header>
+        <Modal.Body className="text-center">
+          your autopay request has been submitted successfully
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose} className="w-100">
+            Done
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 }
 
