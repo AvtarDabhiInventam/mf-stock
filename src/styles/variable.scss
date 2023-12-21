@@ -1,12 +1,13 @@
 /* make the customizations */
 
 // Color system
+$dark-blue: #022E88;
 $white: #ffffff !default;
-$green: #0abb92 !default;
-$red: #d55438 !default;
+$green: #00C853 !default;
+$red: #FF1744 !default;
 $main-bg: #ffffff !default;
 $main-bg-500: #f0f0f2 !default;
-$text-primary: #44475b !default;
+$text-primary: #1e202f !default;
 $border-primary: #e9e9eb !default;
 $body-font: "Roboto", sans-serif;
 $border-radius: 5px !default;
@@ -18,7 +19,7 @@ $accordion-border-color: $border-primary;
 $body-color: $text-primary !default;
 $body-font-family: $body-font;
 $body-font-size: 16px;
-$primary: $green;
+$primary: $dark-blue;
 $danger: $red;
 // $secondary: $pink !default;
 // $gray: $gray !default;
