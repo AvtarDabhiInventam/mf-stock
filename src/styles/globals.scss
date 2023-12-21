@@ -369,6 +369,11 @@ a {
   right: -5px;
 }
 
+.slick-prev {
+  left: -10px;
+  z-index: 99;
+}
+
 /* bordered tab*/
 
 .tab-bordered .nav-item .nav-link.active {

@@ -15,6 +15,8 @@ import {
   Form,
   ProgressBar,
   Modal,
+  OverlayTrigger,
+  Tooltip,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
 import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
@@ -447,14 +449,24 @@ function StockDetail() {
 
                   <div>
                     <div>
-                      <Button size="sm" className="me-3 rounded">
-                        <RiTimerLine style={{ marginRight: "5px" }} />
-                        Create Alert
-                      </Button>
-                      <Button size="sm" className="rounded">
-                        <GoBookmark style={{ marginRight: "5px" }} />
-                        Watchlist
-                      </Button>
+                      <OverlayTrigger
+                        key={"top"}
+                        placement={"bottom"}
+                        overlay={<Tooltip id={`tooltip-top`}>Alert</Tooltip>}
+                      >
+                        <Button size="sm" className="me-3 rounded">
+                          <RiTimerLine fontSize={22} />
+                        </Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        key={"top"}
+                        placement={"bottom"}
+                        overlay={<Tooltip id={`tooltip-top`}>Wishlist</Tooltip>}
+                      >
+                        <Button size="sm" className="me-3 rounded">
+                          <GoBookmark fontSize={22} />
+                        </Button>
+                      </OverlayTrigger>
                     </div>
                   </div>
                 </div>
