@@ -15,6 +15,8 @@ import {
   Form,
   ProgressBar,
   Modal,
+  OverlayTrigger,
+  Tooltip,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
 import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
@@ -25,6 +27,7 @@ import ReactApexChart from "react-apexcharts";
 import { BiWalletAlt } from "react-icons/bi";
 import StockOverview from "@/component/stock-detail/StockOverview";
 import ExpertRating from "@/component/stock-detail/ExpertRating";
+import OrderStock from "@/component/order-stock";
 
 const data = ALL_STOCK_COMPANY_DATA[0];
 
@@ -409,45 +412,66 @@ function StockDetail() {
           </Breadcrumb>
           <Row>
             <Col sm={12} md={7} lg={8} xl={9}>
-              <div className={`${style.stock_detail_logo}`}>
-                <div className="d-flex align-items-center">
-                  <img
-                    src={data.logo}
-                    width={60}
-                    height={60}
-                    alt="User Image"
-                    className="rounded"
-                  />
-                </div>
-                <div>
+              <div className={`${style.stock_detail_stock_name}`}>
+                <div className="d-flex align-items-center justify-content-between w-100 mb-5">
+                  <div className="d-flex ">
+                    <div className={`${style.stock_detail_logo}`}>
+                      <div className="d-flex align-items-center">
+                        <img
+                          src={data.logo}
+                          width={150}
+                          height={150}
+                          alt="User Image"
+                        />
+                      </div>
+                    </div>
+                    <div className="ms-4">
+                      <h2>{data.name}</h2>
+                      <div className={`${style.stock_detail_price}`}>
+                        <h3>
+                          <FaRupeeSign fontSize={22} />
+                          {data.price}{" "}
+                          <span
+                            className={`${style.stock_detail_price_updown}`}
+                          >
+                            {data.priceUpDown}
+                          </span>
+                          <span
+                            className={`${style.stock_detail_price_updown}`}
+                          >
+                            {" "}
+                            ({data.priceUpDownPercentage}%)
+                          </span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+
                   <div>
-                    <Button size="sm" className="me-3 rounded">
-                      <RiTimerLine style={{ marginRight: "5px" }} />
-                      Create Alert
-                    </Button>
-                    <Button size="sm" className="rounded">
-                      <GoBookmark style={{ marginRight: "5px" }} />
-                      Watchlist
-                    </Button>
+                    <div>
+                      <OverlayTrigger
+                        key={"top"}
+                        placement={"bottom"}
+                        overlay={<Tooltip id={`tooltip-top`}>Alert</Tooltip>}
+                      >
+                        <Button size="sm" className="me-3 rounded">
+                          <RiTimerLine fontSize={22} />
+                        </Button>
+                      </OverlayTrigger>
+                      <OverlayTrigger
+                        key={"top"}
+                        placement={"bottom"}
+                        overlay={<Tooltip id={`tooltip-top`}>Wishlist</Tooltip>}
+                      >
+                        <Button size="sm" className="me-3 rounded">
+                          <GoBookmark fontSize={22} />
+                        </Button>
+                      </OverlayTrigger>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className={`${style.stock_detail_stock_name}`}>
-                <h2>{data.name}</h2>
-              </div>
-              <div className={`${style.stock_detail_price}`}>
-                <h3>
-                  <FaRupeeSign fontSize={22} />
-                  {data.price}{" "}
-                  <span className={`${style.stock_detail_price_updown}`}>
-                    {data.priceUpDown}
-                  </span>
-                  <span className={`${style.stock_detail_price_updown}`}>
-                    {" "}
-                    ({data.priceUpDownPercentage}%)
-                  </span>
-                </h3>
-              </div>
+
               <div>
                 <ReactApexChart
                   options={stockGraph.options}
@@ -501,7 +525,7 @@ function StockDetail() {
                 </Tab>
               </Tabs>
             </Col>
-            <Col sm={12} md={5} lg={4} xl={3}>
+            <Col sm={12} md={5} lg={4} xl={3} className="">
               <div className="common-card">
                 <Tabs
                   defaultActiveKey="Market-buy"
@@ -511,7 +535,7 @@ function StockDetail() {
                   <Tab eventKey="Market-buy" title="Market Buy">
                     <div className={`${style.stock_buy_sell}`}>
                       <div className="d-flex align-items-center justify-content-between mb-3">
-                        <p className="mb-0">Shars to Buy</p>
+                        <p className="mb-0 fw-medium">Quantity</p>
                         <Form.Control
                           size="sm"
                           type="text"
@@ -519,13 +543,68 @@ function StockDetail() {
                           style={{ width: "100px", textAlign: "right" }}
                         />
                       </div>
-                      <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-2 fw-medium">Select Order</p>
+                      <Tabs
+                        defaultActiveKey="market"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="market" title="Market">
+                          <Form.Group
+                            controlId="formBasicPassword"
+                            className="mb-3"
+                          >
+                            <Form.Label>Market Price</Form.Label>
+                            <Form.Control
+                              type="password"
+                              placeholder="Enter Market Price"
+                            />
+                          </Form.Group>
+                        </Tab>
+                        <Tab eventKey="limit" title="Limit">
+                          <Form.Group
+                            controlId="formBasicPassword"
+                            className="mb-3"
+                          >
+                            <Form.Label>Limit Price</Form.Label>
+                            <Form.Control
+                              type="password"
+                              placeholder="Enter Limit Price"
+                            />
+                          </Form.Group>
+                        </Tab>
+                      </Tabs>
+                      {/* <div className="d-flex align-items-center justify-content-between mb-4">
                         <p className="mb-0">
                           Market Price{" "}
                           <span className="fs-6 text-primary">NSE</span>
                         </p>
                         <p className="mb-0">2142.2</p>
-                      </div>
+                      </div> */}
+                      <p className="mb-2 fw-medium">Select Share</p>
+                      <Tabs
+                        defaultActiveKey="BSE"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="BSE" title="BSE"></Tab>
+                        <Tab eventKey="NSE" title="NSE"></Tab>
+                      </Tabs>
+                      <p className="mb-2 fw-medium">Type</p>
+                      <Tabs
+                        defaultActiveKey="Delivery"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="Delivery" title="Delivery"></Tab>
+                        <Tab eventKey="Intraday" title="Intraday"></Tab>
+                      </Tabs>
                       <hr />
                       <div className="d-flex align-items-center justify-content-between mb-4">
                         <p className="mb-0">Balance Available</p>
@@ -545,7 +624,7 @@ function StockDetail() {
                   <Tab eventKey="Market-sell" title="Market Sell">
                     <div className={`${style.stock_buy_sell}`}>
                       <div className="d-flex align-items-center justify-content-between mb-3">
-                        <p className="mb-0">Shars to Sell</p>
+                        <p className="mb-0 fw-medium">Quantity</p>
                         <Form.Control
                           size="sm"
                           type="text"
@@ -553,13 +632,68 @@ function StockDetail() {
                           style={{ width: "100px", textAlign: "right" }}
                         />
                       </div>
-                      <div className="d-flex align-items-center justify-content-between mb-4">
+                      <p className="mb-2 fw-medium">Select Order</p>
+                      <Tabs
+                        defaultActiveKey="market"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="market" title="Market">
+                          <Form.Group
+                            controlId="formBasicPassword"
+                            className="mb-3"
+                          >
+                            <Form.Label>Market Price</Form.Label>
+                            <Form.Control
+                              type="password"
+                              placeholder="Enter Market Price"
+                            />
+                          </Form.Group>
+                        </Tab>
+                        <Tab eventKey="limit" title="Limit">
+                          <Form.Group
+                            controlId="formBasicPassword"
+                            className="mb-3"
+                          >
+                            <Form.Label>Limit Price</Form.Label>
+                            <Form.Control
+                              type="password"
+                              placeholder="Enter Limit Price"
+                            />
+                          </Form.Group>
+                        </Tab>
+                      </Tabs>
+                      {/* <div className="d-flex align-items-center justify-content-between mb-4">
                         <p className="mb-0">
                           Market Price{" "}
                           <span className="fs-6 text-primary">NSE</span>
                         </p>
                         <p className="mb-0">2142.2</p>
-                      </div>
+                      </div> */}
+                      <p className="mb-2 fw-medium">Select Share</p>
+                      <Tabs
+                        defaultActiveKey="BSE"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="BSE" title="BSE"></Tab>
+                        <Tab eventKey="NSE" title="NSE"></Tab>
+                      </Tabs>
+                      <p className="mb-2 fw-medium">Type</p>
+                      <Tabs
+                        defaultActiveKey="Delivery"
+                        id="justify-tab-example"
+                        className="mb-3 tab-bordered"
+                        justify
+                        variant="pills"
+                      >
+                        <Tab eventKey="Delivery" title="Delivery"></Tab>
+                        <Tab eventKey="Intraday" title="Intraday"></Tab>
+                      </Tabs>
                       <hr />
                       <div className="d-flex align-items-center justify-content-between mb-4">
                         <p className="mb-0">Balance Available</p>
@@ -572,7 +706,7 @@ function StockDetail() {
                         className="w-100 mb-3"
                         onClick={handleShow}
                       >
-                        Sell
+                        Buy
                       </Button>
                     </div>
                   </Tab>
@@ -580,28 +714,14 @@ function StockDetail() {
                 <Accordion defaultActiveKey="0" className="mt-3">
                   <Accordion.Item>
                     <Accordion.Header>Open Orders</Accordion.Header>
-                    <Accordion.Body>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                    <Accordion.Body className="p-2">
+                      <OrderStock lg={12} md={12} />
                     </Accordion.Body>
                   </Accordion.Item>
                   <Accordion.Item eventKey="1">
                     <Accordion.Header>positions</Accordion.Header>
-                    <Accordion.Body>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
+                    <Accordion.Body className="p-2">
+                      <OrderStock lg={12} md={12} />
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>

@@ -5,26 +5,41 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    img {
+      border-radius: 50%;
+
+    }
   }
 
   .stock_detail_price {
     margin-top: 15px;
+    margin-bottom: 0;
 
     h3 {
       color: $text-primary;
+      font-size: 36px;
+      font-weight: 600;
     }
   }
 
   .stock_detail_stock_name {
+    display: flex;
+    align-items: center;
+
     h2 {
-      font-size: 22px;
+      font-size: 48px;
       margin-top: 15px;
       color: $text-primary;
+      text-transform: uppercase;
+      padding-left: 10px;
+
+
     }
   }
 
   .stock_detail_price_updown {
-    color: $primary;
+    color: $green;
     font-size: 16px;
   }
 

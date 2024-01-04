@@ -3,14 +3,14 @@ import styles from "@/styles/order.module.scss";
 import { Card, Col, Row } from "react-bootstrap";
 import { ALL_STOCKS_ORDERS } from "@/jsondata/allOrdersConstant";
 
-const OrderStock = () => {
+const OrderStock = ({ lg = 4, md = 6 }) => {
   return (
     <>
       <Row className="row_space">
         {ALL_STOCKS_ORDERS.map((value, index) => {
           return (
             <>
-              <Col xs={12} md={6} lg={4}>
+              <Col lg={lg} md={md}>
                 <Card className={`${styles.card_main_div}`}>
                   <Card.Body>
                     <h6 className="mb-3">{value.date}</h6>
