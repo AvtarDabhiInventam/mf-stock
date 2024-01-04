@@ -1,9 +1,12 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
+import {
+  ALL_STOCK_COMPANY_DATA,
+  STOCK_DETAILS,
+} from "@/jsondata/stockConstant";
 
-const data = ALL_STOCK_COMPANY_DATA[0];
+const data = STOCK_DETAILS[0];
 function StockOverview() {
   return (
     <div className={`${style.stock_detail_stock_overview} mt-3`}>

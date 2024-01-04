@@ -434,13 +434,13 @@ function StockDetail() {
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
-                            {data.priceUpDown}
+                            {data.result}
                           </span>
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
                             {" "}
-                            ({data.priceUpDownPercentage}%)
+                            ({data.ltp}%)
                           </span>
                         </h3>
                       </div>

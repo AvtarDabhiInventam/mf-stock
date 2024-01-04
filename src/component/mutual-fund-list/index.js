@@ -23,7 +23,7 @@ const MutualFundList = () => {
                       >
                         <div className={`${styles.img_box}`}>
                           <img
-                            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
+                            src={company_value.logo}
                             alt="logo"
                             width={38}
                             height={38}

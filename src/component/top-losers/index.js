@@ -11,13 +11,13 @@ const TopLosers = () => {
         className="mb-4 mt-0 tabs_main_div"
       >
         <Tab eventKey="Large" title="Large">
-          <StocksList />
+          <StocksList section="topLosers" />
         </Tab>
         <Tab eventKey="Mid" title="Mid">
-          <StocksList />
+          <StocksList section="topLosers" />
         </Tab>
         <Tab eventKey="Small" title="Small">
-          <StocksList />
+          <StocksList section="topLosers" />
         </Tab>
       </Tabs>
     </>

@@ -72,7 +72,7 @@ export default function Home() {
                       <Link href="/">News</Link>
                     </div>
                   </div>
-                  <StocksList />
+                  <StocksList section="stocksInNews" />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">

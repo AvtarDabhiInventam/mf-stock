@@ -5,11 +5,14 @@ import { IoIosStar } from "react-icons/io";
 import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
 
 const MFCurrentInvestment = () => {
+  const filteredItems =
+    ALL_MF_COMPANY?.filter((item) => item.section === "myMutualFund") ||
+    ALL_MF_COMPANY;
   return (
     <>
       <div className="current_investment_div">
         {/* <Row className="row_space"> */}
-        {ALL_MF_COMPANY.map((company_value, index) => {
+        {filteredItems?.map((company_value, index) => {
           return (
             <div key={index} className="mb-3">
               <Card className={`${styles.mf_card_div}`}>
@@ -23,7 +26,7 @@ const MFCurrentInvestment = () => {
                       >
                         <div className={`${styles.img_box}`}>
                           <img
-                            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
+                            src={company_value.logo}
                             alt="logo"
                             width={38}
                             height={38}
