@@ -3,8 +3,7 @@ import { Card, Col, Row } from "react-bootstrap";
 import styles from "../../styles/stock-card.module.scss";
 import { MAIN_CARD } from "@/jsondata/stockConstant";
 import Slider from "react-slick";
-
-console.log("NiftyIndex", MAIN_CARD);
+import Link from "next/link";
 
 const IndexMarket = () => {
   var settings = {
@@ -22,7 +21,11 @@ const IndexMarket = () => {
         {MAIN_CARD.map((value, index) => {
           return (
             <>
-              <Card className={`${styles.card_main_div}`}>
+              <Card
+                as={Link}
+                href={`/stock-detail/${value?.slug}`}
+                className={`${styles.card_main_div}`}
+              >
                 <Card.Body>
                   <h6 className={`${styles.title}`}>{value.name}</h6>
                   <p className={`${styles.index_value}`}>

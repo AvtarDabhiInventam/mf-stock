@@ -15,7 +15,7 @@ const StockWatchlistMain = () => {
     options: {
       // chart: {
       //   height: 350,
-      //   type: "line",
+      //   type: "area",
       //   zoom: {
       //     enabled: false,
       //   },
@@ -26,7 +26,7 @@ const StockWatchlistMain = () => {
           show: false,
         },
         height: 100,
-        type: "line",
+        type: "area",
         zoom: {
           enabled: false,
         },
@@ -120,7 +120,7 @@ const StockWatchlistMain = () => {
                         <ReactApexChart
                           options={stockWatchListGraph.options}
                           series={stockWatchListGraph.series}
-                          type="line"
+                          type="area"
                           height={40}
                           width={100}
                         />

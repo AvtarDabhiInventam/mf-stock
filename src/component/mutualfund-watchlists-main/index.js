@@ -15,7 +15,7 @@ const MutualFundWatchlistMain = () => {
     options: {
       // chart: {
       //   height: 350,
-      //   type: "line",
+      //   type: "area",
       //   zoom: {
       //     enabled: false,
       //   },
@@ -26,7 +26,7 @@ const MutualFundWatchlistMain = () => {
           show: false,
         },
         height: 100,
-        type: "line",
+        type: "area",
         zoom: {
           enabled: false,
         },

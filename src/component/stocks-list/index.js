@@ -7,16 +7,11 @@ import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 // import { ALL_DATA } from "@/jsondata/stockConstant";
 import Link from "next/link";
 
-console.log("ALL_STOCK_COMPANY_DATA", ALL_STOCK_COMPANY_DATA);
-const StocksList = ({ section }) => {
-  const filteredItems = section
-    ? ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === section)
-    : ALL_STOCK_COMPANY_DATA;
-  console.log("filteredItems :>> ", filteredItems);
+const StocksList = ({ STOCK_LIST }) => {
   return (
     <>
       <Row className="row_space">
-        {filteredItems?.map((value, index) => {
+        {STOCK_LIST?.map((value, index) => {
           return (
             <>
               <Col xs={6} md={4} xl={3}>
