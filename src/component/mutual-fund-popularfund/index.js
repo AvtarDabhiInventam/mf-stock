@@ -10,7 +10,7 @@ const MutualFundPopularFund = () => {
     <>
       <Row className="row_space">
         {ALL_MF_COMPANY.map((company_value, index) => {
-          console.log("test", company_value);
+          // console.log("test", company_value);
           return (
             <Col key={index} xs={12} md={12} xl={6}>
               <Card

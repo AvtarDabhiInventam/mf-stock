@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Breadcrumb,
   Container,
@@ -29,7 +29,7 @@ import StockOverview from "@/component/stock-detail/StockOverview";
 import ExpertRating from "@/component/stock-detail/ExpertRating";
 import OrderStock from "@/component/order-stock";
 
-const data = ALL_STOCK_COMPANY_DATA[0];
+const data = ALL_STOCK_COMPANY_DATA;
 
 console.log("all data", data);
 
@@ -396,11 +396,41 @@ const revenueGraph = {
     },
   },
 };
-function StockDetail() {
+function StockDetail({ params }) {
+  console.log("params", params.slug);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [stockItem, setStockItem] = useState(null);
+
+  useEffect(() => {
+    const fetchCartItem = async () => {
+      try {
+        const response = data.find((value) => {
+          console.log("value", value);
+          if (value._id == params.slug) {
+            setStockItem(value);
+            console.log("find", value);
+            return value;
+          }
+        });
+
+        // console.log("find", response);
+        // const data = await response.json(response.data);
+        // setStockItem(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchCartItem();
+  }, [params]);
+
+  console.log("stockItem", stockItem);
+
+  if (stockItem == null) {
+    return null;
+  }
   return (
     <>
       <div className={`${style.stock_detail} mt-5`}>
@@ -418,7 +448,7 @@ function StockDetail() {
                     <div className={`${style.stock_detail_logo}`}>
                       <div className="d-flex align-items-center">
                         <img
-                          src={data.logo}
+                          src={stockItem.logo}
                           width={150}
                           height={150}
                           alt="User Image"
@@ -426,21 +456,21 @@ function StockDetail() {
                       </div>
                     </div>
                     <div className="ms-4">
-                      <h2>{data.name}</h2>
+                      <h2>{stockItem.name}</h2>
                       <div className={`${style.stock_detail_price}`}>
                         <h3>
                           <FaRupeeSign fontSize={22} />
-                          {data.price}{" "}
+                          {stockItem.price}{" "}
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
-                            {data.priceUpDown}
+                            {stockItem.priceUpDown}
                           </span>
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
                             {" "}
-                            ({data.priceUpDownPercentage}%)
+                            ({stockItem.priceUpDownPercentage}%)
                           </span>
                         </h3>
                       </div>

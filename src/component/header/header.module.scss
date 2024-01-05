@@ -74,6 +74,25 @@
   color: $text-primary;
 }
 
+.form_inputs {
+  position: relative;
+  margin-left: 100px;
+  width: 600px;
+
+  .form_control {
+    height: 45px;
+    padding-right: 45px;
+  }
+
+  .search_icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .navbar_main_div {
     margin-top: 0px;
@@ -110,6 +129,7 @@
       color: $text-primary;
     }
   }
+
   .profile_dropdown {
     display: block;
   }

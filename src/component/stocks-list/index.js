@@ -18,7 +18,7 @@ const StocksList = () => {
               <Col xs={6} md={4} xl={3}>
                 <Card
                   as={Link}
-                  href={"/stock/1"}
+                  href={`/stock/${value._id}`}
                   className={`${styles.card_main_div}`}
                 >
                   <Card.Body>

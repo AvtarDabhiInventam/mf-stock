@@ -93,7 +93,7 @@ const data = [
       </div>
     ),
     year: (
-      <span className="fs-6 mb-2 fw-semibold text-primary">+ $3000.00</span>
+      <span className="fs-6 mb-2 fw-semibold text-success">+ $3000.00</span>
     ),
   },
   {
@@ -114,7 +114,7 @@ const data = [
         </div>
       </div>
     ),
-    year: <span className="fs-6 mb-2 fw-semibold text-primary">+ 6200.00</span>,
+    year: <span className="fs-6 mb-2 fw-semibold text-success">+ 6200.00</span>,
   },
   {
     id: 1,

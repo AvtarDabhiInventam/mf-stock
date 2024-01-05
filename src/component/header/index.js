@@ -13,6 +13,7 @@ import Image from "next/image";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { IoWalletOutline } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
+import { IoSearchSharp } from "react-icons/io5";
 
 const CustomNavItem = ({ text }) => {
   return (
@@ -46,6 +47,15 @@ const Header = () => {
               <Image src={logo} alt="Banner Image" width={65} height={65} />
             </Link>
           </Navbar.Brand>
+          <div className={`${style.form_inputs} d-flex`}>
+            <input
+              class=""
+              className={`${style.form_control} form-control`}
+              type="text"
+              placeholder="Search any product..."
+            />
+            <IoSearchSharp fontSize={20} className={`${style.search_icon}`} />
+          </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
