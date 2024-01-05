@@ -9,7 +9,7 @@ const MutualFundList = () => {
     <>
       <Row className="row_space">
         {ALL_MF_COMPANY.map((company_value, index) => {
-          console.log("test", company_value);
+          // console.log("test", company_value);
           return (
             <Col key={index} xs={12} md={6}>
               <Card className={`${styles.mf_card_div}`}>
@@ -23,7 +23,7 @@ const MutualFundList = () => {
                       >
                         <div className={`${styles.img_box}`}>
                           <img
-                            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
+                            src={company_value.logo}
                             alt="logo"
                             width={38}
                             height={38}

@@ -131,9 +131,9 @@ const StockWatchlistMain = () => {
                     </td>
                     <td>
                       <label
-                        className={`${styles.index_percentage} green-color fw-bold`}
+                        className={`${styles.index_percentage} ${value.colorstatus} fw-bold`}
                       >
-                        {value.priceUpDown} ({value.priceUpDownPercentage}%)
+                        {value.result} ({value.ltp}%)
                       </label>
                     </td>
                     <td className={`${styles.index_value}`}>

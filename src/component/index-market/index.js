@@ -28,12 +28,9 @@ const IndexMarket = () => {
                   <p className={`${styles.index_value}`}>
                     {value.price}{" "}
                     <label
-                      className={`${styles.index_percentage} ${
-                        value.priceUp ? "green-color" : "text-danger"
-                      } `}
+                      className={`${styles.index_percentage} ${value.colorstatus} `}
                     >
-                      {value.priceUp ? value.priceUp : value.priceDown} (
-                      {value.pricePercentage}%)
+                      {value.result} ({value.ltp}%)
                     </label>
                   </p>
                 </Card.Body>

@@ -83,10 +83,14 @@ const WatchlistsStocks = () => {
     },
   };
 
+  const filteredItems =
+    ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === "watchlist") ||
+    ALL_STOCK_COMPANY_DATA;
+
   return (
     <>
       <div className={`${styles.watchlists_main_div}`}>
-        {ALL_STOCK_COMPANY_DATA.map((value, index) => {
+        {filteredItems?.map((value, index) => {
           return (
             <>
               <div className={`${styles.watchlists_box_div}`}>
@@ -108,8 +112,10 @@ const WatchlistsStocks = () => {
                   <p className={`${styles.index_value}`}>
                     {value.price}
                     <br />
-                    <label className={`${styles.index_percentage} green-color`}>
-                      {value.priceUpDown} ({value.priceUpDownPercentage}%)
+                    <label
+                      className={`${styles.index_percentage} ${value.colorstatus}`}
+                    >
+                      {value.result} ({value.ltp}%)
                     </label>
                   </p>
                 </div>
