@@ -6,11 +6,14 @@ import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
 import Link from "next/link";
 
 const MutualFundPopularFund = () => {
+  const filteredItems =
+    ALL_MF_COMPANY?.filter((item) => item.section === "popularFund") ||
+    ALL_MF_COMPANY;
   return (
     <>
       <Row className="row_space">
-        {ALL_MF_COMPANY.map((company_value, index) => {
-          // console.log("test", company_value);
+        {filteredItems.map((company_value, index) => {
+          console.log("test", company_value);
           return (
             <Col key={index} xs={12} md={12} xl={6}>
               <Card
@@ -28,7 +31,7 @@ const MutualFundPopularFund = () => {
                       >
                         <div className={`${styles.img_box}`}>
                           <img
-                            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
+                            src={company_value.logo}
                             alt="logo"
                             width={38}
                             height={38}

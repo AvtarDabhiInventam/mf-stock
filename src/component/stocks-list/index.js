@@ -8,11 +8,15 @@ import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 import Link from "next/link";
 
 console.log("ALL_STOCK_COMPANY_DATA", ALL_STOCK_COMPANY_DATA);
-const StocksList = () => {
+const StocksList = ({ section }) => {
+  const filteredItems = section
+    ? ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === section)
+    : ALL_STOCK_COMPANY_DATA;
+  console.log("filteredItems :>> ", filteredItems);
   return (
     <>
       <Row className="row_space">
-        {ALL_STOCK_COMPANY_DATA.map((value, index) => {
+        {filteredItems?.map((value, index) => {
           return (
             <>
               <Col xs={6} md={4} xl={3}>
@@ -35,9 +39,9 @@ const StocksList = () => {
                       {value.price}
                       <br />
                       <label
-                        className={`${styles.index_percentage} green-color`}
+                        className={`${styles.index_percentage} ${value.colorstatus}`}
                       >
-                        {value.priceUpDown} ({value.priceUpDownPercentage}%)
+                        {value.result} ({value.ltp}%)
                       </label>
                     </p>
                   </Card.Body>

@@ -14,7 +14,10 @@ import {
   Form,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
-import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
+import {
+  ALL_MF_COMPANY,
+  MUTUALFUND_DETAILS,
+} from "@/jsondata/mutualFundConstant";
 import { RiTimerLine } from "react-icons/ri";
 import { GoBookmark } from "react-icons/go";
 import { FaRupeeSign } from "react-icons/fa";
@@ -24,7 +27,7 @@ import DataTable from "react-data-table-component";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const data = ALL_MF_COMPANY[0];
+const data = MUTUALFUND_DETAILS[0];
 
 const stockGraph = {
   series: [
@@ -489,7 +492,7 @@ function MutualDetail() {
             <div className={`${style.stock_detail_logo}`}>
               <div className="d-flex align-items-center">
                 <img
-                  src={data.logo}
+                  src={data?.logo}
                   width={60}
                   height={60}
                   alt="User Image"

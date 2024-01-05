@@ -99,7 +99,6 @@ const MutualFundWatchlistMain = () => {
           </thead>
           <tbody>
             {ALL_MF_COMPANY.map((value, index) => {
-              console.log("aaa", value);
               return (
                 <>
                   <tr>
