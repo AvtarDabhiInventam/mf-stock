@@ -278,12 +278,28 @@ const stockGraph = {
   ],
   options: {
     chart: {
-      type: "candlestick",
+      type: "area",
       height: 350,
     },
+    dataLabels: {
+      enabled: false,
+    },
+    markers: {
+      size: 0,
+    },
     title: {
-      text: "CandleStick Chart",
+      text: "Line Chart",
       align: "left",
+    },
+    fill: {
+      type: "gradient",
+      gradient: {
+        shadeIntensity: 1,
+        inverseColors: false,
+        opacityFrom: 0.9,
+        opacityTo: 0.5,
+        stops: [0, 90, 100],
+      },
     },
     xaxis: {
       type: "datetime",
@@ -292,6 +308,12 @@ const stockGraph = {
       tooltip: {
         enabled: true,
       },
+    },
+    tooltip: {
+      shared: false,
+    },
+    tooltip: {
+      enabled: false,
     },
   },
 };
@@ -524,7 +546,7 @@ function MutualDetail() {
               <ReactApexChart
                 options={stockGraph.options}
                 series={stockGraph.series}
-                type="candlestick"
+                type="area"
                 height={350}
               />
             </div>

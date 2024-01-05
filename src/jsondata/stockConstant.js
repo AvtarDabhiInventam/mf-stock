@@ -2,6 +2,7 @@ export const MAIN_CARD = [
   {
     _id: 1,
     name: "NIFTY 50",
+    slug: "nifty50",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.5",
@@ -10,6 +11,7 @@ export const MAIN_CARD = [
   {
     _id: 2,
     name: "SENSEX",
+    slug: "sensex",
     price: "58743.66",
     result: "+771.05",
     ltp: "1.54",
@@ -18,6 +20,7 @@ export const MAIN_CARD = [
   {
     _id: 3,
     name: "Bank NIFTY",
+    slug: "banknifty",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.535",
@@ -26,6 +29,8 @@ export const MAIN_CARD = [
   {
     _id: 4,
     name: "FINNIFTY",
+    slug: "finnifty",
+    slug: "finnifty",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.5",
@@ -34,6 +39,7 @@ export const MAIN_CARD = [
   {
     _id: 5,
     name: "NIFTY 100",
+    slug: "nifty100",
     price: "58743.66",
     result: "+771.05",
     ltp: "1.54",
@@ -42,6 +48,7 @@ export const MAIN_CARD = [
   {
     _id: 6,
     name: "Nifty Midcap Select",
+    slug: "niftyMidcapSelect",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.535",
@@ -53,6 +60,7 @@ export const ALL_DATA = [
   {
     _id: 1,
     name: "NIFTY 50",
+    slug: "nifty50",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.5",
@@ -74,6 +82,66 @@ export const ALL_DATA = [
     company: [
       {
         _id: 1,
+        section: "watchlist",
+        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+        name: "Tesla",
+        market: "NSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
+            {
+              data: [5, 30, 15, 50],
+            },
+          ],
+        },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
+      },
+      {
+        _id: 2,
         section: "topLosers",
         equityFunds: "Large",
         logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
@@ -86,8 +154,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -108,177 +175,33 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
-      {
-        _id: 2,
-        section: "watchlist",
-        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
-        name: "Tesla",
-        market: "NSE",
-        price: "100.09",
-        result: "+30.00",
-        ltp: "0.72",
-        colorstatus: "green-color",
-        chartData: {
-          datasets: [
-            {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-        about:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        fundamental: {
-          open: "$30.22",
-          high: "$30.65",
-          low: "$30.65",
-          marketCap: "$30.22",
-          avgVol: "$30.22",
-          shareVol: "$30.22",
-        },
-        expertRating: {
-          buy: "70%",
-          sell: "20%",
-          hold: "30%",
-          totalRate: "70%",
-        },
-        financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-        },
-      },
+
       {
         _id: 3,
         section: "stocksInNews",
@@ -292,8 +215,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -314,72 +236,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -396,8 +276,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -418,72 +297,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -499,8 +336,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -521,72 +357,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -603,8 +397,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -622,8 +415,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -644,72 +436,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -726,8 +476,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -748,72 +497,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -829,8 +536,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -851,72 +557,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -932,8 +596,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -954,72 +617,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1036,8 +657,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1058,72 +678,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1140,8 +718,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1162,72 +739,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1243,8 +778,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1265,72 +799,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1347,8 +839,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1369,72 +860,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1451,8 +900,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1473,72 +921,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1554,8 +960,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1576,72 +981,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1657,8 +1020,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1679,72 +1041,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1760,8 +1080,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1782,72 +1101,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1863,8 +1140,7 @@ export const ALL_DATA = [
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1885,72 +1161,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -1960,14 +1194,13 @@ export const ALL_DATA = [
         name: "HDFC bank",
         market: "NSE",
         price: "120.30",
-        result: "+30.00",
+        result: "-30.00",
         ltp: "0.72",
-        colorstatus: "green-color",
+        colorstatus: "text-danger",
         chartData: {
           datasets: [
             {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+              data: [5, 30, 15, 50],
             },
           ],
         },
@@ -1988,72 +1221,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],
@@ -2061,6 +1252,7 @@ export const ALL_DATA = [
   {
     _id: 2,
     name: "SENSEX",
+    slug: "sensex",
     price: "58743.66",
     result: "+771.05",
     ltp: "1.54",
@@ -2116,179 +1308,34 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
         _id: 2,
-        section: "watchlist",
-        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
-        name: "Tesla",
-        market: "NSE",
-        price: "100.09",
-        result: "+30.00",
-        ltp: "0.72",
-        colorstatus: "green-color",
-        chartData: {
-          datasets: [
-            {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-        about:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        fundamental: {
-          open: "$30.22",
-          high: "$30.65",
-          low: "$30.65",
-          marketCap: "$30.22",
-          avgVol: "$30.22",
-          shareVol: "$30.22",
-        },
-        expertRating: {
-          buy: "70%",
-          sell: "20%",
-          hold: "30%",
-          totalRate: "70%",
-        },
-        financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-        },
-      },
-      {
-        _id: 3,
         section: "stocksInNews",
         logo: "https://image.similarpng.com/very-thumbnail/2020/05/Flat-logo-Spotify-PNG.png",
         name: "Spotify",
@@ -2322,74 +1369,94 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
+      },
+      {
+        _id: 3,
+        section: "watchlist",
+        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+        name: "Tesla",
+        market: "NSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
             {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
             },
           ],
         },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
       },
+
       {
         _id: 4,
         section: "topLosers",
@@ -2426,72 +1493,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -2529,72 +1554,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -2652,72 +1635,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -2756,72 +1697,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -2859,72 +1758,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -2962,72 +1819,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3066,72 +1881,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3170,72 +1943,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3273,72 +2004,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3377,72 +2066,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3481,72 +2128,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3584,72 +2189,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3687,72 +2250,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3790,72 +2311,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3893,72 +2372,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -3996,72 +2433,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],
@@ -4069,10 +2464,11 @@ export const ALL_DATA = [
   {
     _id: 3,
     name: "Bank NIFTY",
+    slug: "banknifty",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.535",
-    colorstatus: "green-color",
+    colorstatus: "text-danger",
     chartData: [
       {
         date: "5 Aug 2022",
@@ -4088,6 +2484,26 @@ export const ALL_DATA = [
       },
     ],
     company: [
+      {
+        _id: 1,
+        section: "topGainers",
+        equityFunds: "Large",
+        logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
+        name: "Amazon",
+        market: "NSE",
+        price: "120.30",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
+            {
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+            },
+          ],
+        },
+      },
       {
         _id: 1,
         section: "topLosers",
@@ -4124,72 +2540,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4227,72 +2601,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4330,72 +2662,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4434,72 +2724,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4537,72 +2785,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4623,6 +2829,68 @@ export const ALL_DATA = [
               data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
             },
           ],
+        },
+      },
+      {
+        _id: 6,
+        section: "topLosers",
+        equityFunds: "Large",
+        logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+        name: "Apple",
+        market: "BSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
+            {
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+            },
+          ],
+        },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4660,72 +2928,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4764,72 +2990,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4867,72 +3051,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -4970,72 +3112,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5074,72 +3174,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5178,72 +3236,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5281,72 +3297,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5385,72 +3359,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5489,72 +3421,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5592,72 +3482,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5695,72 +3543,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5798,72 +3604,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -5901,72 +3665,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6004,72 +3726,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],
@@ -6077,10 +3757,12 @@ export const ALL_DATA = [
   {
     _id: 4,
     name: "FINNIFTY",
+    slug: "finnifty",
+    slug: "finnifty",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.5",
-    colorstatus: "green-color",
+    colorstatus: "text-danger",
     chartData: [
       {
         date: "5 Aug 2022",
@@ -6098,213 +3780,6 @@ export const ALL_DATA = [
     company: [
       {
         _id: 1,
-        section: "topLosers",
-        equityFunds: "Large",
-        logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
-        name: "Apple",
-        market: "BSE",
-        price: "100.09",
-        result: "+30.00",
-        ltp: "0.72",
-        colorstatus: "green-color",
-        chartData: {
-          datasets: [
-            {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-        about:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        fundamental: {
-          open: "$30.22",
-          high: "$30.65",
-          low: "$30.65",
-          marketCap: "$30.22",
-          avgVol: "$30.22",
-          shareVol: "$30.22",
-        },
-        expertRating: {
-          buy: "70%",
-          sell: "20%",
-          hold: "30%",
-          totalRate: "70%",
-        },
-        financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-        },
-      },
-      {
-        _id: 2,
-        section: "watchlist",
-        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
-        name: "Tesla",
-        market: "NSE",
-        price: "100.09",
-        result: "+30.00",
-        ltp: "0.72",
-        colorstatus: "green-color",
-        chartData: {
-          datasets: [
-            {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-        about:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        fundamental: {
-          open: "$30.22",
-          high: "$30.65",
-          low: "$30.65",
-          marketCap: "$30.22",
-          avgVol: "$30.22",
-          shareVol: "$30.22",
-        },
-        expertRating: {
-          buy: "70%",
-          sell: "20%",
-          hold: "30%",
-          totalRate: "70%",
-        },
-        financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-        },
-      },
-      {
-        _id: 3,
         section: "stocksInNews",
         logo: "https://image.similarpng.com/very-thumbnail/2020/05/Flat-logo-Spotify-PNG.png",
         name: "Spotify",
@@ -6338,76 +3813,34 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
-        _id: 4,
+        _id: 2,
         section: "topLosers",
         equityFunds: "Large",
         logo: "https://cdn.icon-icons.com/icons2/2429/PNG/512/microsoft_logo_icon_147261.png",
@@ -6442,72 +3875,153 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
+      },
+      {
+        _id: 3,
+        section: "topLosers",
+        equityFunds: "Large",
+        logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+        name: "Apple",
+        market: "BSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
             {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
             },
           ],
+        },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
+      },
+      {
+        _id: 4,
+        section: "watchlist",
+        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+        name: "Tesla",
+        market: "NSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
+            {
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
+            },
+          ],
+        },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6545,72 +4059,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6668,72 +4140,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6772,72 +4202,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6875,72 +4263,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -6978,72 +4324,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7082,72 +4386,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7186,72 +4448,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7289,72 +4509,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7393,72 +4571,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7497,72 +4633,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7600,72 +4694,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7703,72 +4755,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7806,72 +4816,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -7909,72 +4877,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8012,72 +4938,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],
@@ -8085,6 +4969,7 @@ export const ALL_DATA = [
   {
     _id: 5,
     name: "NIFTY 100",
+    slug: "nifty100",
     price: "58743.66",
     result: "+771.05",
     ltp: "1.54",
@@ -8106,12 +4991,12 @@ export const ALL_DATA = [
     company: [
       {
         _id: 1,
-        section: "topLosers",
+        section: "topGainers",
         equityFunds: "Large",
-        logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
-        name: "Apple",
-        market: "BSE",
-        price: "100.09",
+        logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
+        name: "Amazon",
+        market: "NSE",
+        price: "120.30",
         result: "+30.00",
         ltp: "0.72",
         colorstatus: "green-color",
@@ -8120,90 +5005,6 @@ export const ALL_DATA = [
             {
               name: "Desktops",
               data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-        about:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        fundamental: {
-          open: "$30.22",
-          high: "$30.65",
-          low: "$30.65",
-          marketCap: "$30.22",
-          avgVol: "$30.22",
-          shareVol: "$30.22",
-        },
-        expertRating: {
-          buy: "70%",
-          sell: "20%",
-          hold: "30%",
-          totalRate: "70%",
-        },
-        financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
             },
           ],
         },
@@ -8211,10 +5012,10 @@ export const ALL_DATA = [
       {
         _id: 2,
         section: "watchlist",
-        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
-        name: "Tesla",
-        market: "NSE",
-        price: "100.09",
+        logo: "https://companieslogo.com/img/orig/TATASTLLP.NS-3c0abd6b.png",
+        name: "Tata steel",
+        market: "BSE",
+        price: "120.30",
         result: "+30.00",
         ltp: "0.72",
         colorstatus: "green-color",
@@ -8243,74 +5044,33 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
+
       {
         _id: 3,
         section: "stocksInNews",
@@ -8346,72 +5106,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8450,72 +5168,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8553,101 +5229,40 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
         _id: 6,
-        section: "topGainers",
+        section: "topLosers",
         equityFunds: "Large",
-        logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
-        name: "Amazon",
-        market: "NSE",
-        price: "120.30",
-        result: "+30.00",
-        ltp: "0.72",
-        colorstatus: "green-color",
-        chartData: {
-          datasets: [
-            {
-              name: "Desktops",
-              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
-            },
-          ],
-        },
-      },
-      {
-        _id: 7,
-        section: "watchlist",
-        logo: "https://companieslogo.com/img/orig/TATASTLLP.NS-3c0abd6b.png",
-        name: "Tata steel",
+        logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+        name: "Apple",
         market: "BSE",
-        price: "120.30",
+        price: "100.09",
         result: "+30.00",
         ltp: "0.72",
         colorstatus: "green-color",
@@ -8676,72 +5291,91 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+        },
+      },
+      {
+        _id: 7,
+        section: "watchlist",
+        logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+        name: "Tesla",
+        market: "NSE",
+        price: "100.09",
+        result: "+30.00",
+        ltp: "0.72",
+        colorstatus: "green-color",
+        chartData: {
+          datasets: [
             {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
+              name: "Desktops",
+              data: [0, 20, 60, 10, 0, 80, 150, 100, 50],
             },
           ],
+        },
+        about:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        fundamental: {
+          open: "$30.22",
+          high: "$30.65",
+          low: "$30.65",
+          marketCap: "$30.22",
+          avgVol: "$30.22",
+          shareVol: "$30.22",
+        },
+        expertRating: {
+          buy: "70%",
+          sell: "20%",
+          hold: "30%",
+          totalRate: "70%",
+        },
+        financials: {
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8780,72 +5414,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8883,72 +5475,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -8986,72 +5536,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9090,72 +5598,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9194,72 +5660,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9297,72 +5721,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9401,72 +5783,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9505,72 +5845,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9608,72 +5906,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9711,72 +5967,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9814,72 +6028,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -9917,72 +6089,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10020,72 +6150,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],
@@ -10093,10 +6181,11 @@ export const ALL_DATA = [
   {
     _id: 6,
     name: "Nifty Midcap Select",
+    slug: "niftyMidcapSelect",
     price: "17289.65",
     result: "-269.25",
     ltp: "1.535",
-    colorstatus: "green-color",
+    colorstatus: "text-danger",
     chartData: [
       {
         date: "5 Aug 2022",
@@ -10148,72 +6237,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10251,72 +6298,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10354,72 +6359,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10458,72 +6421,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10561,72 +6482,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10684,72 +6563,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10788,72 +6625,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10891,72 +6686,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -10994,72 +6747,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11098,72 +6809,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11202,72 +6871,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11305,72 +6932,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11409,72 +6994,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11513,72 +7056,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11616,72 +7117,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11719,72 +7178,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11822,72 +7239,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -11925,72 +7300,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
       {
@@ -12028,72 +7361,30 @@ export const ALL_DATA = [
           totalRate: "70%",
         },
         financials: {
-          revenue: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          profit: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
-          netWorth: [
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-            {
-              month: "sep 2021",
-              value: "30",
-            },
-            {
-              month: "dec 2021",
-              value: "30",
-            },
-            {
-              month: "mar 2021",
-              value: "30",
-            },
-            {
-              month: "jun 2021",
-              value: "30",
-            },
-          ],
+          revenue: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          profit: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
+          netWorth: {
+            labels: ["January", "February", "March", "April", "May", "June"],
+            datasets: [
+              {
+                data: [20, 45, 28, 80, 99, 43],
+              },
+            ],
+          },
         },
       },
     ],

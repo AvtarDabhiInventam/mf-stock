@@ -15,8 +15,12 @@ import MutualFundWatchList from "@/component/mutual-fund-watchlist";
 import MutualFundPopularFund from "@/component/mutual-fund-popularfund";
 import CurrentInvestment from "@/component/stock-current-investment";
 import MFCurrentInvestment from "@/component/mutual-fund-current-investment";
+import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 
 export default function Home() {
+  const STOCK_LIST =
+    ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === "stocksInNews") ||
+    ALL_STOCK_COMPANY_DATA;
   return (
     <>
       <Container>
@@ -44,7 +48,7 @@ export default function Home() {
                   <div className="mb-3">
                     <h5 className="mb-0 sec_title">Most Bought on Groww</h5>
                   </div>
-                  <StocksList />
+                  <StocksList STOCK_LIST={ALL_STOCK_COMPANY_DATA} />
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
@@ -72,7 +76,7 @@ export default function Home() {
                       <Link href="/">News</Link>
                     </div>
                   </div>
-                  <StocksList section="stocksInNews" />
+                  <StocksList STOCK_LIST={STOCK_LIST} />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
