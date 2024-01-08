@@ -13,13 +13,12 @@ const MutualFundPopularFund = () => {
     <>
       <Row className="row_space">
         {filteredItems.map((company_value, index) => {
-          console.log("test", company_value);
           return (
             <Col key={index} xs={12} md={12} xl={6}>
               <Card
                 className={`${styles.mf_card_div}`}
                 as={Link}
-                href={"/mutual/1"}
+                href={`/mutual/${company_value._id}`}
               >
                 <Card.Body>
                   <div className={`${styles.mf_box}`}>

@@ -100,7 +100,6 @@ const StockWatchlistMain = () => {
           </thead>
           <tbody>
             {ALL_STOCK_COMPANY_DATA.map((value, index) => {
-              console.log("aaa", value);
               return (
                 <>
                   <tr>

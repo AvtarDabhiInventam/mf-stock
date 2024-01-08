@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "./mutualfundcategory.module.scss";
 import { CATEGORIES } from "@/jsondata/mutualFundConstant";
+import Link from "next/link";
 
 const MutualFundsCategory = () => {
   return (
@@ -10,7 +11,11 @@ const MutualFundsCategory = () => {
         {CATEGORIES.map((value, index) => {
           return (
             <Col xs={6} md={4} key={index}>
-              <Card className={`${styles.product_card_div}`}>
+              <Card
+                as={Link}
+                href={`/mutualfund-detail/${value.slug}`}
+                className={`${styles.product_card_div}`}
+              >
                 <Card.Body>
                   <div className={`${styles.img_box}`}>
                     <img

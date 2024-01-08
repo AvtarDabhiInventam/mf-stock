@@ -3,16 +3,20 @@ import { Card, Col, Row } from "react-bootstrap";
 import styles from "../../styles/mutual-fund-category.module.scss";
 import { IoIosStar } from "react-icons/io";
 import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
+import Link from "next/link";
 
 const MutualFundList = () => {
   return (
     <>
       <Row className="row_space">
         {ALL_MF_COMPANY.map((company_value, index) => {
-          // console.log("test", company_value);
           return (
             <Col key={index} xs={12} md={6}>
-              <Card className={`${styles.mf_card_div}`}>
+              <Card
+                as={Link}
+                href={`/mutual/${company_value._id}`}
+                className={`${styles.mf_card_div}`}
+              >
                 <Card.Body>
                   <div className={`${styles.mf_box}`}>
                     <div

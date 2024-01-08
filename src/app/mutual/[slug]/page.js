@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Breadcrumb,
   Container,
@@ -26,8 +26,6 @@ import { BiWalletAlt } from "react-icons/bi";
 import DataTable from "react-data-table-component";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-const data = MUTUALFUND_DETAILS[0];
 
 const stockGraph = {
   series: [
@@ -499,8 +497,31 @@ const year_data = [
   },
 ];
 
-function MutualDetail() {
+function MutualDetail({ params }) {
   const [startDate, setStartDate] = useState(new Date());
+  const [mutualFundData, setMutualFundData] = useState(null);
+
+  useEffect(() => {
+    const fetchCartItem = async () => {
+      try {
+        const response = ALL_MF_COMPANY.find((value) => {
+
+          if (value._id == params.slug) {
+            setMutualFundData(value);
+            return value;
+          }
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchCartItem();
+  }, [params]);
+
+  if (mutualFundData == null) {
+    return null;
+  }
+
   return (
     <div className={`${style.stock_detail} mt-5`}>
       <Container>
@@ -514,7 +535,7 @@ function MutualDetail() {
             <div className={`${style.stock_detail_logo}`}>
               <div className="d-flex align-items-center">
                 <img
-                  src={data?.logo}
+                  src={mutualFundData?.logo}
                   width={60}
                   height={60}
                   alt="User Image"
@@ -531,12 +552,12 @@ function MutualDetail() {
               </div>
             </div>
             <div className={`${style.stock_detail_stock_name}`}>
-              <h2>{data.name}</h2>
+              <h2>{mutualFundData.name}</h2>
             </div>
             <div className={`${style.stock_detail_price}`}>
               <h3>
                 {/* <FaRupeeSign fontSize={22} /> */}
-                {data.threeYearReturn}{" "}
+                {mutualFundData.threeYearReturn}{" "}
                 <span className={`${style.mutual_detail_year}`}>
                   3Y annualised
                 </span>
@@ -554,25 +575,25 @@ function MutualDetail() {
               <Col sm={12} md={6} lg={4}>
                 <div className={`${style.mutual_list}`}>
                   <h6>Nav</h6>
-                  <p>{data.nav}</p>
+                  <p>{mutualFundData.nav}</p>
                 </div>
               </Col>
               <Col sm={12} md={6} lg={4}>
                 <div className={`${style.mutual_list}`}>
                   <h6>Rating</h6>
-                  <p>{data.rating}</p>
+                  <p>{mutualFundData.rating}</p>
                 </div>
               </Col>
               <Col sm={12} md={6} lg={4}>
                 <div className={`${style.mutual_list}`}>
                   <h6>Min SIP Amount</h6>
-                  <p>{data.minSIPAmount}</p>
+                  <p>{mutualFundData.minSIPAmount}</p>
                 </div>
               </Col>
               <Col sm={12} md={6} lg={4}>
                 <div className={`${style.mutual_list}`}>
                   <h6> Fund Size</h6>
-                  <p>{data.fundSize}</p>
+                  <p>{mutualFundData.fundSize}</p>
                 </div>
               </Col>
             </Row>
@@ -608,11 +629,11 @@ function MutualDetail() {
                 <div sm={12} md={6} lg={12}>
                   <div>
                     <h3 className="main_sub_title">Props</h3>
-                    <p>{data.pros}</p>
+                    <p>{mutualFundData.pros}</p>
                   </div>
                   <div>
                     <h3 className="main_sub_title">Cons</h3>
-                    <p>{data.cons}</p>
+                    <p>{mutualFundData.cons}</p>
                   </div>
                 </div>
               </Row>

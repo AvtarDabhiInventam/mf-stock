@@ -31,7 +31,6 @@ import OrderStock from "@/component/order-stock";
 
 const data = ALL_STOCK_COMPANY_DATA;
 
-console.log("all data", data);
 const stockGraph = {
   series: [
     {
@@ -414,7 +413,6 @@ const revenueGraph = {
   },
 };
 function StockDetail({ params }) {
-  console.log("params", params.slug);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -425,15 +423,11 @@ function StockDetail({ params }) {
     const fetchCartItem = async () => {
       try {
         const response = data.find((value) => {
-          console.log("value", value);
           if (value._id == params.slug) {
             setStockItem(value);
-            console.log("find", value);
             return value;
           }
         });
-
-        // console.log("find", response);
         // const data = await response.json(response.data);
         // setStockItem(data);
       } catch (error) {
@@ -442,8 +436,6 @@ function StockDetail({ params }) {
     };
     fetchCartItem();
   }, [params]);
-
-  console.log("stockItem", stockItem);
 
   if (stockItem == null) {
     return null;
