@@ -62,6 +62,9 @@ const Header = () => {
             className="justify-content-end"
           >
             <Nav className={`${style.navbar_nav} `}>
+              <Nav.Link href="/dashboard" className={`${style.nav_link} `}>
+                Dashboard
+              </Nav.Link>
               <Nav.Link href="/login" className={`${style.nav_link} `}>
                 Login
               </Nav.Link>

@@ -24,7 +24,7 @@ const IndexMarket = () => {
               <Card
                 as={Link}
                 href={`/stock-detail/${value?.slug}`}
-                className={`${styles.card_main_div}`}
+                className={`${styles.card_main_div} m-2`}
               >
                 <Card.Body>
                   <h6 className={`${styles.title}`}>{value.name}</h6>
