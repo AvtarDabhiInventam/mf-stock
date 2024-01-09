@@ -280,8 +280,19 @@ const stockGraph = {
   ],
   options: {
     chart: {
-      type: "area",
+      type: "candlestick",
       height: 350,
+      toolbar: {
+        tools: {
+          download: false, // Download options
+          selection: false, // Data selection tool
+          zoom: true, // Zooming tool
+          zoomin: true, // Zoom in button
+          zoomout: true, // Zoom out button
+          pan: false, // Panning tool
+          reset: false, // Reset zoom and pan
+        },
+      },
     },
     dataLabels: {
       enabled: false,
@@ -293,16 +304,7 @@ const stockGraph = {
       text: "Line Chart",
       align: "left",
     },
-    fill: {
-      type: "gradient",
-      gradient: {
-        shadeIntensity: 1,
-        inverseColors: false,
-        opacityFrom: 0.9,
-        opacityTo: 0.5,
-        stops: [0, 90, 100],
-      },
-    },
+
     xaxis: {
       type: "datetime",
     },
@@ -328,6 +330,17 @@ const revenueGraph = {
     chart: {
       height: 350,
       type: "bar",
+      toolbar: {
+        tools: {
+          download: false, // Download options
+          selection: false, // Data selection tool
+          zoom: true, // Zooming tool
+          zoomin: true, // Zoom in button
+          zoomout: true, // Zoom out button
+          pan: false, // Panning tool
+          reset: false, // Reset zoom and pan
+        },
+      },
     },
     plotOptions: {
       bar: {
@@ -515,7 +528,7 @@ function StockDetail({ params }) {
                 <ReactApexChart
                   options={stockGraph.options}
                   series={stockGraph.series}
-                  type="area"
+                  type="candlestick"
                   height={350}
                 />
               </div>
@@ -551,7 +564,7 @@ function StockDetail({ params }) {
                     {/* <ReactApexChart
                 options={stockGraph.options}
                 series={stockGraph.series}
-                type="area"
+                type="candlestick"
                 height={350}
               /> */}
                     <ReactApexChart

@@ -34,7 +34,7 @@ function StockOverview() {
         <Col sm={6} lg={3}>
           <div className={`${style.stock_detail_stock_performance}`}>
             <h6>Market Cap</h6>
-            <p>{data.fundamental.marketCap}</p>
+            <p>{data.fundamental?.marketCap}</p>
           </div>
         </Col>
       </Row>
@@ -60,7 +60,7 @@ function StockOverview() {
         <Col sm={6} lg={3}>
           <div className={`${style.stock_detail_stock_performance}`}>
             <h6>Market Cap</h6>
-            <p>{data.fundamental.marketCap}</p>
+            <p>{data.fundamental?.marketCap}</p>
           </div>
         </Col>
       </Row>

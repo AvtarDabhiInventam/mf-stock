@@ -7524,7 +7524,7 @@ export const ALL_STOCK_COMPANY = [
   {
     _id: 8,
     section: "topLosers",
-    equityFunds: "Large",
+    equityFunds: "Small",
     logo: "https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png",
     name: "Axis bank",
     market: "NSE",
@@ -7579,7 +7579,7 @@ export const ALL_STOCK_COMPANY = [
   {
     _id: 11,
     section: "topGainers",
-    equityFunds: "Large",
+    equityFunds: "Small",
     logo: "https://logos-world.net/wp-content/uploads/2020/04/Nile-Symbol.png",
     name: "Nike",
     market: "NSE",
@@ -8991,6 +8991,564 @@ export const STOCK_DETAILS = [
           },
         ],
       },
+    },
+  },
+];
+
+export const TOP_GAINERS_LIST = [
+  {
+    _id: 1,
+    section: "topGainers",
+    equityFunds: "Large",
+    logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+    name: "Apple",
+    market: "BSE",
+    price: "100.09",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 2,
+    section: "topGainers",
+    equityFunds: "Large",
+    logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+    name: "Tesla",
+    market: "NSE",
+    price: "100.09",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 3,
+    section: "topGainers",
+    equityFunds: "Large",
+    logo: "https://image.similarpng.com/very-thumbnail/2020/05/Flat-logo-Spotify-PNG.png",
+    name: "Spotify",
+    market: "BSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 4,
+    section: "topGainers",
+    equityFunds: "Medium",
+    logo: "https://cdn.icon-icons.com/icons2/2429/PNG/512/microsoft_logo_icon_147261.png",
+    name: "Microsot",
+    market: "NSE",
+    price: "100.09",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 5,
+    section: "topGainers",
+    equityFunds: "Medium",
+    logo: "https://brandlogos.net/wp-content/uploads/2021/10/meta-logo-768x768.png",
+    name: "Meta",
+    market: "BSE",
+    price: "15.30",
+    result: "-0.04",
+    ltp: "4.94",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 6,
+    section: "topGainers",
+    equityFunds: "Medium",
+    equityFunds: "Large",
+    logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
+    name: "Amazon",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 7,
+    section: "topGainers",
+    equityFunds: "Small",
+    logo: "https://companieslogo.com/img/orig/TATASTLLP.NS-3c0abd6b.png",
+    name: "Tata steel",
+    market: "BSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 8,
+    section: "topGainers",
+    equityFunds: "Small",
+    equityFunds: "Small",
+    logo: "https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png",
+    name: "Axis bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 9,
+    section: "topGainers",
+    equityFunds: "Small",
+    logo: "https://companieslogo.com/img/orig/ASIANPAINT.NS-6124f67e.png?t=1596837431",
+    name: "Asianpaints",
+    market: "BSE",
+    price: "15.30",
+    result: "-0.04",
+    ltp: "4.94",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 10,
+    section: "topGainers",
+    equityFunds: "Small",
+    logo: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png",
+    name: "HDFC bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+];
+
+export const TOP_LOOSERS_LIST = [
+  {
+    _id: 11,
+    section: "topLosers",
+    equityFunds: "Large",
+    logo: "https://logos-world.net/wp-content/uploads/2020/04/Nile-Symbol.png",
+    name: "Nike",
+    market: "NSE",
+    price: "120.30",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 12,
+    section: "topLosers",
+    equityFunds: "Large",
+    logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+    name: "Apple",
+    market: "BSE",
+    price: "100.09",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 13,
+    section: "topLosers",
+    equityFunds: "Large",
+    logo: "https://pngimg.com/uploads/tesla_logo/tesla_logo_PNG13.png",
+    name: "Tesla",
+    market: "NSE",
+    price: "100.09",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 14,
+    section: "topLosers",
+    equityFunds: "Medium",
+    logo: "https://image.similarpng.com/very-thumbnail/2020/05/Flat-logo-Spotify-PNG.png",
+    name: "Spotify",
+    market: "BSE",
+    price: "120.30",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 15,
+    section: "topLosers",
+    equityFunds: "Medium",
+    logo: "https://cdn.icon-icons.com/icons2/2429/PNG/512/microsoft_logo_icon_147261.png",
+    name: "Microsot",
+    market: "NSE",
+    price: "100.09",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 16,
+    section: "topLosers",
+    equityFunds: "Medium",
+    logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
+    name: "Amazon",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 17,
+    section: "topLosers",
+    equityFunds: "Small",
+    logo: "https://companieslogo.com/img/orig/TATASTLLP.NS-3c0abd6b.png",
+    name: "Tata steel",
+    market: "BSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 18,
+    section: "topLosers",
+    equityFunds: "Small",
+    logo: "https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png",
+    name: "Axis bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 19,
+    section: "topLosers",
+    equityFunds: "Small",
+    logo: "https://companieslogo.com/img/orig/ASIANPAINT.NS-6124f67e.png?t=1596837431",
+    name: "Asianpaints",
+    market: "BSE",
+    price: "15.30",
+    result: "-0.04",
+    ltp: "4.94",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 20,
+    section: "topLosers",
+    equityFunds: "Small",
+    logo: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png",
+    name: "HDFC bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+];
+
+export const RECENTLY_VISITED_STOCK = [
+  {
+    _id: 4,
+    section: "topLosers",
+    equityFunds: "Large",
+    logo: "https://cdn.icon-icons.com/icons2/2429/PNG/512/microsoft_logo_icon_147261.png",
+    name: "Microsot",
+    market: "NSE",
+    price: "100.09",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 5,
+    section: "watchlist",
+    logo: "https://brandlogos.net/wp-content/uploads/2021/10/meta-logo-768x768.png",
+    name: "Meta",
+    market: "BSE",
+    price: "15.30",
+    result: "-0.04",
+    ltp: "4.94",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 6,
+    section: "topGainers",
+    equityFunds: "Large",
+    logo: "https://cdn0.iconfinder.com/data/icons/most-usable-logos/120/Amazon-1024.png",
+    name: "Amazon",
+    market: "NSE",
+    price: "120.30",
+    result: "+80.00",
+    ltp: "0.82",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 7,
+    section: "watchlist",
+    logo: "https://companieslogo.com/img/orig/TATASTLLP.NS-3c0abd6b.png",
+    name: "Tata steel",
+    market: "BSE",
+    price: "140.30",
+    result: "+10.00",
+    ltp: "0.12",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 8,
+    section: "topLosers",
+    equityFunds: "Small",
+    logo: "https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png",
+    name: "Axis bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 9,
+    section: "watchlist",
+    logo: "https://companieslogo.com/img/orig/ASIANPAINT.NS-6124f67e.png?t=1596837431",
+    name: "Asianpaints",
+    market: "BSE",
+    price: "15.30",
+    result: "-0.04",
+    ltp: "4.94",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 10,
+    section: "watchlist",
+    logo: "https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png",
+    name: "HDFC bank",
+    market: "NSE",
+    price: "120.30",
+    result: "+30.00",
+    ltp: "0.72",
+    colorstatus: "green-color",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 11,
+    section: "topGainers",
+    equityFunds: "Small",
+    logo: "https://logos-world.net/wp-content/uploads/2020/04/Nile-Symbol.png",
+    name: "Nike",
+    market: "NSE",
+    price: "120.30",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
+    },
+  },
+  {
+    _id: 12,
+    section: "topLosers",
+    equityFunds: "Large",
+    logo: "https://cdn.pixabay.com/photo/2022/09/18/18/40/apple-logo-7463795_1280.png",
+    name: "Apple",
+    market: "BSE",
+    price: "100.09",
+    result: "-30.00",
+    ltp: "0.72",
+    colorstatus: "text-danger",
+    chartData: {
+      datasets: [
+        {
+          data: [5, 30, 15, 50],
+        },
+      ],
     },
   },
 ];

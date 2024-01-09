@@ -21,6 +21,7 @@ export default function Home() {
   const STOCK_LIST =
     ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === "stocksInNews") ||
     ALL_STOCK_COMPANY_DATA;
+
   return (
     <>
       <Container>
