@@ -793,7 +793,7 @@ function StockDetail({ params }) {
             {" "}
             <FaCheck fontSize={45} />
           </div>
-          <h4 class="modal-title w-100">SUCCESS!</h4>
+          <h4 className="modal-title w-100">SUCCESS!</h4>
         </Modal.Header>
         <Modal.Body className="text-center">
           your autopay request has been submitted successfully

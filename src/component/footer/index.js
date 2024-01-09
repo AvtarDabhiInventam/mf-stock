@@ -32,12 +32,6 @@ const Footer = () => {
                   Stocks
                 </Link>
                 <Link href="#" className={`${style.para_text}`}>
-                  Futures & Options
-                </Link>
-                <Link href="#" className={`${style.para_text}`}>
-                  IPO
-                </Link>
-                <Link href="#" className={`${style.para_text}`}>
                   Mutual Funds
                 </Link>
               </div>
@@ -45,20 +39,17 @@ const Footer = () => {
             <Col xs={12} md={4} lg={3}>
               <div>
                 <h5 className={`${style.box_heading}`}>Support</h5>
-                <Link href="#" className={`${style.para_text}`}>
+                <Link href="aboutus" className={`${style.para_text}`}>
                   About Us
                 </Link>
-                <Link href="#" className={`${style.para_text}`}>
-                  Pricing
-                </Link>
-                <Link href="#" className={`${style.para_text}`}>
+                <Link href="/blog" className={`${style.para_text}`}>
                   Blog
                 </Link>
                 <Link href="#" className={`${style.para_text}`}>
-                  Careers
-                </Link>
-                <Link href="#" className={`${style.para_text}`}>
                   Help and Support
+                </Link>
+                <Link href="terms-condtion" className={`${style.para_text}`}>
+                  Terms and condition
                 </Link>
               </div>
             </Col>
@@ -68,13 +59,13 @@ const Footer = () => {
                 <Link href="#" className={`${style.para_text}`}>
                   AMC Mutual Funds
                 </Link>
-                <Link href="#" className={`${style.para_text}`}>
+                <Link
+                  href="https://sipcalculator.in/"
+                  className={`${style.para_text}`}
+                >
                   Calculators
                 </Link>
-                <Link href="#" className={`${style.para_text}`}>
-                  Glossary
-                </Link>
-                <Link href="#" className={`${style.para_text}`}>
+                <Link href="#" className={`${style.para_text}`} target="_blank">
                   Open Demat Account
                 </Link>
                 <Link href="#" className={`${style.para_text}`}>
