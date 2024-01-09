@@ -49,7 +49,6 @@ const Header = () => {
           </Navbar.Brand>
           <div className={`${style.form_inputs} d-flex`}>
             <input
-              class=""
               className={`${style.form_control} form-control`}
               type="text"
               placeholder="Search any product..."
