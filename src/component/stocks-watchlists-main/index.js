@@ -15,18 +15,25 @@ const StockWatchlistMain = () => {
     options: {
       // chart: {
       //   height: 350,
-      //   type: "area",
+      //   type: "candlestick",
       //   zoom: {
       //     enabled: false,
       //   },
       // },
       chart: {
         toolbar: {
-          // Hamburger menu at top
-          show: false,
+          tools: {
+            download: false, // Download options
+            selection: false, // Data selection tool
+            zoom: true, // Zooming tool
+            zoomin: true, // Zoom in button
+            zoomout: true, // Zoom out button
+            pan: false, // Panning tool
+            reset: false, // Reset zoom and pan
+          },
         },
         height: 100,
-        type: "area",
+        type: "candlestick",
         zoom: {
           enabled: false,
         },
@@ -119,7 +126,7 @@ const StockWatchlistMain = () => {
                         <ReactApexChart
                           options={stockWatchListGraph.options}
                           series={stockWatchListGraph.series}
-                          type="area"
+                          type="candlestick"
                           height={40}
                           width={100}
                         />
@@ -136,7 +143,7 @@ const StockWatchlistMain = () => {
                       </label>
                     </td>
                     <td className={`${styles.index_value}`}>
-                      {value.fundamental.marketCap}
+                      {value.fundamental?.marketCap}
                     </td>
                   </tr>
                 </>

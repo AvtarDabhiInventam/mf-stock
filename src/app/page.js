@@ -21,6 +21,7 @@ export default function Home() {
   const STOCK_LIST =
     ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === "stocksInNews") ||
     ALL_STOCK_COMPANY_DATA;
+
   return (
     <>
       <Container>
@@ -46,7 +47,7 @@ export default function Home() {
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
-                    <h5 className="mb-0 sec_title">Most Bought on Groww</h5>
+                    <h5 className="mb-0 sec_title">Most Bought on mf-stcok</h5>
                   </div>
                   <StocksList STOCK_LIST={ALL_STOCK_COMPANY_DATA} />
                 </div>
@@ -113,15 +114,8 @@ export default function Home() {
                   </div>
                   <Investments />
                 </div>
-                <div className="mt-5">
-                  <div className="d-flex justify-content-between align-items-center mb-3">
-                    <div>
-                      <h5 className="mb-0 sec_title">Current Investment</h5>
-                    </div>
-                  </div>
-                  <CurrentInvestment />
-                </div>
-                <div className="mt-5 mb-5">
+
+                <div className="mt-4 mb-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
                       <h5 className="mb-0 sec_title">All watchlists</h5>

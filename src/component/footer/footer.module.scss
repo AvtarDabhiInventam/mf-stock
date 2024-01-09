@@ -7,18 +7,21 @@
   padding-bottom: 50px;
   margin-top: 70px;
 }
+
 .bottom_footer_main_div {
   background-color: $main-bg-500;
   padding-top: 20px;
   padding-bottom: 20px;
   border-top: 1px solid $border-primary;
 }
+
 .box_heading {
   font-size: 24px;
   font-weight: 500;
   color: $text-primary;
   margin-bottom: 25px;
 }
+
 .para_text {
   color: $text-primary;
   font-size: 16px;
@@ -27,6 +30,7 @@
   display: block;
   text-decoration: none;
 }
+
 .highlight_text {
   font-size: 30px;
   color: $text-primary;
@@ -38,6 +42,7 @@
   .footer_main_div {
     margin-top: 35px;
   }
+
   .box_heading {
     margin-bottom: 15px;
   }
@@ -48,13 +53,16 @@
     font-size: 22px;
     margin-bottom: 20px;
   }
+
   .para_text {
     font-size: 15px;
   }
+
   .highlight_text {
     font-size: 24px;
     margin-bottom: 20px;
   }
+
   .footer_main_div {
     margin-top: 35px;
   }
