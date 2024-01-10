@@ -73,99 +73,21 @@ export const MY_WALLET = [
   },
 ];
 
-export const data = [
+export const BANK_DETAILS = [
   {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
+    _id: 1,
+    name: "Dorothy Churchill",
+    bankName: "ICICI Bank",
+    logo: "https://i.pinimg.com/originals/ff/d5/31/ffd531a6a78464512a97848e14506738.png",
+    accountNo: "122344556666",
+    IFSC: "ICICI1231444",
   },
   {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            HDFC Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            ICICI Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">SBI Bank Share Purchase</span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
+    _id: 2,
+    name: "Jennifer	Parsons",
+    bankName: "State Bank of India",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5dqR6ECLQAnp9qWbENHSEsmv3ApEqvtLIQ&usqp=CAU",
+    accountNo: "3247598974673",
+    IFSC: "SBI12231444",
   },
 ];

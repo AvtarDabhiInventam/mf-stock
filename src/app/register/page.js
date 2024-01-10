@@ -17,6 +17,7 @@ import _data from "../../JSON/auth.json";
 
 function Register() {
   const users = useSelector((state) => state.authReducer.users);
+
   const dispatch = useDispatch();
   const validationSchema = Yup.object({
     firstName: Yup.string()

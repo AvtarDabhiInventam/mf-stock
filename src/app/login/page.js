@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/auth.module.scss";
 import { Col, Container, FormText, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -37,16 +37,30 @@ function Login() {
     resolver: yupResolver(validationSchema),
   });
 
+  useEffect(() => {
+    function preventBack() {
+      window.history.forward();
+    }
+    preventBack();
+    window.onunload = function () {
+      null;
+    };
+  }, [isLogin]);
+
   const onSubmit = (data) => {
     setLoading(true);
     const matchedUser = users.find(
       (obj) => obj.email === data.email && obj.password === data.password
     );
-    // localStorage.setItem('token', token)
     setLoginData(matchedUser);
+
     if (matchedUser) {
-      dispatch(loginUser({ data }));
-      alert(`Match found: ${matchedUser.email}`);
+      const payload = {
+        firstName: matchedUser.firstName,
+        lastName: matchedUser.lastName,
+        email: matchedUser.email,
+      };
+      dispatch(loginUser(payload));
       router.push("/");
       setLoading(false);
     } else {
