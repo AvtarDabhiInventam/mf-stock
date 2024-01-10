@@ -14,7 +14,7 @@ const Slice = createSlice({
     loginUser(state, action) {
       if (action.payload) {
         state.isLogin = true;
-        state.user = action.payload.data;
+        state.user = action.payload;
         localStorage.setItem("isLoggedin", true);
       }
     },
@@ -26,8 +26,9 @@ const Slice = createSlice({
     addUser(state, action) {
       state.users.push(action.payload);
     },
+    resetAuthSlice: () => initialState,
   },
 });
 
-export const { loginUser, addUser, logout } = Slice.actions;
+export const { loginUser, addUser, logout, resetAuthSlice } = Slice.actions;
 export default Slice.reducer;

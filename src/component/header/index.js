@@ -17,8 +17,10 @@ import { IoSearchSharp } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { logout } from "@/redux/slices/authSlice";
+import { logout, resetAuthSlice } from "@/redux/slices/authSlice";
 import { persistor } from "@/redux/store";
+import { resetBankSlice } from "@/redux/slices/bankSlice";
+import { resetStockSlice } from "@/redux/slices/stockSlice";
 
 const CustomNavItem = ({ text }) => {
   return (
@@ -46,6 +48,10 @@ const Header = () => {
   const isLoggedin = localStorage.getItem("isLoggedin");
   const user = useSelector((state) => state.authReducer.user);
 
+  const purge = () => {
+    persistor.purge();
+  };
+
   return (
     !(
       pathname === "/login" ||
@@ -68,7 +74,7 @@ const Header = () => {
                 class=""
                 className={`${style.form_control} form-control`}
                 type="text"
-                placeholder="Search any product..."
+                placeholder="Search..."
               />
               <IoSearchSharp fontSize={20} className={`${style.search_icon}`} />
             </div>
@@ -96,7 +102,9 @@ const Header = () => {
                   title={
                     <>
                       <FaUser className={`${style.info_icon} me-2`} />
-                      <span className="text-gray">Avtar</span>
+                      <span className="text-gray">
+                        {user?.firstName} {user?.lastName}
+                      </span>
                     </>
                   }
                   id="basic-nav-dropdown"
@@ -132,8 +140,11 @@ const Header = () => {
                   </NavDropdown.Item>
                   <NavDropdown.Item
                     onClick={() => {
+                      purge();
                       dispatch(logout());
-                      // persistor.purge();
+                      dispatch(resetAuthSlice());
+                      dispatch(resetBankSlice());
+                      dispatch(resetStockSlice());
                       router.push("/login");
                     }}
                   >

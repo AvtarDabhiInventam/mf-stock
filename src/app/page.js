@@ -15,12 +15,27 @@ import MutualFundWatchList from "@/component/mutual-fund-watchlist";
 import MutualFundPopularFund from "@/component/mutual-fund-popularfund";
 import CurrentInvestment from "@/component/stock-current-investment";
 import MFCurrentInvestment from "@/component/mutual-fund-current-investment";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getAllStockCompany } from "@/redux/slices/stockSlice";
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const allStockComany = useSelector(
+    (state) => state.stockReducer.allStockComany
+  );
+
+  useEffect(() => {
+    dispatch(getAllStockCompany());
+  }, []);
+
   const STOCK_LIST =
-    ALL_STOCK_COMPANY_DATA?.filter((item) => item.section === "stocksInNews") ||
-    ALL_STOCK_COMPANY_DATA;
+    allStockComany?.filter((item) => item.section === "stocksInNews") ||
+    allStockComany;
+
+  const MOST_BOUGHT_STOCK_LIST =
+    allStockComany?.filter((item) => item.section === "mostBoughtOnMF") ||
+    allStockComany;
 
   return (
     <>
@@ -47,9 +62,9 @@ export default function Home() {
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
-                    <h5 className="mb-0 sec_title">Most Bought on mf-stcok</h5>
+                    <h5 className="mb-0 sec_title">Most Bought on mf-stock</h5>
                   </div>
-                  <StocksList STOCK_LIST={ALL_STOCK_COMPANY_DATA} />
+                  <StocksList STOCK_LIST={MOST_BOUGHT_STOCK_LIST} />
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">

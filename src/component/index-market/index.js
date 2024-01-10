@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "../../styles/stock-card.module.scss";
-import { MAIN_CARD } from "@/jsondata/stockConstant";
+import { ALL_DATA } from "@/jsondata/stockConstant";
 import Slider from "react-slick";
 import Link from "next/link";
 
@@ -18,7 +18,7 @@ const IndexMarket = () => {
   return (
     <>
       <Slider {...settings}>
-        {MAIN_CARD.map((value, index) => {
+        {ALL_DATA.map((value, index) => {
           return (
             <>
               <Card

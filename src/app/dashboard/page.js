@@ -11,11 +11,15 @@ import { FaHandHoldingUsd } from "react-icons/fa";
 import { GiProfit } from "react-icons/gi";
 import { BsCashCoin } from "react-icons/bs";
 import StocksList from "@/component/stocks-list";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 import Investments from "@/component/investments";
 import MutualFundPopularFund from "@/component/mutual-fund-popularfund";
+import { useSelector } from "react-redux";
 
 function page() {
+  const allStockComany = useSelector(
+    (state) => state.stockReducer.allStockComany
+  );
+
   return (
     <Container className={`mb-4 mt-5`}>
       <Breadcrumb className="mb-3">
@@ -115,7 +119,7 @@ function page() {
             <div className="mb-3 mt-3">
               <h5 className="mb-0 sec_title">Invested In Stock</h5>
             </div>
-            <StocksList STOCK_LIST={ALL_STOCK_COMPANY_DATA} />
+            <StocksList STOCK_LIST={allStockComany} />
           </div>
         </Tab>
         <Tab eventKey="MutualFunds" title="MutualFunds">

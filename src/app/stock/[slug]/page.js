@@ -19,7 +19,7 @@ import {
   Tooltip,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
+import { NSE_DETAIL } from "@/jsondata/stockConstant";
 import { RiTimerLine } from "react-icons/ri";
 import { GoBookmark } from "react-icons/go";
 import { FaCheck, FaCheckCircle, FaRupeeSign } from "react-icons/fa";
@@ -28,8 +28,7 @@ import { BiWalletAlt } from "react-icons/bi";
 import StockOverview from "@/component/stock-detail/StockOverview";
 import ExpertRating from "@/component/stock-detail/ExpertRating";
 import OrderStock from "@/component/order-stock";
-
-const data = ALL_STOCK_COMPANY_DATA;
+import { useSelector } from "react-redux";
 
 const stockGraph = {
   series: [
@@ -426,11 +425,16 @@ const revenueGraph = {
   },
 };
 function StockDetail({ params }) {
-  const [show, setShow] = useState(false);
+  const allStockComany = useSelector(
+    (state) => state.stockReducer.allStockComany
+  );
+  const data = allStockComany;
 
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [stockItem, setStockItem] = useState(null);
+  const [key, setKey] = useState("BSE");
 
   useEffect(() => {
     const fetchCartItem = async () => {
@@ -482,17 +486,21 @@ function StockDetail({ params }) {
                       <div className={`${style.stock_detail_price}`}>
                         <h3>
                           <FaRupeeSign fontSize={22} />
-                          {stockItem.price}{" "}
+                          {key === "NSE"
+                            ? NSE_DETAIL.price
+                            : stockItem.price}{" "}
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
-                            {stockItem.result}
+                            {key === "NSE"
+                              ? NSE_DETAIL.result
+                              : stockItem.result}
                           </span>
                           <span
                             className={`${style.stock_detail_price_updown}`}
                           >
                             {" "}
-                            ({stockItem.ltp}%)
+                            ({key === "NSE" ? NSE_DETAIL.ltp : stockItem.ltp}%)
                           </span>
                         </h3>
                       </div>
@@ -532,8 +540,16 @@ function StockDetail({ params }) {
                   height={350}
                 />
               </div>
-              <StockOverview />
-              <ExpertRating />
+              <StockOverview
+                stockItem={stockItem}
+                tabValue={key}
+                NSE_DETAIL={NSE_DETAIL}
+              />
+              <ExpertRating
+                stockItem={stockItem}
+                tabValue={key}
+                NSE_DETAIL={NSE_DETAIL}
+              />
 
               <Tabs
                 defaultActiveKey="Overview"
@@ -638,6 +654,8 @@ function StockDetail({ params }) {
                       <p className="mb-2 fw-medium">Select Share</p>
                       <Tabs
                         defaultActiveKey="BSE"
+                        // activeKey={key}
+                        onSelect={(k) => setKey(k)}
                         id="justify-tab-example"
                         className="mb-3 tab-bordered"
                         justify
@@ -727,6 +745,7 @@ function StockDetail({ params }) {
                       <p className="mb-2 fw-medium">Select Share</p>
                       <Tabs
                         defaultActiveKey="BSE"
+                        onSelect={(k) => setKey(k)}
                         id="justify-tab-example"
                         className="mb-3 tab-bordered"
                         justify

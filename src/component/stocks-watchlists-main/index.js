@@ -1,10 +1,13 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
 import ReactApexChart from "react-apexcharts";
 import styles from "./watchlist.module.scss";
+import { useSelector } from "react-redux";
 
 const StockWatchlistMain = () => {
+  const allStockComany = useSelector(
+    (state) => state.stockReducer.allStockComany
+  );
   const stockWatchListGraph = {
     series: [
       {
@@ -106,7 +109,7 @@ const StockWatchlistMain = () => {
             </tr>
           </thead>
           <tbody>
-            {ALL_STOCK_COMPANY_DATA.map((value, index) => {
+            {allStockComany.map((value, index) => {
               return (
                 <>
                   <tr>

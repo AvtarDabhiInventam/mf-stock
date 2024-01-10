@@ -20,6 +20,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import DataTable from "react-data-table-component";
 import { addBank } from "@/redux/slices/bankSlice";
+import { BANK_DETAILS } from "@/jsondata/accountConstant";
 
 const columns = [
   {
@@ -51,103 +52,6 @@ const customStyles = {
   },
 };
 
-const data = [
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            HDFC Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            ICICI Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">SBI Bank Share Purchase</span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">XXXX XXXX XXXX 4545</span>
-        </div>
-      </div>
-    ),
-  },
-];
-
 const validationSchema = Yup.object({
   name: Yup.string()
     .matches(/^[A-Za-z ]*$/, "Please enter valid name")
@@ -167,12 +71,13 @@ const validationSchema = Yup.object({
 
 function page() {
   const dispatch = useDispatch();
-  const banks = useSelector((state) => state.bankReducer.banks);
+  const bankList = useSelector((state) => state.bankReducer.banks);
 
   const {
     register,
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(validationSchema),
@@ -181,8 +86,26 @@ function page() {
   const onSubmit = (data) => {
     if (data) {
       dispatch(addBank({ _id: Date.now(), ...data }));
+      reset();
     }
   };
+
+  const TABLE_DATA = bankList.map((bank, index) => ({
+    key: bank._id,
+    id: bank._id,
+    title: (
+      <div className="d-flex align-items-center">
+        {/* <div>
+          <img width={50} src={bank?.logo} alt="" />
+        </div> */}
+        <div className="d-flex flex-column">
+          <span className="fs-6 mb-2 fw-semibold">{bank.bankName}</span>
+          <span className="gray-color fw-medium">{bank.accountNo}</span>
+        </div>
+      </div>
+    ),
+  }));
+
   return (
     <Container className={`${style.my_wallet} mb-4 mt-5`}>
       <Row>
@@ -197,7 +120,7 @@ function page() {
         <Col sm={12} md={12} lg={6}>
           <DataTable
             columns={columns}
-            data={data}
+            data={TABLE_DATA}
             customStyles={customStyles}
           />
         </Col>

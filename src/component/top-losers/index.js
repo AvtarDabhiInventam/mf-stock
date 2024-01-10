@@ -1,22 +1,24 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
 import StocksList from "../stocks-list";
-import {
-  ALL_STOCK_COMPANY_DATA,
-  TOP_LOOSERS_LIST,
-} from "@/jsondata/stockConstant";
+import { useSelector } from "react-redux";
 
 const TopLosers = () => {
+  const allStockComany = useSelector(
+    (state) => state.stockReducer.allStockComany
+  );
   const LARGE_STOCK_LIST =
-    TOP_LOOSERS_LIST?.filter((item) => item.equityFunds === "Large") ||
-    ALL_STOCK_COMPANY_DATA;
+    allStockComany?.filter((item) =>
+      item?.section === "topLosers" ? item.equityFunds === "Large" : ""
+    ) || allStockComany;
   const MEDIUM_STOCK_LIST =
-    TOP_LOOSERS_LIST?.filter((item) => item.equityFunds === "Medium") ||
-    ALL_STOCK_COMPANY_DATA;
+    allStockComany?.filter((item) =>
+      item?.section === "topLosers" ? item.equityFunds === "Medium" : ""
+    ) || allStockComany;
   const SMALL_STOCK_LIST =
-    TOP_LOOSERS_LIST?.filter((item) => item.equityFunds === "Small") ||
-    ALL_STOCK_COMPANY_DATA;
-
+    allStockComany?.filter((item) =>
+      item?.section === "topLosers" ? item.equityFunds === "Small" : ""
+    ) || allStockComany;
   return (
     <>
       <Tabs

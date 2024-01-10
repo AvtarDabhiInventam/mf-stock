@@ -3,8 +3,6 @@ import { Card, Col, Row } from "react-bootstrap";
 import styles from "../../styles/stock-card.module.scss";
 import StockImg from "../../images/stock-img.webp";
 import Image from "next/image";
-import { ALL_STOCK_COMPANY_DATA } from "@/jsondata/stockConstant";
-// import { ALL_DATA } from "@/jsondata/stockConstant";
 import Link from "next/link";
 
 const StocksList = ({ STOCK_LIST }) => {

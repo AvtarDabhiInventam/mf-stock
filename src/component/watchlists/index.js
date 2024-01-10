@@ -5,9 +5,12 @@ import { FaAngleDown } from "react-icons/fa6";
 import WatchlistsStocks from "../watchlists-stocks";
 import Link from "next/link";
 import { MdAddCircleOutline } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 const Watchlists = () => {
   const [isOpen, setOpen] = useState(false);
+  const user = useSelector((state) => state.authReducer.user);
+
   return (
     <>
       <Card className={`${styles.watchlist_card_div}`}>
@@ -17,7 +20,9 @@ const Watchlists = () => {
             onClick={() => setOpen(!isOpen)}
           >
             <div>
-              <h6 className={`${styles.title}`}>Rahul Watchlists</h6>
+              <h6 className={`${styles.title}`}>
+                {user?.firstName}'s Watchlists
+              </h6>
               <p className={`${styles.index_value}`}>5 items</p>
             </div>
             <div>
