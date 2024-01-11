@@ -319,6 +319,7 @@ const MainStockTabDetails = ({ STOCK_DATA }) => {
           height={350}
         />
       </div>
+      <h5 class="mb-3 mt-2 sec_title">Companies</h5>
       <StocksList STOCK_LIST={STOCK_DATA?.company} />
     </>
   );

@@ -3,10 +3,13 @@
 .mf_card_div {
   background: $white;
   border: 1px solid $border-primary;
+  box-shadow: 0 0 2px 0 #e0e3eb, 0 2px 10px 0 #e0e3eb;
 }
+
 .small_text {
   font-size: 15px;
 }
+
 .img_box {
   img {
     border-radius: $border-radius;
@@ -14,6 +17,7 @@
     min-height: 38px;
   }
 }
+
 .star_rating {
   svg {
     color: $gold-color;
@@ -24,6 +28,7 @@
   .small_text {
     font-size: 14px;
   }
+
   .header_contains {
     h6 {
       font-size: 15px;

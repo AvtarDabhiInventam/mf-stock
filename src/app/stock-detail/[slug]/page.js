@@ -31,7 +31,7 @@ const MainStockDetail = ({ params }) => {
         <Container>
           <Breadcrumb>
             <BreadcrumbItem href="#">Home </BreadcrumbItem>
-            <BreadcrumbItem href="#">Stocks</BreadcrumbItem>
+            <BreadcrumbItem href="#">Index</BreadcrumbItem>
             {/* <BreadcrumbItem active>{params.slug}</BreadcrumbItem> */}
           </Breadcrumb>
           <Row>
@@ -47,7 +47,7 @@ const MainStockDetail = ({ params }) => {
                 <Tab eventKey="sensex" title="SENSEX">
                   <MainStockTabDetails STOCK_DATA={sensex_data} />
                 </Tab>
-                <Tab eventKey="banknifty" title="Bank NIFTY">
+                <Tab eventKey="banknifty" title="BANK NIFTY">
                   <MainStockTabDetails STOCK_DATA={banknifty_data} />
                 </Tab>
                 <Tab eventKey="finnifty" title="FINNIFTY">
@@ -56,7 +56,7 @@ const MainStockDetail = ({ params }) => {
                 <Tab eventKey="nifty100" title="NIFTY 100">
                   <MainStockTabDetails STOCK_DATA={nifty100_data} />
                 </Tab>
-                <Tab eventKey="niftyMidcapSelect" title="Nifty Midcap Select">
+                <Tab eventKey="niftyMidcapSelect" title="NIFTY MIDCAP">
                   <MainStockTabDetails STOCK_DATA={niftyMidcapSelect_data} />
                 </Tab>
               </Tabs>

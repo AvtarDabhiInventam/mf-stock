@@ -12,6 +12,9 @@ import * as Yup from "yup";
 import { addUser } from "@/redux/slices/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import _data from "../../JSON/auth.json";
+import Image from "next/image";
+import logo from "../../images/mf-stock-logo.png";
+import loginImg from "../../images/login-bg.jpg";
 
 // import data from "../../JSON/auth.json";
 
@@ -53,25 +56,32 @@ function Register() {
 
   return (
     <>
-      <div className={`${styles.auth_page_main_div}`}>
-        <Container>
+      <Container>
+        <div className={`${styles.auth_page_main_div}`}>
           <Row>
-            <Col md={6}>
+            <Col md={6} className="pe-0">
               <div className={`${styles.contains_div}`}>
-                <div>
+                <Image src={loginImg} alt="login img" />
+
+                {/* <div>
                   <h3>Hello There, Join Us </h3>
                   <p>Please create your account to continue using this app</p>
-                </div>
+                </div> */}
               </div>
             </Col>
-            <Col md={6}>
+            <Col md={6} className="ps-0">
               <div className={`${styles.auth_card_div}`}>
+                <div className="text-center w-100 mb-3">
+                  <Image src={logo} alt="logo" width={65} height={65} />
+                </div>
                 <h4>Sign Up</h4>
                 <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
                   <Row>
-                    <Col md={6}>
-                      <Form.Group className="mb-3" controlId="firstName">
-                        <Form.Label>First Name</Form.Label>
+                    <Col md={12}>
+                      <Form.Group className="mb-4" controlId="firstName">
+                        <Form.Label className={`${styles.auth_label}`}>
+                          First Name
+                        </Form.Label>
                         <Controller
                           name="firstName"
                           control={control}
@@ -80,8 +90,8 @@ function Register() {
                               {...field}
                               type="text"
                               autoComplete="off"
-                              placeholder="First Name"
                               isInvalid={!!errors.firstName}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -92,9 +102,11 @@ function Register() {
                         )}
                       </Form.Group>
                     </Col>
-                    <Col md={6}>
-                      <Form.Group className="mb-3" controlId="lastName">
-                        <Form.Label>Last Name</Form.Label>
+                    <Col md={12}>
+                      <Form.Group className="mb-4" controlId="lastName">
+                        <Form.Label className={`${styles.auth_label}`}>
+                          Last Name
+                        </Form.Label>
                         <Controller
                           name="lastName"
                           control={control}
@@ -103,8 +115,8 @@ function Register() {
                               {...field}
                               type="text"
                               autoComplete="off"
-                              placeholder="Last Name"
                               isInvalid={!!errors.lastName}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -115,9 +127,11 @@ function Register() {
                         )}
                       </Form.Group>
                     </Col>
-                    <Col md={6}>
-                      <Form.Group className="mb-3" controlId="email">
-                        <Form.Label>Email</Form.Label>
+                    <Col md={12}>
+                      <Form.Group className="mb-4" controlId="email">
+                        <Form.Label className={`${styles.auth_label}`}>
+                          Email
+                        </Form.Label>
                         <Controller
                           name="email"
                           control={control}
@@ -126,8 +140,8 @@ function Register() {
                               {...field}
                               type="email"
                               autoComplete="off"
-                              placeholder="Email"
                               isInvalid={!!errors.email}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -138,9 +152,11 @@ function Register() {
                         )}
                       </Form.Group>
                     </Col>
-                    <Col md={6}>
+                    <Col md={12}>
                       <Form.Group className="mb-3" controlId="password">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className={`${styles.auth_label}`}>
+                          Password
+                        </Form.Label>
                         <Controller
                           name="password"
                           control={control}
@@ -149,8 +165,8 @@ function Register() {
                               {...field}
                               type="password"
                               autoComplete="off"
-                              placeholder="Password"
                               isInvalid={!!errors.password}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -179,8 +195,8 @@ function Register() {
               </div>
             </Col>
           </Row>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </>
   );
 }

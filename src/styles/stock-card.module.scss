@@ -28,4 +28,14 @@
     overflow: hidden;
     margin-bottom: 12px;
   }
+
+  &:hover .wishlist_icon {
+    display: block;
+  }
+}
+
+.wishlist_icon {
+  display: none;
+  position: absolute;
+  right: 10px;
 }
