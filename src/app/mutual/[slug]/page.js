@@ -14,10 +14,6 @@ import {
   Form,
 } from "react-bootstrap";
 import style from "@/styles/stock-detail.module.scss";
-import {
-  ALL_MF_COMPANY,
-  MUTUALFUND_DETAILS,
-} from "@/jsondata/mutualFundConstant";
 import { RiTimerLine } from "react-icons/ri";
 import { GoBookmark } from "react-icons/go";
 import { FaRupeeSign } from "react-icons/fa";
@@ -26,6 +22,7 @@ import { BiWalletAlt } from "react-icons/bi";
 import DataTable from "react-data-table-component";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useSelector } from "react-redux";
 
 const stockGraph = {
   series: [
@@ -521,11 +518,12 @@ const year_data = [
 function MutualDetail({ params }) {
   const [startDate, setStartDate] = useState(new Date());
   const [mutualFundData, setMutualFundData] = useState(null);
+  const allMFCompany = useSelector((state) => state.mfReducer.allMFCompany);
 
   useEffect(() => {
     const fetchCartItem = async () => {
       try {
-        const response = ALL_MF_COMPANY.find((value) => {
+        const response = allMFCompany.find((value) => {
           if (value._id == params.slug) {
             setMutualFundData(value);
             return value;

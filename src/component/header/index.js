@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Dropdown, NavDropdown, Row } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -20,7 +20,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout, resetAuthSlice } from "@/redux/slices/authSlice";
 import { persistor } from "@/redux/store";
 import { resetBankSlice } from "@/redux/slices/bankSlice";
-import { resetStockSlice } from "@/redux/slices/stockSlice";
+import { resetStockSlice, setSearchTerm } from "@/redux/slices/stockSlice";
+import { setMFSearchTerm } from "@/redux/slices/mfSlice";
 
 const CustomNavItem = ({ text }) => {
   return (
@@ -40,16 +41,27 @@ const CustomNavHeader = ({ text }) => {
 
 const Header = () => {
   const dispatch = useDispatch();
+  const isLoggedin = localStorage.getItem("isLoggedin");
+  const user = useSelector((state) => state.authReducer.user);
+  const activeTab = useSelector((state) => state.stockReducer.activeTab);
+  const [searchInput, setSearchInput] = useState("");
   const [show, setShow] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const isLoggedin = localStorage.getItem("isLoggedin");
-  const user = useSelector((state) => state.authReducer.user);
 
   const purge = () => {
     persistor.purge();
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+    if (activeTab === "Stock") {
+      dispatch(setSearchTerm(e.target.value));
+    } else {
+      dispatch(setMFSearchTerm(e.target.value));
+    }
   };
 
   return (
@@ -71,10 +83,12 @@ const Header = () => {
             </Navbar.Brand>
             <div className={`${style.form_inputs} d-flex`}>
               <input
-                class=""
                 className={`${style.form_control} form-control`}
                 type="text"
+                name="search"
+                value={searchInput}
                 placeholder="Search..."
+                onChange={(e) => handleSearchChange(e)}
               />
               <IoSearchSharp fontSize={20} className={`${style.search_icon}`} />
             </div>

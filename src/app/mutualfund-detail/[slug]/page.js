@@ -1,13 +1,16 @@
 "use client";
-import { CATEGORIES } from "@/jsondata/mutualFundConstant";
+
 import React from "react";
 import { IoIosStar } from "react-icons/io";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import styles from "@/styles/mutual-fund-category.module.scss";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const MutualfundCategoryDeatail = ({ params }) => {
-  const COMPANY_LIST = CATEGORIES.find(
+  const { allMFCategory } = useSelector((state) => state.mfReducer);
+
+  const COMPANY_LIST = allMFCategory?.find(
     (obj) => obj.slug === params?.slug
   ).company;
   return (

@@ -17,31 +17,57 @@ import CurrentInvestment from "@/component/stock-current-investment";
 import MFCurrentInvestment from "@/component/mutual-fund-current-investment";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getAllStockCompany } from "@/redux/slices/stockSlice";
+import {
+  getAllStockCategory,
+  getAllStockCompany,
+  setActiceTab,
+} from "@/redux/slices/stockSlice";
+import { getAllMFCategory, getAllMFCompany } from "@/redux/slices/mfSlice";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+
+  const { allStockCompany, allStockCategory } = useSelector(
+    (state) => state.stockReducer
+  );
+  const { allMFCompany, allMFCategory } = useSelector(
+    (state) => state.mfReducer
   );
 
   useEffect(() => {
     dispatch(getAllStockCompany());
+    dispatch(getAllMFCompany());
+    dispatch(getAllStockCategory());
+    dispatch(getAllMFCategory());
+    dispatch(setActiceTab("Stock"));
   }, []);
 
   const STOCK_LIST =
-    allStockComany?.filter((item) => item.section === "stocksInNews") ||
-    allStockComany;
+    allStockCompany?.filter((item) => item.section === "stocksInNews") ||
+    allStockCompany;
 
   const MOST_BOUGHT_STOCK_LIST =
-    allStockComany?.filter((item) => item.section === "mostBoughtOnMF") ||
-    allStockComany;
+    allStockCompany?.filter((item) => item.section === "mostBoughtOnMF") ||
+    allStockCompany;
+
+  const MF_POPULAR_FUND_LIST =
+    allMFCompany?.filter((item) => item.section === "popularFund") ||
+    allMFCompany;
+
+  const MF_WATCHLIST =
+    allMFCompany?.filter((item) => item.section === "watchList") ||
+    allMFCompany;
+
+  const MF_MYMF_LIST =
+    allMFCompany?.filter((item) => item.section === "myMutualFund") ||
+    allMFCompany;
 
   return (
     <>
       <Container>
         <Tabs
           defaultActiveKey="Stock"
+          onSelect={(k) => dispatch(setActiceTab(k))}
           transition={false}
           id="noanim-tab-example"
           className="mb-4 mt-5 tabs_main_div"
@@ -58,7 +84,7 @@ export default function Home() {
                       <Link href="/">All indices</Link>
                     </div>
                   </div>
-                  <IndexMarket />
+                  <IndexMarket allStockCategory={allStockCategory} />
                 </div>
                 <div className="mt-5">
                   <div className="mb-3">
@@ -151,7 +177,7 @@ export default function Home() {
                   <div className="mb-3">
                     <h5 className="mb-0 sec_title">Category</h5>
                   </div>
-                  <MutualFundsCategory />
+                  <MutualFundsCategory allMFCategory={allMFCategory} />
                 </div>
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
@@ -162,9 +188,8 @@ export default function Home() {
                       <Link href="/">See all</Link>
                     </div>
                   </div>
-                  <MutualFundPopularFund />
+                  <MutualFundPopularFund MF_LIST={MF_POPULAR_FUND_LIST} />
                 </div>
-
                 <div className="mt-5">
                   <div className="d-flex justify-content-between align-items-center mb-3">
                     <div>
@@ -174,7 +199,7 @@ export default function Home() {
                       <Link href="/">See all</Link>
                     </div>
                   </div>
-                  <MutualFundWatchList />
+                  <MutualFundWatchList MF_LIST={MF_WATCHLIST} />
                 </div>
 
                 <div className="mt-5">
@@ -186,7 +211,7 @@ export default function Home() {
                       <Link href="/">See all</Link>
                     </div>
                   </div>
-                  <MutualFundList />
+                  <MutualFundList MF_LIST={allMFCompany} />
                 </div>
               </Col>
               <Col xs={12} md={8} xl={4} className="tabs_invest_div">
@@ -207,7 +232,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">My Mutual Fund</h5>
                     </div>
                   </div>
-                  <MFCurrentInvestment />
+                  <MFCurrentInvestment MF_LIST={MF_MYMF_LIST} />
                 </div>
               </Col>
             </Row>

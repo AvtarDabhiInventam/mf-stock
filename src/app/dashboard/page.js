@@ -17,8 +17,8 @@ import { useSelector } from "react-redux";
 import { FaArrowDownLong, FaArrowUpLong } from "react-icons/fa6";
 
 function page() {
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+  const allStockCompany = useSelector(
+    (state) => state.stockReducer.allStockCompany
   );
 
   return (
@@ -124,7 +124,7 @@ function page() {
             <div className="mb-3 mt-3">
               <h5 className="mb-0 sec_title">Invested In Stock</h5>
             </div>
-            <StocksList STOCK_LIST={allStockComany} />
+            <StocksList STOCK_LIST={allStockCompany} />
           </div>
         </Tab>
         <Tab eventKey="MutualFunds" title="MutualFunds">

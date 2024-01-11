@@ -1,6 +1,5 @@
 "use client";
 import StocksList from "@/component/stocks-list";
-import { ALL_DATA } from "@/jsondata/stockConstant";
 import React from "react";
 import {
   Breadcrumb,
@@ -14,14 +13,18 @@ import {
 import style from "@/styles/stock-detail.module.scss";
 import ReactApexChart from "react-apexcharts";
 import MainStockTabDetails from "@/component/main-stock-tab-details";
+import { useSelector } from "react-redux";
 
 const MainStockDetail = ({ params }) => {
-  const nifty50_data = ALL_DATA.find((obj) => obj.slug === "nifty50");
-  const sensex_data = ALL_DATA.find((obj) => obj.slug === "sensex");
-  const banknifty_data = ALL_DATA.find((obj) => obj.slug === "banknifty");
-  const finnifty_data = ALL_DATA.find((obj) => obj.slug === "finnifty");
-  const nifty100_data = ALL_DATA.find((obj) => obj.slug === "nifty100");
-  const niftyMidcapSelect_data = ALL_DATA.find(
+  const { allStockCategory } = useSelector((state) => state.stockReducer);
+  const nifty50_data = allStockCategory.find((obj) => obj.slug === "nifty50");
+  const sensex_data = allStockCategory.find((obj) => obj.slug === "sensex");
+  const banknifty_data = allStockCategory.find(
+    (obj) => obj.slug === "banknifty"
+  );
+  const finnifty_data = allStockCategory.find((obj) => obj.slug === "finnifty");
+  const nifty100_data = allStockCategory.find((obj) => obj.slug === "nifty100");
+  const niftyMidcapSelect_data = allStockCategory.find(
     (obj) => obj.slug === "niftyMidcapSelect"
   );
 

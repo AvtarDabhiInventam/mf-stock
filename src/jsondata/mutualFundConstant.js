@@ -13,11 +13,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -62,11 +61,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -111,11 +109,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -160,11 +157,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -209,11 +205,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -258,11 +253,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -307,11 +301,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -356,11 +349,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -405,11 +397,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -454,11 +445,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -503,11 +493,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -552,11 +541,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -609,11 +597,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -658,11 +645,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -707,11 +693,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -756,11 +741,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -805,11 +789,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -854,11 +837,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -903,11 +885,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -952,11 +933,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1001,11 +981,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1050,11 +1029,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1099,11 +1077,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1148,11 +1125,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1205,11 +1181,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1254,11 +1229,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1303,11 +1277,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1352,11 +1325,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1401,11 +1373,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1450,11 +1421,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1499,11 +1469,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1548,11 +1517,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1597,11 +1565,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1646,11 +1613,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1695,11 +1661,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1744,11 +1709,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1801,11 +1765,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1850,11 +1813,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1899,11 +1861,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1948,11 +1909,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -1997,11 +1957,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2046,11 +2005,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2095,11 +2053,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2144,11 +2101,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2193,11 +2149,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2242,11 +2197,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2291,11 +2245,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2340,11 +2293,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2397,11 +2349,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2446,11 +2397,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2495,11 +2445,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2544,11 +2493,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2593,11 +2541,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2642,11 +2589,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2691,11 +2637,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2740,11 +2685,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2789,11 +2733,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2838,11 +2781,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2887,11 +2829,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2936,11 +2877,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -2993,11 +2933,10 @@ export const CATEGORIES = [
         minInvest: "10",
         fundSize: "2000",
         threeYearReturn: "0.48",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3042,11 +2981,10 @@ export const CATEGORIES = [
         minInvest: "23",
         fundSize: "43853",
         threeYearReturn: "4.34",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3091,11 +3029,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "8900",
         threeYearReturn: "7.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3140,11 +3077,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "3000",
         threeYearReturn: "3.00",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.14",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3189,11 +3125,10 @@ export const CATEGORIES = [
         minInvest: "60",
         fundSize: "4000",
         threeYearReturn: "90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.23",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3238,11 +3173,10 @@ export const CATEGORIES = [
         minInvest: "21",
         fundSize: "8200",
         threeYearReturn: "12",
-        oneDayReturn: "1.16",
+        oneDayReturn: "5.06",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3287,11 +3221,10 @@ export const CATEGORIES = [
         minInvest: "32",
         fundSize: "47775",
         threeYearReturn: "8.90",
-        oneDayReturn: "1.16",
+        oneDayReturn: "1.10",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "3",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3336,11 +3269,10 @@ export const CATEGORIES = [
         minInvest: "28",
         fundSize: "43400",
         threeYearReturn: "4.56",
-        oneDayReturn: "1.16",
+        oneDayReturn: "6.02",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3385,11 +3317,10 @@ export const CATEGORIES = [
         minInvest: "78",
         fundSize: "9400",
         threeYearReturn: "7.87",
-        oneDayReturn: "1.16",
+        oneDayReturn: "0.09",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "2",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3434,11 +3365,10 @@ export const CATEGORIES = [
         minInvest: "29",
         fundSize: "4000",
         threeYearReturn: "6.54",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.16",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3483,11 +3413,10 @@ export const CATEGORIES = [
         minInvest: "77",
         fundSize: "38000",
         threeYearReturn: "2.05",
-        oneDayReturn: "1.16",
+        oneDayReturn: "3.27",
         nav: "30.04",
         minSIPAmount: "100",
         rating: "4",
-        fundSize: "98111",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3532,11 +3461,10 @@ export const CATEGORIES = [
         minInvest: "36",
         fundSize: "20000",
         threeYearReturn: "3.04",
-        oneDayReturn: "1.16",
+        oneDayReturn: "2.05",
         nav: "30.04",
         minSIPAmount: "100",
-        rating: "4",
-        fundSize: "98111",
+        rating: "5",
         colorstatus: "green-color",
         returnAndRating: [
           {
@@ -3586,11 +3514,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "10",
     fundSize: "2000",
     threeYearReturn: "0.48",
-    oneDayReturn: "1.16",
+    oneDayReturn: "2.16",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "3",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3635,11 +3562,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "23",
     fundSize: "43853",
     threeYearReturn: "4.34",
-    oneDayReturn: "1.16",
+    oneDayReturn: "1.06",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "2",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3684,11 +3610,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "29",
     fundSize: "8900",
     threeYearReturn: "7.05",
-    oneDayReturn: "1.16",
+    oneDayReturn: "0.16",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "3",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3733,11 +3658,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "21",
     fundSize: "3000",
     threeYearReturn: "3.00",
-    oneDayReturn: "1.16",
+    oneDayReturn: "3.14",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "5",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3782,11 +3706,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "60",
     fundSize: "4000",
     threeYearReturn: "90",
-    oneDayReturn: "1.16",
+    oneDayReturn: "0.23",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "5",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3831,11 +3754,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "21",
     fundSize: "8200",
     threeYearReturn: "12",
-    oneDayReturn: "1.16",
+    oneDayReturn: "5.06",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "3",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3880,11 +3802,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "32",
     fundSize: "47775",
     threeYearReturn: "8.90",
-    oneDayReturn: "1.16",
+    oneDayReturn: "1.10",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "3",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3929,11 +3850,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "28",
     fundSize: "43400",
     threeYearReturn: "4.56",
-    oneDayReturn: "1.16",
+    oneDayReturn: "6.02",
     nav: "30.04",
     minSIPAmount: "100",
     rating: "4",
-    fundSize: "98111",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -3978,11 +3898,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "78",
     fundSize: "9400",
     threeYearReturn: "7.87",
-    oneDayReturn: "1.16",
+    oneDayReturn: "0.09",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "2",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -4027,11 +3946,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "29",
     fundSize: "4000",
     threeYearReturn: "6.54",
-    oneDayReturn: "1.16",
+    oneDayReturn: "2.16",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "5",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -4076,11 +3994,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "77",
     fundSize: "38000",
     threeYearReturn: "2.05",
-    oneDayReturn: "1.16",
+    oneDayReturn: "3.27",
     nav: "30.04",
     minSIPAmount: "100",
     rating: "4",
-    fundSize: "98111",
     colorstatus: "green-color",
     returnAndRating: [
       {
@@ -4125,11 +4042,10 @@ export const ALL_MF_COMPANY = [
     minInvest: "36",
     fundSize: "20000",
     threeYearReturn: "3.04",
-    oneDayReturn: "1.16",
+    oneDayReturn: "2.05",
     nav: "30.04",
     minSIPAmount: "100",
-    rating: "4",
-    fundSize: "98111",
+    rating: "5",
     colorstatus: "green-color",
     returnAndRating: [
       {
