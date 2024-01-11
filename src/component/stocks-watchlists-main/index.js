@@ -5,9 +5,13 @@ import styles from "./watchlist.module.scss";
 import { useSelector } from "react-redux";
 
 const StockWatchlistMain = () => {
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+  const allStockCompany = useSelector(
+    (state) => state.stockReducer.allStockCompany
   );
+  const filteredItems =
+    allStockCompany?.filter((item) => item.section === "watchlist") ||
+    allStockCompany;
+
   const stockWatchListGraph = {
     series: [
       {
@@ -109,47 +113,45 @@ const StockWatchlistMain = () => {
             </tr>
           </thead>
           <tbody>
-            {allStockComany.map((value, index) => {
+            {filteredItems?.map((value, index) => {
               return (
-                <>
-                  <tr>
-                    <td>
-                      <div className={`${styles.img_box}`}>
-                        <img
-                          src={value.logo}
-                          width={38}
-                          height={38}
-                          alt="User Image"
-                        />
-                      </div>
-                    </td>
-                    <td className={`${styles.index_value}`}>{value.name}</td>
-                    <td>
-                      <div id="chart">
-                        <ReactApexChart
-                          options={stockWatchListGraph.options}
-                          series={stockWatchListGraph.series}
-                          type="candlestick"
-                          height={40}
-                          width={100}
-                        />
-                      </div>
-                    </td>
-                    <td>
-                      <p className={`${styles.index_value}`}>{value.price}</p>
-                    </td>
-                    <td>
-                      <label
-                        className={`${styles.index_percentage} ${value.colorstatus} fw-bold`}
-                      >
-                        {value.result} ({value.ltp}%)
-                      </label>
-                    </td>
-                    <td className={`${styles.index_value}`}>
-                      {value.fundamental?.marketCap}
-                    </td>
-                  </tr>
-                </>
+                <tr key={index}>
+                  <td>
+                    <div className={`${styles.img_box}`}>
+                      <img
+                        src={value.logo}
+                        width={38}
+                        height={38}
+                        alt="User Image"
+                      />
+                    </div>
+                  </td>
+                  <td className={`${styles.index_value}`}>{value.name}</td>
+                  <td>
+                    <div id="chart">
+                      <ReactApexChart
+                        options={stockWatchListGraph.options}
+                        series={stockWatchListGraph.series}
+                        type="candlestick"
+                        height={40}
+                        width={100}
+                      />
+                    </div>
+                  </td>
+                  <td>
+                    <p className={`${styles.index_value}`}>{value.price}</p>
+                  </td>
+                  <td>
+                    <label
+                      className={`${styles.index_percentage} ${value.colorstatus} fw-bold`}
+                    >
+                      {value.result} ({value.ltp}%)
+                    </label>
+                  </td>
+                  <td className={`${styles.index_value}`}>
+                    {value.fundamental?.marketCap}
+                  </td>
+                </tr>
               );
             })}
           </tbody>

@@ -1,14 +1,13 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "./mutualfundcategory.module.scss";
-import { CATEGORIES } from "@/jsondata/mutualFundConstant";
 import Link from "next/link";
 
-const MutualFundsCategory = () => {
+const MutualFundsCategory = ({ allMFCategory }) => {
   return (
     <>
       <Row className="row_space">
-        {CATEGORIES.map((value, index) => {
+        {allMFCategory?.map((value, index) => {
           return (
             <Col xs={6} md={4} key={index}>
               <Card

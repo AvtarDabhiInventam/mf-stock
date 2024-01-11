@@ -1,6 +1,5 @@
 "use client";
 import StocksList from "@/component/stocks-list";
-import { ALL_DATA } from "@/jsondata/stockConstant";
 import React from "react";
 import {
   Breadcrumb,
@@ -14,14 +13,18 @@ import {
 import style from "@/styles/stock-detail.module.scss";
 import ReactApexChart from "react-apexcharts";
 import MainStockTabDetails from "@/component/main-stock-tab-details";
+import { useSelector } from "react-redux";
 
 const MainStockDetail = ({ params }) => {
-  const nifty50_data = ALL_DATA.find((obj) => obj.slug === "nifty50");
-  const sensex_data = ALL_DATA.find((obj) => obj.slug === "sensex");
-  const banknifty_data = ALL_DATA.find((obj) => obj.slug === "banknifty");
-  const finnifty_data = ALL_DATA.find((obj) => obj.slug === "finnifty");
-  const nifty100_data = ALL_DATA.find((obj) => obj.slug === "nifty100");
-  const niftyMidcapSelect_data = ALL_DATA.find(
+  const { allStockCategory } = useSelector((state) => state.stockReducer);
+  const nifty50_data = allStockCategory.find((obj) => obj.slug === "nifty50");
+  const sensex_data = allStockCategory.find((obj) => obj.slug === "sensex");
+  const banknifty_data = allStockCategory.find(
+    (obj) => obj.slug === "banknifty"
+  );
+  const finnifty_data = allStockCategory.find((obj) => obj.slug === "finnifty");
+  const nifty100_data = allStockCategory.find((obj) => obj.slug === "nifty100");
+  const niftyMidcapSelect_data = allStockCategory.find(
     (obj) => obj.slug === "niftyMidcapSelect"
   );
 
@@ -31,7 +34,7 @@ const MainStockDetail = ({ params }) => {
         <Container>
           <Breadcrumb>
             <BreadcrumbItem href="#">Home </BreadcrumbItem>
-            <BreadcrumbItem href="#">Stocks</BreadcrumbItem>
+            <BreadcrumbItem href="#">Index</BreadcrumbItem>
             {/* <BreadcrumbItem active>{params.slug}</BreadcrumbItem> */}
           </Breadcrumb>
           <Row>
@@ -47,7 +50,7 @@ const MainStockDetail = ({ params }) => {
                 <Tab eventKey="sensex" title="SENSEX">
                   <MainStockTabDetails STOCK_DATA={sensex_data} />
                 </Tab>
-                <Tab eventKey="banknifty" title="Bank NIFTY">
+                <Tab eventKey="banknifty" title="BANK NIFTY">
                   <MainStockTabDetails STOCK_DATA={banknifty_data} />
                 </Tab>
                 <Tab eventKey="finnifty" title="FINNIFTY">
@@ -56,7 +59,7 @@ const MainStockDetail = ({ params }) => {
                 <Tab eventKey="nifty100" title="NIFTY 100">
                   <MainStockTabDetails STOCK_DATA={nifty100_data} />
                 </Tab>
-                <Tab eventKey="niftyMidcapSelect" title="Nifty Midcap Select">
+                <Tab eventKey="niftyMidcapSelect" title="NIFTY MIDCAP">
                   <MainStockTabDetails STOCK_DATA={niftyMidcapSelect_data} />
                 </Tab>
               </Tabs>

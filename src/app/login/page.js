@@ -12,6 +12,9 @@ import * as Yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "@/redux/slices/authSlice";
 import { useRouter } from "next/navigation";
+import loginImg from "../../images/login-bg.jpg";
+import Image from "next/image";
+import logo from "../../images/mf-stock-logo.png";
 
 function Login() {
   const users = useSelector((state) => state.authReducer.users);
@@ -70,28 +73,35 @@ function Login() {
   };
   return (
     <>
-      <div className={`${styles.auth_page_main_div}`}>
-        <Container>
+      <Container>
+        <div className={`${styles.auth_page_main_div}`}>
           <Row>
-            <Col md={6}>
+            <Col md={6} className="pe-0">
               <div className={`${styles.contains_div}`}>
-                <div>
+                <Image src={loginImg} alt="login img" />
+
+                {/* <div>
                   <h3>Hello There, Join Us </h3>
                   <p>
                     Please login using email id we will sent OTP for
                     verification
                   </p>
-                </div>
+                </div> */}
               </div>
             </Col>
-            <Col md={6}>
+            <Col md={6} className="ps-0">
               <div className={`${styles.auth_card_div}`}>
+                <div className="text-center w-100 mb-3">
+                  <Image src={logo} alt="logo" width={65} height={65} />
+                </div>
                 <h4>Sign In</h4>
                 <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
                   <Row>
                     <Col md={12}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Email</Form.Label>
+                        <Form.Label className={`${styles.auth_label}`}>
+                          Email
+                        </Form.Label>
                         <Controller
                           name="email"
                           control={control}
@@ -100,8 +110,8 @@ function Login() {
                               {...field}
                               type="text"
                               autoComplete="off"
-                              placeholder="Email"
                               isInvalid={!!errors.email}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -114,7 +124,9 @@ function Login() {
                     </Col>
                     <Col md={12}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Password</Form.Label>
+                        <Form.Label className={`${styles.auth_label}`}>
+                          Password
+                        </Form.Label>
                         <Controller
                           name="password"
                           control={control}
@@ -123,8 +135,8 @@ function Login() {
                               {...field}
                               type="password"
                               autoComplete="off"
-                              placeholder="Password"
                               isInvalid={!!errors.password}
+                              className={`${styles.auth_form_control}`}
                             />
                           )}
                         />
@@ -172,8 +184,8 @@ function Login() {
               </div>
             </Col>
           </Row>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </>
   );
 }

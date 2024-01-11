@@ -2,32 +2,62 @@
 
 .auth_page_main_div {
   margin-top: 70px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%), 0 6px 6px rgb(0 0 0 / 5%);
+  border-radius: 15px;
 }
+
 .contains_div {
-  padding-right: 10%;
+  padding-right: 0;
   height: 100%;
   display: flex;
   align-items: center;
+
+  img {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    height: 100%;
+  }
+
   h3 {
     font-size: 38px;
     margin-bottom: 10px;
   }
+
   p {
     font-size: 17px;
   }
 }
 
+.auth_label {
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.auth_form_control {
+  height: 35px;
+  background-color: #ffffff;
+  border: 0;
+  border-bottom: 1px solid $border-primary;
+  font-size: 17px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
 .auth_card_div {
   background-color: #fff;
-  box-shadow: 0 10px 20px rgb(0 0 0 / 10%), 0 6px 6px rgb(0 0 0 / 5%);
-  padding: 50px;
+  padding: 40px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+
   h4 {
     text-align: center;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 500;
     color: $text-primary;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 }
 
@@ -36,6 +66,7 @@
   text-align: center;
   margin-top: 25px;
 }
+
 .continue_with span {
   text-align: center;
   font-size: 15px;
@@ -44,6 +75,7 @@
   position: relative;
   padding: 0 25px;
 }
+
 .continue_with span:before {
   display: inline-block;
   content: "";
@@ -56,6 +88,7 @@
   position: absolute;
   z-index: 1;
 }
+
 .continue_with span:after {
   display: inline-block;
   content: "";
@@ -80,6 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   svg {
     font-size: 20px;
   }
@@ -89,21 +123,26 @@
   .auth_page_main_div {
     margin-top: 25px;
   }
+
   .auth_card_div {
     padding: 20px;
+
     h4 {
       text-align: center;
       font-size: 28px;
       margin-bottom: 30px;
     }
   }
+
   .contains_div {
     padding-right: 0px;
     margin-bottom: 25px;
     height: auto;
+
     h3 {
       font-size: 32px;
     }
+
     p {
       font-size: 17px;
     }
@@ -114,14 +153,17 @@
   .auth_page_main_div {
     margin-top: 25px;
   }
+
   .auth_card_div {
     padding: 20px;
+
     h4 {
       text-align: center;
       font-size: 28px;
       margin-bottom: 30px;
     }
   }
+
   .contains_div {
     padding-right: 0px;
     margin-bottom: 25px;
@@ -129,6 +171,7 @@
     h3 {
       font-size: 32px;
     }
+
     p {
       font-size: 17px;
     }

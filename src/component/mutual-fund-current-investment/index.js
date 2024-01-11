@@ -1,18 +1,12 @@
 import React from "react";
 import { Card, Col, Row } from "react-bootstrap";
 import styles from "../../styles/mutual-fund-category.module.scss";
-import { IoIosStar } from "react-icons/io";
-import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
 
-const MFCurrentInvestment = () => {
-  const filteredItems =
-    ALL_MF_COMPANY?.filter((item) => item.section === "myMutualFund") ||
-    ALL_MF_COMPANY;
+const MFCurrentInvestment = ({ MF_LIST }) => {
   return (
     <>
       <div className="current_investment_div">
-        {/* <Row className="row_space"> */}
-        {filteredItems?.map((company_value, index) => {
+        {MF_LIST?.map((company_value, index) => {
           return (
             <div key={index} className="mb-3">
               <Card className={`${styles.mf_card_div}`}>

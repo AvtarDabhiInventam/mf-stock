@@ -5,9 +5,9 @@ import Image from "next/image";
 import MutualFundsImg from "../../images/multi_funds_icon.png";
 import StocksImg from "../../images/stocks_icon.png";
 import FutureOptionsImg from "../../images/future_opt_icon.png";
-import CommoditiesImg from "../../images/commody_icon.png";
-import IPOsImg from "../../images/ipos_icon.png";
-import CurrenciesImg from "../../images/currency_icon.png";
+// import CommoditiesImg from "../../images/commody_icon.png";
+// import IPOsImg from "../../images/ipos_icon.png";
+// import CurrenciesImg from "../../images/currency_icon.png";
 
 const ProductToolsData = [
   {
@@ -17,22 +17,6 @@ const ProductToolsData = [
   {
     img: StocksImg,
     title: "Stocks",
-  },
-  {
-    img: FutureOptionsImg,
-    title: "Future & Options",
-  },
-  {
-    img: CommoditiesImg,
-    title: "Commodities",
-  },
-  {
-    img: IPOsImg,
-    title: "IPOs",
-  },
-  {
-    img: CurrenciesImg,
-    title: "Currencies",
   },
 ];
 

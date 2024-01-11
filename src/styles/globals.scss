@@ -52,6 +52,11 @@ a {
   font-weight: 500;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .white-color {
   color: $white;
 }
@@ -211,6 +216,14 @@ a {
   font-weight: 500;
   font-size: 16px;
   margin-bottom: 10px;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .btn {
@@ -575,4 +588,21 @@ a {
   letter-spacing: 3px;
   line-height: 1.5;
   color: #262626;
+}
+
+.card-stats {
+  box-shadow: 0 0 2px 0 #e0e3eb, 0 2px 10px 0 #e0e3eb;
+  border: 0;
+}
+
+.card-stats.blue {
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.card-stats.yellow {
+  background: linear-gradient(45deg, #d08519, #ffcb80);
+}
+
+.card-stats.green {
+  background: linear-gradient(45deg, #1c927b, #59e0c5);
 }

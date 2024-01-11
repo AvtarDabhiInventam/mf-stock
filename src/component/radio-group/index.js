@@ -15,10 +15,22 @@ export const RadioGroup = ({ children }) => {
   );
 };
 
-export const Radio = ({ children, id, name }) => {
+export const Radio = ({ children, id, name, register }) => {
+  const handleRadioChange = (event) => {
+    console.log("Selected value:", event.target.value);
+    // Perform additional actions if needed
+  };
+
   return (
     <>
-      <input type="radio" id={id} name={name} checked />
+      <input
+        type="radio"
+        id={id}
+        name={name}
+        checked
+        {...register(name)}
+        onChange={handleRadioChange}
+      />
       <label className="radio-label" htmlFor={id}>
         {children}
       </label>
