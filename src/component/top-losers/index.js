@@ -4,21 +4,21 @@ import StocksList from "../stocks-list";
 import { useSelector } from "react-redux";
 
 const TopLosers = () => {
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+  const allStockCompany = useSelector(
+    (state) => state.stockReducer.allStockCompany
   );
   const LARGE_STOCK_LIST =
-    allStockComany?.filter((item) =>
+    allStockCompany?.filter((item) =>
       item?.section === "topLosers" ? item.equityFunds === "Large" : ""
-    ) || allStockComany;
+    ) || allStockCompany;
   const MEDIUM_STOCK_LIST =
-    allStockComany?.filter((item) =>
+    allStockCompany?.filter((item) =>
       item?.section === "topLosers" ? item.equityFunds === "Medium" : ""
-    ) || allStockComany;
+    ) || allStockCompany;
   const SMALL_STOCK_LIST =
-    allStockComany?.filter((item) =>
+    allStockCompany?.filter((item) =>
       item?.section === "topLosers" ? item.equityFunds === "Small" : ""
-    ) || allStockComany;
+    ) || allStockCompany;
   return (
     <>
       <Tabs

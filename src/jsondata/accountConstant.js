@@ -79,7 +79,7 @@ export const BANK_DETAILS = [
     name: "Dorothy Churchill",
     bankName: "ICICI Bank",
     logo: "https://i.pinimg.com/originals/ff/d5/31/ffd531a6a78464512a97848e14506738.png",
-    accountNo: "122344556666",
+    accountNo: "42232954127",
     IFSC: "ICICI1231444",
   },
   {
@@ -87,7 +87,45 @@ export const BANK_DETAILS = [
     name: "Jennifer	Parsons",
     bankName: "State Bank of India",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5dqR6ECLQAnp9qWbENHSEsmv3ApEqvtLIQ&usqp=CAU",
-    accountNo: "3247598974673",
+    accountNo: "64728668633",
     IFSC: "SBI12231444",
+  },
+];
+
+export const WALLET_HISTORY = [
+  {
+    _id: 1,
+    name: "Dorothy Churchill",
+    bankName: "ICICI Bank",
+    logo: "https://i.pinimg.com/originals/ff/d5/31/ffd531a6a78464512a97848e14506738.png",
+    accountNo: "42232954127",
+    IFSC: "ICICI1231444",
+    amount: "10000",
+    date: "11/23/2023",
+    type: "withdraw",
+  },
+  {
+    _id: 2,
+    name: "Jennifer	Parsons",
+    bankName: "State Bank of India",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5dqR6ECLQAnp9qWbENHSEsmv3ApEqvtLIQ&usqp=CAU",
+    accountNo: "64728668633",
+    IFSC: "SBI12231444",
+    amount: "23000",
+    date: "05/11/2023",
+    type: "addMoney",
+  },
+];
+
+export const FUND_DATA = [
+  {
+    _id: 1,
+    availableMargin: "2265.35",
+    openingBalance: "24389",
+    payIn: "0.00",
+    span: "00015 BTC",
+    deliveryMargin: "0.00",
+    optionPrimum: "0.00",
+    totalCollateral: "0.00",
   },
 ];

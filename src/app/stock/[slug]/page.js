@@ -425,10 +425,10 @@ const revenueGraph = {
   },
 };
 function StockDetail({ params }) {
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+  const allStockCompany = useSelector(
+    (state) => state.stockReducer.allStockCompany
   );
-  const data = allStockComany;
+  const data = allStockCompany;
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);

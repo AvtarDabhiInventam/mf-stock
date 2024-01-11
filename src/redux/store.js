@@ -1,9 +1,11 @@
 import { persistStore, persistReducer } from "redux-persist";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import authReducer from "./slices/authSlice";
 import bankReducer from "./slices/bankSlice";
 import stockReducer from "./slices/stockSlice";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import mfReducer from "./slices/mfSlice";
+import walletReducer from "./slices/wallateSlice";
 
 const persistConfig = {
   key: "root",
@@ -17,6 +19,8 @@ const persistedReducer = persistReducer(
     authReducer,
     bankReducer,
     stockReducer,
+    mfReducer,
+    walletReducer,
   })
 );
 

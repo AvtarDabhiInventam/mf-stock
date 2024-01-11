@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,6 +7,7 @@ import {
   Col,
   Container,
   Form,
+  FormText,
   Modal,
   Nav,
   Row,
@@ -15,9 +16,13 @@ import {
 import style from "@/app/wallet/wallet.module.scss";
 import { IoWalletOutline } from "react-icons/io5";
 import { Radio, RadioGroup } from "@/component/radio-group";
-
 import DataTable from "react-data-table-component";
 import { FaCheck } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { addWithdrawal, getWallateHistory } from "@/redux/slices/wallateSlice";
+import { Controller, useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as Yup from "yup";
 
 const columns = [
   {
@@ -53,114 +58,85 @@ const customStyles = {
   },
 };
 
-const data = [
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">15 Apr 2022</span>
-        </div>
-      </div>
-    ),
-    year: <span className="fs-6 mb-2 fw-semibold text-danger">- $2000.00</span>,
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            HDFC Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">15 Apr 2022</span>
-        </div>
-      </div>
-    ),
-    year: (
-      <span className="fs-6 mb-2 fw-semibold text-success">+ $3000.00</span>
-    ),
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            ICICI Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">15 Apr 2022</span>
-        </div>
-      </div>
-    ),
-    year: <span className="fs-6 mb-2 fw-semibold text-success">+ 6200.00</span>,
-  },
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">SBI Bank Share Purchase</span>
-          <span className="gray-color fw-medium">15 Apr 2022</span>
-        </div>
-      </div>
-    ),
-    year: <span className="fs-6 mb-2 fw-semibold text-danger">- $4565.00</span>,
-  },
-
-  {
-    id: 1,
-    title: (
-      <div className="d-flex align-items-center">
-        <div>
-          <img
-            width={50}
-            src="https://companyurlfinder.com/marketing/assets/img/logos/axisdirect.in.png.pagespeed.ce.CLxqY0vOkM.png"
-          />
-        </div>
-        <div className="d-flex flex-column ms-3">
-          <span className="fs-6 mb-2 fw-semibold">
-            Axis Bank Share Purchase
-          </span>
-          <span className="gray-color fw-medium">15 Apr 2022</span>
-        </div>
-      </div>
-    ),
-    year: <span className="fs-6 mb-2 fw-semibold text-danger">- $2000.00</span>,
-  },
-];
-
 function page() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const dispatch = useDispatch();
+  const { walletHistoryList } = useSelector((state) => state.walletReducer);
+  const bankList = useSelector((state) => state.bankReducer.banks);
+
+  const validationSchema = Yup.object({
+    amount: Yup.string()
+      .matches(/^\d+$/, "Please enter valid amount")
+      .required("Amount is required"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }); //
+
+  const onSubmit = (data) => {
+    const payload = {
+      _id: Date.now(),
+      name: "Dorothy Churchill",
+      bankName: data.bankName,
+      logo: "https://i.pinimg.com/originals/ff/d5/31/ffd531a6a78464512a97848e14506738.png",
+      accountNo: "42232954127",
+      IFSC: "ICICI1231444",
+      amount: data.amount,
+      date: formattedDate,
+      type: "withdraw",
+    };
+    dispatch(addWithdrawal(payload));
+    handleShow();
+  };
+
+  useEffect(() => {
+    dispatch(getWallateHistory());
+  }, []);
+
+  const TABLE_DATA = walletHistoryList.map((wallet, index) => ({
+    key: wallet._id,
+    id: wallet._id,
+    title: (
+      <div className="d-flex align-items-center">
+        <div>
+          {/* <img
+            width={50}
+            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ScFaLDnH6FW4n_OIvB2q1A.png"
+          /> */}
+        </div>
+        <div className="d-flex flex-column">
+          <span className="fs-6 mb-2 fw-semibold">{wallet.bankName}</span>
+          <span className="gray-color fw-medium">{wallet?.date}</span>
+        </div>
+      </div>
+    ),
+    year: (
+      <span
+        className={`fs-6 mb-2 fw-semibold ${
+          wallet?.type === "withdraw" ? "text-danger" : "text-success"
+        } `}
+      >
+        {wallet?.type === "withdraw" ? "-" : "+"}
+        {wallet?.amount}
+      </span>
+    ),
+  }));
+
   return (
     <>
       <Container className={`${style.my_wallet} mb-4 mt-5`}>
@@ -176,7 +152,7 @@ function page() {
           <Col sm={12} md={12} lg={8}>
             <DataTable
               columns={columns}
-              data={data}
+              data={TABLE_DATA}
               customStyles={customStyles}
             />
           </Col>
@@ -222,33 +198,68 @@ function page() {
                     </Form>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <Form>
+                    <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
                       <Form.Group
                         className="mb-3"
                         controlId="exampleForm.ControlInput1"
                       >
                         <Form.Label>Withdraw Amount</Form.Label>
-                        <Form.Control
-                          type="email"
-                          placeholder="Enter Withdraw"
+                        <Controller
+                          name="amount"
+                          control={control}
+                          render={({ field }) => (
+                            <Form.Control
+                              {...field}
+                              type="text"
+                              autoComplete="off"
+                              placeholder="amount"
+                              isInvalid={!!errors.amount}
+                            />
+                          )}
                         />
+                        {errors.amount && (
+                          <FormText className="text-danger">
+                            {errors.amount.message}
+                          </FormText>
+                        )}
                       </Form.Group>
                       <Form.Group className="custom-radio">
                         <RadioGroup>
-                          <Radio id="basic" name="radio">
-                            <h3>HDFC Bank</h3>
-                            <p>XXXX XXXX XXXX 4565</p>
-                          </Radio>
-                          <Radio id="advanced" name="radio">
-                            <h3>ICICI Bank</h3>
-                            <p>XXXX XXXX XXXX 4565</p>
-                          </Radio>
+                          {bankList.map((bank, index) => (
+                            // <Radio
+                            //   id={bank.bankName}
+                            //   name="bankName"
+                            //   key={index}
+                            //   // register={register}
+                            // >
+                            //   <h3>{bank.bankName}</h3>
+                            //   <p>{bank.accountNo}</p>
+                            // </Radio>
+                            <>
+                              <input
+                                type="radio"
+                                id={bank.bankName}
+                                name="bankName"
+                                value={bank.bankName}
+                                checked={bankList[0]?.bankName}
+                                {...register("bankName")}
+                              />
+                              <label
+                                className="radio-label"
+                                htmlFor={bank.bankName}
+                              >
+                                <h3>{bank.bankName}</h3>
+                                <p>{bank.accountNo}</p>
+                              </label>
+                            </>
+                          ))}
                         </RadioGroup>
                       </Form.Group>
                       <Button
                         variant="primary"
                         className="mt-3 w-100"
-                        onClick={handleShow}
+                        type="submit"
+                        // onClick={handleShow}
                       >
                         Withdraw
                       </Button>

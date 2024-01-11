@@ -5,13 +5,13 @@ import LineChart from "../charts/lineChart";
 import { useSelector } from "react-redux";
 
 const WatchlistsStocks = () => {
-  const allStockComany = useSelector(
-    (state) => state.stockReducer.allStockComany
+  const allStockCompany = useSelector(
+    (state) => state.stockReducer.allStockCompany
   );
 
   const filteredItems =
-    allStockComany?.filter((item) => item.section === "watchlist") ||
-    allStockComany;
+    allStockCompany?.filter((item) => item.section === "watchlist") ||
+    allStockCompany;
 
   return (
     <>

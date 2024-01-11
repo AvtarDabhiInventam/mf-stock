@@ -1,10 +1,11 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { ALL_MF_COMPANY } from "@/jsondata/mutualFundConstant";
 import ReactApexChart from "react-apexcharts";
 import styles from "../../component/stocks-watchlists-main/watchlist.module.scss";
+import { useSelector } from "react-redux";
 
 const MutualFundWatchlistMain = () => {
+  const allMFCompany = useSelector((state) => state.mfReducer.allMFCompany);
   const stockWatchListGraph = {
     series: [
       {
@@ -83,6 +84,11 @@ const MutualFundWatchlistMain = () => {
       },
     },
   };
+
+  const MF_WATCHLIST =
+    allMFCompany?.filter((item) => item.section === "watchList") ||
+    allMFCompany;
+
   return (
     <>
       <div>
@@ -98,41 +104,37 @@ const MutualFundWatchlistMain = () => {
             </tr>
           </thead>
           <tbody>
-            {ALL_MF_COMPANY.map((value, index) => {
+            {MF_WATCHLIST?.map((value, index) => {
               return (
-                <>
-                  <tr>
-                    <td>
-                      <div className={`${styles.img_box}`}>
-                        <img
-                          src={value.logo}
-                          width={38}
-                          height={38}
-                          alt="User Image"
-                        />
-                      </div>
-                    </td>
-                    <td className={`${styles.index_value}`}>{value.name}</td>
-                    <td>
-                      <p className={`${styles.index_value}`}>
-                        {value.fundSize}
-                      </p>
-                    </td>
-                    <td>
-                      <p className={`${styles.index_value}`}>
-                        {value.oneDayReturn}
-                      </p>
-                    </td>
-                    <td>
-                      <p className={`${styles.index_value}`}>
-                        {value.threeYearReturn}
-                      </p>
-                    </td>
-                    <td>
-                      <p className={`${styles.index_value}`}>{value.rating}</p>
-                    </td>
-                  </tr>
-                </>
+                <tr key={index}>
+                  <td>
+                    <div className={`${styles.img_box}`}>
+                      <img
+                        src={value.logo}
+                        width={38}
+                        height={38}
+                        alt="User Image"
+                      />
+                    </div>
+                  </td>
+                  <td className={`${styles.index_value}`}>{value.name}</td>
+                  <td>
+                    <p className={`${styles.index_value}`}>{value?.fundSize}</p>
+                  </td>
+                  <td>
+                    <p className={`${styles.index_value}`}>
+                      {value?.oneDayReturn}
+                    </p>
+                  </td>
+                  <td>
+                    <p className={`${styles.index_value}`}>
+                      {value.threeYearReturn}
+                    </p>
+                  </td>
+                  <td>
+                    <p className={`${styles.index_value}`}>{value.rating}</p>
+                  </td>
+                </tr>
               );
             })}
           </tbody>
