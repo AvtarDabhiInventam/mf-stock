@@ -7,6 +7,7 @@ const initialState = {
   allStockCompany: [],
   searchTerm: "",
   activeTab: "Stock",
+  watchList: [],
 };
 const Slice = createSlice({
   name: "stockSlice",
@@ -17,6 +18,14 @@ const Slice = createSlice({
     },
     getAllStockCompany(state, action) {
       state.allStockCompany = ALL_STOCK_COMPANY_DATA;
+    },
+    getWatchListData(state, action) {
+      state.watchList =
+        state.allStockCompany?.filter((item) => item.section === "watchlist") ||
+        state.allStockCompany;
+    },
+    addWatchListData(state, action) {
+      state.watchList.push(action.payload);
     },
     setSearchTerm(state, action) {
       state.searchTerm = action.payload;
@@ -40,5 +49,7 @@ export const {
   resetStockSlice,
   setSearchTerm,
   setActiceTab,
+  getWatchListData,
+  addWatchListData,
 } = Slice.actions;
 export default Slice.reducer;

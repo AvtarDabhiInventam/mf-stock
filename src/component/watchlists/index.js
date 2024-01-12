@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 const Watchlists = () => {
   const [isOpen, setOpen] = useState(false);
   const user = useSelector((state) => state.authReducer.user);
+  const { watchList } = useSelector((state) => state.stockReducer);
 
   return (
     <>
@@ -23,7 +24,9 @@ const Watchlists = () => {
               <h6 className={`${styles.title}`}>
                 {user?.firstName}'s Watchlists
               </h6>
-              <p className={`${styles.index_value}`}>5 items</p>
+              <p className={`${styles.index_value}`}>
+                {watchList?.length} items
+              </p>
             </div>
             <div>
               <FaAngleDown />

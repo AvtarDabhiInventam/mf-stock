@@ -89,6 +89,10 @@ const MutualFundWatchlistMain = () => {
     allMFCompany?.filter((item) => item.section === "watchList") ||
     allMFCompany;
 
+  console.log("allMFCompany :>> ", allMFCompany);
+
+  console.log("MF_WATCHLIST :>> ", MF_WATCHLIST);
+
   return (
     <>
       <div>

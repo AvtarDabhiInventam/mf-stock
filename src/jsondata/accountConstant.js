@@ -129,3 +129,26 @@ export const FUND_DATA = [
     totalCollateral: "0.00",
   },
 ];
+
+export const SERCH_BAR_FILTER_DATA = [
+  {
+    _id: "1",
+    icon: "",
+    name: "NSE",
+  },
+  {
+    _id: "2",
+    icon: "",
+    name: "BSE",
+  },
+  {
+    _id: "3",
+    icon: "",
+    name: "Alphabetically",
+  },
+  {
+    _id: "4",
+    icon: "",
+    name: "Last Traded Price",
+  },
+];

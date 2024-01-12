@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import {
   getAllStockCategory,
   getAllStockCompany,
+  getWatchListData,
   setActiceTab,
 } from "@/redux/slices/stockSlice";
 import { getAllMFCategory, getAllMFCompany } from "@/redux/slices/mfSlice";
@@ -40,6 +41,7 @@ export default function Home() {
     dispatch(getAllStockCategory());
     dispatch(getAllMFCategory());
     dispatch(setActiceTab("Stock"));
+    dispatch(getWatchListData());
   }, []);
 
   const STOCK_LIST =
@@ -80,15 +82,20 @@ export default function Home() {
                     <div>
                       <h5 className="mb-0 sec_title">Index</h5>
                     </div>
-                    <div>
-                      <Link href="/">All indices</Link>
-                    </div>
+                    <div>{/* <Link href="/">All indices</Link> */}</div>
                   </div>
                   <IndexMarket allStockCategory={allStockCategory} />
                 </div>
                 <div className="mt-5">
-                  <div className="mb-3">
-                    <h5 className="mb-0 sec_title">Most Bought on mf-stock</h5>
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                      <h5 className="mb-0 sec_title">
+                        Most Bought on mf-stock
+                      </h5>
+                    </div>
+                    <div>
+                      <Link href={`/stock-list/mostBoughtOnMF`}>See more</Link>
+                    </div>
                   </div>
                   <StocksList STOCK_LIST={MOST_BOUGHT_STOCK_LIST} />
                 </div>
@@ -104,7 +111,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Top Gainers</h5>
                     </div>
                     <div>
-                      <Link href="/">See more</Link>
+                      <Link href="/stock-list/topGainers">See more</Link>
                     </div>
                   </div>
                   <TopGainers />
@@ -115,7 +122,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Stocks in News</h5>
                     </div>
                     <div>
-                      <Link href="/">News</Link>
+                      <Link href="/stock-list/stocksInNews">News</Link>
                     </div>
                   </div>
                   <StocksList STOCK_LIST={STOCK_LIST} />
@@ -126,7 +133,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Top Losers</h5>
                     </div>
                     <div>
-                      <Link href="/">See more</Link>
+                      <Link href="/stock-list/topLosers">See more</Link>
                     </div>
                   </div>
                   <TopLosers />
@@ -136,9 +143,7 @@ export default function Home() {
                     <div>
                       <h5 className="mb-0 sec_title">Top Sectors</h5>
                     </div>
-                    <div>
-                      <Link href="/">See more</Link>
-                    </div>
+                    <div>{/* <Link href="/">See more</Link> */}</div>
                   </div>
                   <TopSectors />
                 </div>
@@ -150,7 +155,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Your Investments</h5>
                     </div>
                     <div>
-                      <Link href="/">Dashboard</Link>
+                      <Link href="/dashboard">Dashboard</Link>
                     </div>
                   </div>
                   <Investments />
@@ -162,7 +167,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">All watchlists</h5>
                     </div>
                     <div>
-                      <Link href="/">View all</Link>
+                      <Link href="/stock-list/watchlist">View all</Link>
                     </div>
                   </div>
                   <Watchlists />
@@ -185,7 +190,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Popular fund</h5>
                     </div>
                     <div>
-                      <Link href="/">See all</Link>
+                      <Link href="/mutualfund-list/popularFund">See all</Link>
                     </div>
                   </div>
                   <MutualFundPopularFund MF_LIST={MF_POPULAR_FUND_LIST} />
@@ -196,7 +201,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">Watchlist</h5>
                     </div>
                     <div>
-                      <Link href="/">See all</Link>
+                      <Link href="/mutualfund-list/watchList">See all</Link>
                     </div>
                   </div>
                   <MutualFundWatchList MF_LIST={MF_WATCHLIST} />
@@ -208,7 +213,7 @@ export default function Home() {
                       <h5 className="mb-0 sec_title">All mutual fund</h5>
                     </div>
                     <div>
-                      <Link href="/">See all</Link>
+                      <Link href="/mutualfund-list/all">See all</Link>
                     </div>
                   </div>
                   <MutualFundList MF_LIST={allMFCompany} />

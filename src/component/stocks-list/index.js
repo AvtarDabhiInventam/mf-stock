@@ -5,8 +5,22 @@ import StockImg from "../../images/stock-img.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { FiPlusCircle } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
+import { addWatchListData } from "@/redux/slices/stockSlice";
 
 const StocksList = ({ STOCK_LIST }) => {
+  const dispatch = useDispatch();
+  const { watchList } = useSelector((state) => state.stockReducer);
+
+  const handleWatchList = (value) => {
+    const item = watchList.find((item) => item._id === value?._id);
+    if (item === undefined) {
+      dispatch(addWatchListData(value));
+    } else {
+      alert("You've already added this item to your wishlist!");
+    }
+  };
+
   return (
     <>
       <Row className="row_space">
@@ -24,6 +38,10 @@ const StocksList = ({ STOCK_LIST }) => {
                       fontSize={30}
                       color="#5993D2"
                       className={`${styles.wishlist_icon}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleWatchList(value);
+                      }}
                     />
                     <div className={`${styles.img_box}`}>
                       <img

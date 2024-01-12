@@ -4135,3 +4135,168 @@ export const MUTUALFUND_DETAILS = [
     cons: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
   },
 ];
+
+export const FILTER_MF_DATA = [
+  {
+    type: "AMC",
+    data: [
+      {
+        _id: 1,
+        name: "Axis midcap Direct plan growth",
+      },
+      {
+        _id: 2,
+        name: "Mirae Asset Large Cap Fund.",
+      },
+      {
+        _id: 3,
+        name: "Aditya Birla Sun Life Flexi Cap Fund",
+      },
+      {
+        _id: 4,
+        name: "Icici prudential technology Direct plan growth",
+      },
+      {
+        _id: 5,
+        name: "Baroda liquid direct fund growth",
+      },
+      {
+        _id: 6,
+        name: "SBI Equity Hybrid Fund",
+      },
+      {
+        _id: 7,
+        name: "Canara Robeco Mutual Fund",
+      },
+      {
+        _id: 8,
+        name: "Kotak Mutual Fund",
+      },
+      {
+        _id: 9,
+        name: "Nippon India Mutual Fund",
+      },
+      {
+        _id: 10,
+        name: "DHFL Pramerica Large Cap Fund",
+      },
+      {
+        _id: 11,
+        name: "Essel Midcap Fund",
+      },
+      {
+        _id: 12,
+        name: "IDBI Long Term Value Fund",
+      },
+    ],
+  },
+  {
+    type: "Category",
+    data: [
+      {
+        _id: 1,
+        name: "Debt Schemes",
+      },
+      {
+        _id: 2,
+        name: "Equity Schemes",
+      },
+      {
+        _id: 3,
+        name: "Hybrid Schemes",
+      },
+      {
+        _id: 4,
+        name: "Other Schemes",
+      },
+      {
+        _id: 5,
+        name: "Solution Oriented Schemes",
+      },
+    ],
+  },
+  {
+    type: "Rating",
+    data: [
+      {
+        _id: 1,
+        name: "5",
+      },
+      {
+        _id: 2,
+        name: "4",
+      },
+      {
+        _id: 3,
+        name: "3",
+      },
+      {
+        _id: 4,
+        name: "2",
+      },
+      {
+        _id: 5,
+        name: "1",
+      },
+    ],
+  },
+  {
+    type: "Risk",
+    data: [
+      {
+        _id: 1,
+        name: "Low",
+      },
+      {
+        _id: 2,
+        name: "Moderately Low",
+      },
+      {
+        _id: 3,
+        name: "Moderate",
+      },
+      {
+        _id: 4,
+        name: "Moderately High",
+      },
+      {
+        _id: 5,
+        name: "High",
+      },
+      {
+        _id: 6,
+        name: "Very High",
+      },
+    ],
+  },
+  {
+    type: "Available to invest",
+    data: [
+      {
+        _id: 1,
+        name: "SIP",
+      },
+      {
+        _id: 2,
+        name: "ONE-TIME",
+      },
+    ],
+  },
+  {
+    type: "Sort By",
+    data: [
+      {
+        _id: 1,
+        name: "Popularity",
+      },
+      {
+        _id: 2,
+        name: "Ratings-High to Low",
+      },
+      {
+        _id: 2,
+        name: "Returns-High to Low",
+      },
+    ],
+  },
+];

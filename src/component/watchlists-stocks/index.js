@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./watchlists-stocks.module.scss";
 import ReactApexChart from "react-apexcharts";
 import LineChart from "../charts/lineChart";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getWatchListData } from "@/redux/slices/stockSlice";
 
 const WatchlistsStocks = () => {
+  const dispatch = useDispatch();
   const allStockCompany = useSelector(
     (state) => state.stockReducer.allStockCompany
   );
 
-  const filteredItems =
-    allStockCompany?.filter((item) => item.section === "watchlist") ||
-    allStockCompany;
+  const { watchList } = useSelector((state) => state.stockReducer);
 
   return (
     <>
       <div className={`${styles.watchlists_main_div}`}>
-        {filteredItems?.map((value, index) => {
+        {watchList?.map((value, index) => {
           return (
             <>
               <div className={`${styles.watchlists_box_div}`}>
